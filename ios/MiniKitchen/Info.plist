@@ -16,4 +16,5 @@
 <key>CFBundleURLTypes</key><array><dict><key>CFBundleURLSchemes</key><array><string>minikitchen</string></array></dict></array>
 <key>ImportServiceURL</key><string>$(IMPORT_SERVICE_URL)</string>
 <key>ImportServiceToken</key><string>$(IMPORT_SERVICE_TOKEN)</string>
+<key>NSAppTransportSecurity</key><dict><key>NSAllowsLocalNetworking</key><true/></dict>
 </dict></plist>

@@ -33,7 +33,7 @@
 
 临时视频与抽帧自动清理；任务结果保存在 SQLite。当前生成内容为结构化文本菜谱，没有把新抽帧持久化为图文资源；原生内置 18 道菜使用已打包真实配图。部署网络需允许小红书、视频 CDN 与配置的模型服务。
 
-当前环境未提供模型密钥；已验证协议、错误处理和状态机，尚未完成真实在线端到端验收。
+Mac 本地已复用钥匙串中的 Kimi API 配置并验证图片输入与 JSON 输出；完整小红书视频导入尚未端到端验收。参见 [Mac 本地开发](LOCAL_MAC.md)。
 
 ## 使用本机 Kimi API
 
@@ -41,4 +41,4 @@
 
 Mac 的 Chromium 不再默认使用 Linux 路径。项目目录内执行 `npm install --no-save playwright` 与 `npx playwright install chromium` 后使用 Playwright 自带浏览器；或显式设置 `CHROMIUM_PATH`。仍需安装 ffmpeg/ffprobe。
 
-Kimi Key 不填入 Xcode 配置。iOS 的 `IMPORT_SERVICE_URL` 指向这个菜谱服务，`IMPORT_SERVICE_TOKEN` 是私有服务令牌，不是 Kimi Key。当前没有使用你的真实密钥进行调用验收。
+Kimi Key 不填入 Xcode 配置。iOS 的 `IMPORT_SERVICE_URL` 指向这个菜谱服务，`IMPORT_SERVICE_TOKEN` 是私有服务令牌，不是 Kimi Key。本机 Kimi 的图片输入与 JSON 输出已通过真实请求验证。

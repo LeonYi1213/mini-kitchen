@@ -46,4 +46,4 @@ xcodebuild test -project ios/MiniKitchen.xcodeproj -scheme MiniKitchen \
 
 `check_ios.py` 检查 Swift 语法树、工程资源引用、配置、菜谱与图片，不代替 Swift 类型检查或 Xcode 编译。仓库已提供 macOS CI，尚需实际触发。
 
-当前交付环境是 Linux，没有 Apple SDK；未执行 iOS 编译、模拟器截图或真机验收，因此不能将旧 HTML 设计截图视为 App 实测截图。一比一视觉验收、Dynamic Type、横竖屏、iPad 分屏、VoiceOver、系统通知与云同步仍需在 Apple 设备上验收。没有生成签名安装包或提交 App Store。
+现已在 Mac / Xcode 26.3 完成模拟器编译和单元测试，并接入本机 Kimi 服务；启动方式见 [Mac 本地开发](../backend/LOCAL_MAC.md)。一比一视觉验收、Dynamic Type、横竖屏、iPad 分屏、VoiceOver、系统通知与云同步仍需在 Apple 设备上验收。没有生成真机签名安装包或提交 App Store。

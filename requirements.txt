@@ -1,1 +1,2 @@
 yt-dlp==2026.3.17
+truststore==0.10.4

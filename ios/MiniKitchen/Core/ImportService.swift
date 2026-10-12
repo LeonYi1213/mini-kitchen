@@ -33,12 +33,20 @@ struct ImportService {
         }
     }
     func create(_ url: URL) async throws -> ImportJob {
-        guard let baseURL, baseURL.scheme == "https" else { throw ImportFailure.unavailable }
+        guard let baseURL, Self.allowedEndpoint(baseURL) else { throw ImportFailure.unavailable }
         var request = URLRequest(url: baseURL.appendingPathComponent("imports"))
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = try JSONEncoder().encode(["url": url.absoluteString])
         return try await send(request)
+    }
+    static func allowedEndpoint(_ url: URL) -> Bool {
+        if url.scheme == "https" { return true }
+        #if DEBUG && targetEnvironment(simulator)
+        return url.scheme == "http" && ["localhost", "127.0.0.1"].contains(url.host ?? "")
+        #else
+        return false
+        #endif
     }
     func poll(_ id: String) async throws -> ImportJob {
         guard let baseURL else { throw ImportFailure.unavailable }

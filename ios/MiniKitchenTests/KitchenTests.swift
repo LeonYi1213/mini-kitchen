@@ -2,6 +2,16 @@ import XCTest
 @testable import MiniKitchen
 
 final class KitchenTests: XCTestCase {
+    func testServiceOnlyAllowsHTTPSAndDebugSimulatorLoopback() {
+        XCTAssertTrue(ImportService.allowedEndpoint(URL(string: "https://kitchen.example.com")!))
+        XCTAssertFalse(ImportService.allowedEndpoint(URL(string: "http://kitchen.example.com")!))
+        XCTAssertFalse(ImportService.allowedEndpoint(URL(string: "http://localhost.evil.example")!))
+        #if DEBUG && targetEnvironment(simulator)
+        XCTAssertTrue(ImportService.allowedEndpoint(URL(string: "http://localhost:18080")!))
+        #else
+        XCTAssertFalse(ImportService.allowedEndpoint(URL(string: "http://localhost:18080")!))
+        #endif
+    }
     private func recipe(_ id: String, wait: Int) -> Recipe {
         Recipe(id: id, title: id, source: "https://www.xiaohongshu.com/explore/" + id,
                ingredients: [Ingredient(name: "水", unit: "适量")], prep: ["清洗"], cook: ["炖煮", "出锅"],

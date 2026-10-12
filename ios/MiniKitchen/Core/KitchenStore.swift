@@ -110,6 +110,6 @@ import SwiftUI
     }
     private func save() {
         do { try JSONEncoder().encode(meal).write(to: file, options: .atomic) }
-        catch { error = "保存失败，请检查设备剩余空间后重试。" }
+        catch { self.error = "保存失败，请检查设备剩余空间后重试。" }
     }
 }
