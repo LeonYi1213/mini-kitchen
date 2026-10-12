@@ -93,6 +93,20 @@ struct MealState: Codable {
     var selected: [String] = []
     var progress: [String: DishProgress] = [:]
     var imported: [Recipe] = []
+    // Meal IDs deduplicate retries and completion on multiple devices.
+    var completedMeals: [String: Set<String>]?
+    func cookingCount(_ recipe: Recipe) -> Int { completedMeals?[recipe.id]?.count ?? 0 }
+    mutating func recordCompletion(_ recipe: Recipe) {
+        guard !recipe.steps.isEmpty else { return }
+        if completedMeals == nil { completedMeals = [:] }
+        completedMeals![recipe.id, default: []].insert(id)
+    }
+    func frequentlyCooked(in recipes: [Recipe]) -> [Recipe] {
+        recipes.enumerated().sorted {
+            let a = cookingCount($0.element), b = cookingCount($1.element)
+            return a == b ? $0.offset < $1.offset : a > b
+        }.map(\.element)
+    }
     mutating func toggle(_ id: String) {
         if selected.contains(id) { selected.removeAll { $0 == id } }
         else { selected.append(id) }
@@ -102,6 +116,7 @@ struct MealState: Codable {
         dish.step = min(recipe.steps.count, dish.step + 1)
         dish.timer = nil
         progress[recipe.id] = dish
+        if dish.step == recipe.steps.count { recordCompletion(recipe) }
     }
     func recommendation(in recipes: [Recipe], now: Date = Date()) -> Recipe? {
         let candidates = recipes.filter { recipe in

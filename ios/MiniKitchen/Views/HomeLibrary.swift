@@ -15,12 +15,27 @@ struct HomeView: View {
                         PrimaryButton(title: "粘贴链接，收藏第一道菜") { showImport = true }
                     } else {
                         EmptyMeal { tab = .library }
-                        Text("最近收藏").font(.title3.bold())
-                        ForEach(Array(store.recipes.prefix(4))) { recipe in
-                            HStack {
-                                NavigationLink { RecipeDetail(recipe: recipe) } label: { RecipeRow(recipe: recipe) }.buttonStyle(.plain)
-                                Button { store.toggle(recipe) } label: { Image(systemName: "plus.circle.fill").font(.title2).frame(width: 44, height: 44) }
-                                    .accessibilityLabel("加入这一餐：\(recipe.title)")
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("常做的菜").font(.title3.bold()).padding(.bottom, 4)
+                            ForEach(Array(store.meal.frequentlyCooked(in: store.recipes).prefix(4))) { recipe in
+                                HStack(spacing: 8) {
+                                    NavigationLink { RecipeDetail(recipe: recipe) } label: {
+                                        HStack(spacing: 10) {
+                                            RecipePhoto(name: recipe.cover, height: 48).frame(width: 48)
+                                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                            VStack(alignment: .leading, spacing: 4) {
+                                                Text(recipe.title).font(.system(size: 15, weight: .semibold))
+                                                Text(recipe.duration).font(.caption).foregroundStyle(KitchenStyle.muted)
+                                            }
+                                            Spacer(minLength: 4)
+                                            Text("已做 \(store.meal.cookingCount(recipe)) 次")
+                                                .font(.caption).foregroundStyle(KitchenStyle.muted).fixedSize()
+                                        }
+                                    }.buttonStyle(.plain)
+                                    Button { store.toggle(recipe) } label: {
+                                        Image(systemName: "plus.circle.fill").font(.title2).frame(width: 44, height: 44)
+                                    }.accessibilityLabel("加入这一餐：\(recipe.title)")
+                                }.padding(10).background(.white, in: RoundedRectangle(cornerRadius: 16))
                             }
                         }
                     }

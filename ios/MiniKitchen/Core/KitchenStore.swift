@@ -48,6 +48,10 @@ import SwiftUI
         save()
     }
     func advance(_ recipe: Recipe) {
+        if progress(recipe).step == recipe.steps.count - 1 {
+            meal.recordCompletion(recipe)
+            publish(meal.completedMeals?[recipe.id] ?? [], key: "history.\(recipe.id)")
+        }
         update(recipe) { $0.step = min(recipe.steps.count, $0.step + 1); $0.timer = nil }
     }
     func startNewMeal() {
@@ -114,6 +118,13 @@ import SwiftUI
             meal.selected = header.selected.filter { seen.insert($0).inserted }
         }
         for recipe in recipes {
+            let key = "history.\(recipe.id)"
+            if let remote = incoming(Set<String>.self, key: key) {
+                let merged = (meal.completedMeals?[recipe.id] ?? []).union(remote)
+                if meal.completedMeals == nil { meal.completedMeals = [:] }
+                meal.completedMeals?[recipe.id] = merged
+                if merged != remote { publish(merged, key: key) }
+            }
             var value = progress(recipe)
             if let checks = incoming(Set<Int>.self, key: "checks.\(meal.id).\(recipe.id)") {
                 value.checked = checks.filter { recipe.ingredients.indices.contains($0) }

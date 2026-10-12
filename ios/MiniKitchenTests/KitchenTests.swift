@@ -61,6 +61,28 @@ final class KitchenTests: XCTestCase {
         for _ in 0..<10 { state.advance(fish) }
         XCTAssertEqual(state.progress[fish.id]?.step, fish.steps.count)
     }
+    func testCookingHistorySurvivesNewMealsAndDeduplicatesCompletion() throws {
+        let fish = recipe("fish", wait: 10), ribs = recipe("ribs", wait: 45)
+        var state = MealState()
+        state.advance(fish)
+        XCTAssertEqual(state.cookingCount(fish), 0)
+        for _ in 0..<5 { state.advance(fish) }
+        XCTAssertEqual(state.cookingCount(fish), 1)
+        state.progress[fish.id]?.step = fish.steps.count - 1
+        state.advance(fish)
+        XCTAssertEqual(state.cookingCount(fish), 1)
+        state.id = UUID().uuidString; state.progress = [:]
+        for _ in fish.steps { state.advance(fish) }
+        let restored = try JSONDecoder().decode(MealState.self, from: JSONEncoder().encode(state))
+        XCTAssertEqual(restored.cookingCount(fish), 2)
+        XCTAssertEqual(restored.frequentlyCooked(in: [ribs, fish]).map(\.id), [fish.id, ribs.id])
+        XCTAssertEqual(MealState().frequentlyCooked(in: [ribs, fish]).map(\.id), [ribs.id, fish.id])
+        var legacy = try XCTUnwrap(JSONSerialization.jsonObject(with: JSONEncoder().encode(state)) as? [String: Any])
+        legacy.removeValue(forKey: "completedMeals")
+        let migrated = try JSONDecoder().decode(MealState.self, from: JSONSerialization.data(withJSONObject: legacy))
+        XCTAssertEqual(migrated.cookingCount(fish), 0)
+        XCTAssertEqual(migrated.progress[fish.id]?.step, fish.steps.count)
+    }
     func testLongWaitFirstThenOtherDishDuringTimerThenExpiredTimerFirst() {
         let ribs = recipe("ribs", wait: 45), fish = recipe("fish", wait: 10)
         let now = Date(timeIntervalSince1970: 1000)
