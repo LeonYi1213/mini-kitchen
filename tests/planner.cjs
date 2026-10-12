@@ -1,0 +1,17 @@
+const assert=require('node:assert/strict');
+const P=require('../web/planner.js');
+const ribs={id:'ribs',title:'排骨',prep:['排骨焯水'],cook:['煎香','加盖炖 40–50 分钟','短暂翻拌，不必久炖']};
+const greens={id:'greens',title:'蒜蓉青菜',prep:['洗菜'],cook:['炒熟']};
+let menu=[{id:'greens',stage:0,checked:{}},{id:'ribs',stage:0,checked:{}}];
+assert.equal(P.plan([greens,ribs],menu).actions[0].id,'ribs');
+menu[1]={id:'ribs',stage:1,checked:{'1-0':true},wait:{key:'1-1',until:600000}};
+assert.equal(P.plan([greens,ribs],menu,0).actions[0].id,'greens');
+assert.equal(P.plan([greens,ribs],menu,0).waiting[0].remaining,10);
+assert.equal(P.plan([greens,ribs],menu,600001).actions[0].id,'ribs');
+menu[1].stage=2;assert.equal(P.plan([greens,ribs],menu).actions.length,1);
+assert.deepEqual(P.estimateStep('炖 40–50 分钟',1),{min:40,max:50,wait:true});
+assert.equal(P.estimateStep('短暂翻拌，不必久炖',1).wait,false);
+assert.equal(P.estimateStep('菜',1,{min:-1,max:2}).min,3);
+const recipe=require('../web/recipes/pepper-ribs/recipe.json');
+assert.deepEqual(P.total(recipe),{min:65,max:90});
+console.log('PASS: long dish first, waiting interleave, expired wait, completed exclusion, timing validation');

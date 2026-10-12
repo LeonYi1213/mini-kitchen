@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+imports/
+ios/Config/Local.xcconfig
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.env
+
+node_modules/
+.DS_Store
+.env.*

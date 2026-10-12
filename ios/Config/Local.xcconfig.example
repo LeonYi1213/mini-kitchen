@@ -1,0 +1,5 @@
+// Private service endpoint. Escape the // in https for xcconfig syntax.
+IMPORT_SERVICE_URL = https:/$()/kitchen.example.com
+// Single-owner service access token, NOT the AI provider key.
+IMPORT_SERVICE_TOKEN = replace-with-your-private-service-token
+// DEVELOPMENT_TEAM = your-team-id

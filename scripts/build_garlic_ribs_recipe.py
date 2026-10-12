@@ -1,0 +1,20 @@
+from pathlib import Path
+import json,base64,re,html,subprocess
+root=Path(__file__).resolve().parents[1]/'web/recipes/crispy-garlic-ribs'
+root.mkdir(parents=True,exist_ok=True)
+note='69c119c2000000001f0003f5'
+steps=[('garlic',20,'蒜末洗净沥干，留下蒜水','200 克蒜切末，用水淘洗去黏汁，过滤后保留蒜水。蒜末充分沥干，减少炸制时溅油。','00:08–00:21'),('marinate',30,'排骨洗净，调味腌半小时','900 克排骨用面粉抓洗、冲净并擦干。加葱 30 克、姜 5 克、白胡椒粉 1 克、蚝油 15 克、料酒 30 毫升、盐 3 克、白糖 8 克及适量蒜水，抓匀腌 30 分钟。','00:22–00:33'),('fry-garlic',42,'中小火炸蒜，过滤留油','利用腌制时间，将沥干的蒜末放入油锅，中小火炸至浮起、金黄，及时过滤。蒜酥摊凉，蒜油留下炸排骨。','00:34–00:45'),('coat',50,'去掉葱姜，裹蛋黄淀粉','排骨腌好后挑去葱姜，加入 2 个蛋黄和 40 克玉米淀粉，抓拌均匀。','00:46–00:51'),('fry-ribs',60,'蒜油炸排骨，控油盛出','用过滤的蒜油炸排骨，原片先中小火约 10 分钟，再大火约 5 分钟后捞出控油。实际随排骨大小及油温调整，避免上色过深，确认内部熟透。','00:52–01:05'),('finish',70,'配菜炒香，拌入蒜酥','洋葱碎和彩椒丁共 50 克下锅炒香，倒入排骨与炸好的蒜酥，翻拌均匀，撒葱花出锅。','01:06–01:13')]
+for n,t,*_ in steps:
+ subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y','-ss',str(t),'-i',str(root.parents[2]/f'imports/{note}.mp4'),'-vf','scale=480:-1','-frames:v','1',str(root/(n+'.jpg'))],check=True)
+items=[('排骨',900,'克'),('蒜',200,'克'),('葱（腌制）',30,'克'),('姜',5,'克'),('白胡椒粉',1,'克'),('蚝油',15,'克'),('料酒',30,'毫升'),('盐',3,'克'),('白糖',8,'克'),('蛋黄',2,'个'),('玉米淀粉',40,'克'),('洋葱碎和彩椒丁（合计）',50,'克')]+[(n,None,'适量') for n in ['面粉（清洗用）','水（洗蒜、清洗用）','食用油','葱花（出锅用）']]
+r={'id':'xhs-'+note,'title':'酥脆蒜香排骨','servings':None,'source':'https://www.xiaohongshu.com/explore/'+note,'ingredients':[{'name':n,'amount':a,'unit':u} for n,a,u in items],'prep':['蒜切末、淘洗、过滤留蒜水，蒜末充分沥干。','排骨用面粉抓洗冲净、擦干，葱姜切好，洋葱和彩椒切丁，另备葱花。','排骨按配方加入葱姜、调料和蒜水抓匀，腌 30 分钟；期间可炸蒜酥。'],'cook':[steps[i][3] for i in [2,3,4,5]],'timing':{'prep':[{'min':5,'max':8},{'min':8,'max':12},{'min':30,'max':30,'wait':True}],'cook':[{'min':5,'max':8},{'min':2,'max':3},{'min':15,'max':15},{'min':2,'max':4}]},'notes':['来源：孩儿他姥姥。依据全片抽帧及烧录字幕整理，未独立转写音频。','原片明确排骨 900 克、蒜 200 克及所列调味配比；人数未注明，其余用量显示适量。','原片腌制半小时，炸排骨先中小火约 10 分钟，再大火约 5 分钟。未标注油温，实际以熟度和颜色调整。','预计 67–80 分钟为各步骤累计的补充估算；炸蒜酥可与腌制重叠，实际墙钟耗时可缩短约 5–8 分钟。','蒜水由清洗蒜末取得，不是另购调味料；原片未给加入蒜水的体积。','洋葱和彩椒为合计 50 克，不是各 50 克；葱花另用适量。','避免上色过深并检查排骨内部熟透为补充建议，不能仅靠原片分钟数判断。'],'illustrated_steps':[{'title':s[2],'text':s[3],'source_time':s[4],'image':s[0]+'.jpg'} for s in steps]}
+(root/'recipe.json').write_text(json.dumps(r,ensure_ascii=False,indent=2))
+css=re.search(r'<style>(.*?)</style>',(root.parent/'pepper-ribs/index.html').read_text(),re.S)[1]+'.step img,.step:nth-child(4) img{object-position:50% 55%}'
+def img(n):return 'data:image/jpeg;base64,'+base64.b64encode((root/(n+'.jpg')).read_bytes()).decode()
+rows=''.join('<li>'+html.escape(n)+'：'+(str(a)+' '+html.escape(u) if a is not None else '适量')+'</li>' for n,a,u in items)
+prep=''.join('<li>'+html.escape(x)+'</li>' for x in r['prep'])
+cards=''.join(f'<article class="step"><img src="{img(n)}" alt="{title}，原视频截图"><div><small>STEP {i:02} · 原片 {time}</small><h2>{title}</h2><p>{text}</p></div></article>' for i,(n,t,title,text,time) in enumerate(steps,1))
+download='data:application/json;base64,'+base64.b64encode(json.dumps(r,ensure_ascii=False).encode()).decode()
+s=f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>酥脆蒜香排骨 · 小厨房</title><style>{css}</style></head><body><main><div class="label">小厨房 / 视频提炼菜谱</div><h1>酥脆蒜香排骨<small>预计 67–80 分钟 · 含备菜、腌制，按步骤累计，补充估算</small></h1><p class="lead">蒜末炸成酥，蒜油炸排骨，最后一起翻拌出浓郁蒜香。</p><p class="note">腌制与炸蒜可重叠，实际耗时可少约 5–8 分钟。人数未注明。手机可左右滑动步骤卡。</p><div class="info"><b>一次备齐 · 一项一行</b><ul class="prep-list">{rows}</ul><p class="note">以上明确数值来自原片字幕；洋葱和彩椒合计 50 克。蒜水、蒜酥、蒜油均由前序步骤取得。未标用量显示适量。</p><b>备菜顺序</b><ol>{prep}</ol><b>搭配其他菜的顺序建议</b><p>先将排骨腌上，等待时炸好蒜酥并完成其他菜的洗切、调汁。接近开饭再炸排骨，最后炒配菜合锅。炸制需要持续看守，避免同时进行另一道需要不停翻炒的菜。</p></div><div class="actions"><a href="{download}" download="酥脆蒜香排骨.json">下载小厨房导入 JSON</a></div><section class="grid">{cards}</section><footer>来源：小红书「孩儿他姥姥」 · <a href="{r['source']}">原笔记</a><br>图片为原视频截图，文字依据画面及烧录字幕整理，未独立转写音频。总耗时为补充估算；原片明确腌 30 分钟、炸约 10 分钟再大火约 5 分钟。熟度及避免上色过深的提醒为补充建议。</footer></main></body></html>'''
+(root/'index.html').write_text(s)
+print('Built garlic ribs recipe')

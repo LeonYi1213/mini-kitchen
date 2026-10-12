@@ -1,0 +1,15 @@
+from pathlib import Path
+import json,base64,re,html,subprocess
+root=Path(__file__).resolve().parents[1]/'web/recipes/garlic-luffa'
+steps=[('prep',8,'丝瓜切薄片','丝瓜洗净、处理外皮后切薄片，蒜切末。原片未注明丝瓜和蒜的用量。','00:04–00:09'),('garlic',11,'猪油爆香蒜末','锅中放猪油化开，下蒜末稍微爆香，避免炒焦。','00:10–00:12'),('soften',18,'丝瓜炒软、调味','倒入丝瓜，不断翻炒至略微软化，加适量盐调味。','00:12–00:20'),('water',23,'沿锅边加开水','沿锅边淋入一圈开水，翻动丝瓜，让汤汁煮开。原片未给具体水量。','00:21–00:25'),('simmer',28,'中小火煮约 2 分钟','转中小火煮约 2 分钟，观察丝瓜熟软、汤汁浓郁；不用另加鸡精、味精。','00:26–00:29'),('finish',31,'带汤盛出','丝瓜熟软、汤汁略浓时即可盛出，保留汤汁趁热吃。','00:30–00:33')]
+for name,t,*_ in steps:
+ subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y','-ss',str(t),'-i',str(root.parents[2]/'imports/685d28a1000000001d00c84f.mp4'),'-vf','scale=480:-1','-frames:v','1',str(root/(name+'.jpg'))],check=True)
+r={'id':'xhs-685d28a1000000001d00c84f','title':'猪油蒜香清炒丝瓜','servings':None,'source':'https://www.xiaohongshu.com/explore/685d28a1000000001d00c84f','ingredients':[{'name':n,'amount':None,'unit':'适量'} for n in ['丝瓜','蒜','猪油','盐','开水']],'prep':[steps[0][3]],'cook':[s[3] for s in steps[1:]],'timing':{'prep':[{'min':4,'max':6}],'cook':[{'min':1,'max':2},{'min':2,'max':3},{'min':1,'max':1},{'min':2,'max':2},{'min':1,'max':1}]},'notes':['依据视频画面与烧录字幕整理，未独立转写音频。','原片明确中小火煮约 2 分钟，其余时间为补充估算，总计约 11–15 分钟。','原片未注明重量、人数和盐量；盐在画面中加入，按常见白色调味料及操作判断，字幕未给明确名称。','不额外加入鸡精、味精。'],'illustrated_steps':[{'title':s[2],'text':s[3],'source_time':s[4],'image':s[0]+'.jpg'} for s in steps]}
+(root/'recipe.json').write_text(json.dumps(r,ensure_ascii=False,indent=2))
+css=re.search(r'<style>(.*?)</style>',(root.parent/'pepper-ribs/index.html').read_text(),re.S)[1]+'.step:nth-child(4) img{object-position:50% 65%}'
+def img(n):return 'data:image/jpeg;base64,'+base64.b64encode((root/(n+'.jpg')).read_bytes()).decode()
+cards=''.join(f'<article class="step"><img src="{img(n)}" alt="{title}，原片截图"><div><small>STEP {i:02} · 原片 {tm}</small><h2>{title}</h2><p>{txt}</p></div></article>' for i,(n,t,title,txt,tm) in enumerate(steps,1))
+u='data:application/json;base64,'+base64.b64encode(json.dumps(r,ensure_ascii=False).encode()).decode()
+rows=''.join('<li>'+i['name']+'：适量</li>' for i in r['ingredients'])
+s=f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>猪油蒜香清炒丝瓜 · 小厨房</title><style>{css}</style></head><body><main><div class="label">小厨房 / 视频提炼菜谱</div><h1>猪油蒜香清炒丝瓜<small>预计 11–15 分钟 · 含备菜，估算</small></h1><p class="lead">猪油蒜香打底，炒软后加开水。带一点浓汤，鲜甜出锅。</p><div class="info"><b>一次备齐 · 一项一行</b><ul class="prep-list">{rows}</ul><p class="note">原片未注明用量及人数；白色调味料按画面判断为盐，字幕未明确名称。鸡精、味精不用加。</p><b>多道菜同时做</b><ol><li>先让排骨、咖喱牛排骨等长时间炖菜进入等待阶段。</li><li>期间准备丝瓜与蒜末。</li><li>主菜临近完成再炒丝瓜，趁热一起上桌。</li></ol><p class="note">以上为备菜安排建议；丝瓜是快手菜，优先级建议排在炖菜之后。</p></div><div class="actions"><a href="{u}" download="猪油蒜香清炒丝瓜.json">下载小厨房导入 JSON</a></div><section class="grid">{cards}</section><footer>来源：小红书「大仙爱吃」 · <a href="{r['source']}">原笔记</a><br>图片为原视频截图，文字依据画面与烧录字幕整理，未独立转写音频。中小火约 2 分钟来自原片，其余时间为估算。</footer></main></body></html>'''
+(root/'index.html').write_text(s)

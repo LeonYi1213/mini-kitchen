@@ -1,0 +1,20 @@
+from pathlib import Path
+import json,base64,re,html,subprocess
+root=Path(__file__).resolve().parents[1]/'web/recipes/matcha-basque'
+root.mkdir(parents=True,exist_ok=True)
+note='64315112000000000800fd02'
+steps=[('matcha',76,'70℃水调开抹茶','20 克抹茶粉加 50 克约 70℃热水，搅匀至无明显结块，避免直接用沸水。','00:56–01:10'),('cream',78,'淡奶油温至 40℃，分次混合','170 克、脂肪含量 35% 的淡奶油加热至约 40℃，分两次与抹茶糊混合均匀，放一旁备用。','01:12–01:22'),('cheese',106,'奶酪软化，拌入糖和淀粉','350 克奶油奶酪提前软化。110 克黄蔗糖与 10 克玉米淀粉先混匀，再加入奶酪，用刮刀拌至顺滑；黄蔗糖可换白糖，作者提示会稍微更甜。','01:24–01:53'),('eggs',146,'蛋液分次加，再拌抹茶糊','2 个蛋黄加 3 个全蛋，蛋液总重以 200 克为准。搅散后分 4–5 次加入奶酪，每次拌匀，避免打入太多空气；再混入抹茶奶油糊。','01:54–02:38'),('bake',220,'6 寸模具，240℃烤约 28 分钟','6 寸／15 厘米模具铺烘焙纸。面糊可过筛后入模，挑破表面气泡。烤箱提前预热至 250℃，入炉后降至 240℃，烤约 28 分钟，按自家烤箱上色和状态调整。','02:40–03:59'),('chill',266,'彻底放凉，冷藏过夜','出炉后完全放凉，盖保鲜膜冷藏一晚，第二天脱模切块。热刀切片更整齐；原片没有把一晚换算成固定小时数。','04:00–04:38')]
+for n,t,*_ in steps:
+ subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y','-ss',str(t),'-i',str(root.parents[2]/f'imports/{note}.mp4'),'-vf','scale=480:-1','-frames:v','1',str(root/(n+'.jpg'))],check=True)
+items=[('奶油奶酪',350,'克'),('黄蔗糖（可换白糖）',110,'克'),('玉米淀粉',10,'克'),('抹茶粉',20,'克'),('70℃热水',50,'克'),('淡奶油（35% 脂肪）',170,'克'),('蛋液（2 蛋黄＋3 全蛋，总重）',200,'克')]
+r={'id':'xhs-'+note,'title':'抹茶软心巴斯克','servings':None,'source':'https://www.xiaohongshu.com/explore/'+note,'ingredients':[{'name':n,'amount':a,'unit':u} for n,a,u in items],'prep':['按配方称量；奶油奶酪提前软化，蛋液搅散并称至总重 200 克。','准备 6 寸／15 厘米模具与烘焙纸，烤箱提前预热至 250℃。'],'cook':[s[3] for s in steps],'timing':{'prep':[{'min':5,'max':8},{'min':5,'max':8}],'cook':[{'min':2,'max':3},{'min':3,'max':5},{'min':3,'max':5},{'min':5,'max':8},{'min':30,'max':32,'wait':True},{'min':510,'max':780,'wait':True}]},'notes':['来源：元气八眉菌。依据全片抽帧、操作字幕与片尾两页配方整理，未独立转写音频。','配方用于一个 6 寸／15 厘米蛋糕；作者演示使用加高模具，份数未注明。','蛋液为 2 个蛋黄加 3 个全蛋，总重 200 克，鸡蛋大小不同应称重调整。','黄蔗糖 110 克可用白糖替代，作者提示甜度可能稍高；不擅自减糖。','原片预热 250℃，烤制降至 240℃约 28 分钟；按上色情况调整，不保证所有烤箱时间一致。','原片要求完全放凉后冷藏一晚；时间字段以放凉 30–60 分钟、过夜冷藏 8–12 小时作补充排程估算，非原片精确时长。','预计累计 563–849 分钟，约 9 小时 23 分至 14 小时 9 分；软化与预热额外等待未单独累计，实际操作约 25–42 分钟。','片头手稿来源由作者介绍，未独立核验其出处。'],'illustrated_steps':[{'title':s[2],'text':s[3],'source_time':s[4],'image':s[0]+'.jpg'} for s in steps]}
+(root/'recipe.json').write_text(json.dumps(r,ensure_ascii=False,indent=2))
+css=re.search(r'<style>(.*?)</style>',(root.parent/'pepper-ribs/index.html').read_text(),re.S)[1]+'.step img,.step:nth-child(4) img{object-position:50% 55%}'
+def img(n):return 'data:image/jpeg;base64,'+base64.b64encode((root/(n+'.jpg')).read_bytes()).decode()
+rows=''.join('<li>'+html.escape(n)+'：'+(str(a)+' '+html.escape(u) if a is not None else '适量')+'</li>' for n,a,u in items)
+prep=''.join('<li>'+html.escape(x)+'</li>' for x in r['prep'])
+cards=''.join(f'<article class="step"><img src="{img(n)}" alt="{title}，原视频截图"><div><small>STEP {i:02} · 原片 {time}</small><h2>{title}</h2><p>{text}</p></div></article>' for i,(n,t,title,text,time) in enumerate(steps,1))
+download='data:application/json;base64,'+base64.b64encode(json.dumps(r,ensure_ascii=False).encode()).decode()
+s=f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>抹茶软心巴斯克 · 小厨房</title><style>{css}</style></head><body><main><div class="label">小厨房 / 视频提炼菜谱</div><h1>抹茶软心巴斯克<small>预计 563–849 分钟 · 含放凉与过夜冷藏排程，补充估算</small></h1><p class="lead">浓抹茶与奶酪融合，轻柔拌匀，冷藏过夜后切出软心。</p><p class="note">6 寸／15 厘米配方。实际操作约 25–42 分钟，另需烘烤、放凉与冷藏一晚。手机可左右滑动步骤卡。</p><div class="info"><b>一次备齐 · 一项一行</b><ul class="prep-list">{rows}</ul><p class="note">全部克数来自片尾配方。蛋液按 2 个蛋黄＋3 个全蛋组合称至总重 200 克；淡奶油脂肪含量为 35%。</p><b>备菜顺序</b><ol>{prep}</ol><b>搭配其他菜的顺序建议</b><p>这款需冷藏过夜，建议前一天完成烘烤和放凉后入冰箱。第二天集中处理晚餐热菜，甜点临上桌再脱模切块。总时间中冷藏按 8–12 小时估算，原片只写一晚。</p></div><div class="actions"><a href="{download}" download="抹茶软心巴斯克.json">下载小厨房导入 JSON</a></div><section class="grid">{cards}</section><footer>来源：小红书「元气八眉菌」 · <a href="{r['source']}">原笔记</a><br>图片为原视频截图，文字依据画面及烧录字幕整理，未独立转写音频。原片温时：70℃调抹茶、40℃温奶油、250℃预热、240℃烤约 28 分钟，完全放凉后冷藏一晚。过夜小时数和总耗时是排程估算。</footer></main></body></html>'''
+(root/'index.html').write_text(s)
+print('Built matcha basque recipe')

@@ -1,0 +1,20 @@
+from pathlib import Path
+import json,base64,re,html,subprocess
+root=Path(__file__).resolve().parents[1]/'web/recipes/sizzling-chicken-wings'
+root.mkdir(parents=True,exist_ok=True)
+note='66f0f9b4000000001902f568'
+steps=[('marinate',24,'鸡翅剪半，腌 30 分钟','12 只鸡翅处理干净后对半剪开，加盐 4 克、糖 4 克、盐焗鸡粉 3 克、白胡椒粉 2 克、生抽 15 毫升、淀粉 10 克，抓匀腌 30 分钟。','00:14–00:27'),('sauce',38,'切配菜，调啫啫酱','小洋葱 2 个切块，姜 80 克切块拍松，半头蒜剥好。另将老抽 10 毫升、生抽 15 毫升、蚝油 15 克、柱候酱 15 克拌匀。','00:28–00:40'),('aromatics',46,'砂锅加油，炒香配料','使用可干烧的砂锅，加适量食用油，炒香洋葱、姜、蒜后盛出，保留锅中的油。','00:42–00:49'),('sear',52,'鸡翅煎至两面金黄','用锅中余油煎鸡翅，先让一面煎定型，再翻面，煎至两面金黄。原片提示没经验可先用不粘锅煎好再转入砂锅。','00:50–00:54'),('simmer',60,'配料回锅，加酱焖 5 分钟','倒回洋葱姜蒜，加入啫啫酱翻拌均匀，加盖转小火焖 5 分钟。实际按鸡翅大小、锅具调整，确认鸡肉熟透。','00:54–01:00'),('finish',64,'沿锅盖边淋米酒，拌香菜','沿锅盖边淋适量米酒，开盖加入香菜或小葱，翻拌后出锅。米酒用量未注明，避免淋到明火上。','01:02–01:08')]
+for n,t,*_ in steps:
+ subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y','-ss',str(t),'-i',str(root.parents[2]/f'imports/{note}.mp4'),'-vf','scale=480:-1','-frames:v','1',str(root/(n+'.jpg'))],check=True)
+items=[('鸡翅',12,'只'),('洋葱（小）',2,'个'),('姜',80,'克'),('蒜',0.5,'头'),('盐（腌料）',4,'克'),('糖（腌料）',4,'克'),('盐焗鸡粉（腌料）',3,'克'),('白胡椒粉（腌料）',2,'克'),('生抽（腌料）',15,'毫升'),('淀粉（腌料）',10,'克'),('老抽（啫啫酱）',10,'毫升'),('生抽（啫啫酱）',15,'毫升'),('蚝油（啫啫酱）',15,'克'),('柱候酱（啫啫酱）',15,'克')]+[(n,None,'适量') for n in ['食用油','米酒','香菜（或小葱）']]
+r={'id':'xhs-'+note,'title':'啫啫鸡翅煲','servings':None,'source':'https://www.xiaohongshu.com/explore/'+note,'ingredients':[{'name':n,'amount':a,'unit':u} for n,a,u in items],'prep':['鸡翅处理干净、剪半，加入腌料抓匀。','鸡翅腌制 30 分钟；等待时可切配菜、调酱。',steps[1][3]],'cook':[s[3] for s in steps[2:]],'timing':{'prep':[{'min':5,'max':8},{'min':30,'max':30,'wait':True},{'min':5,'max':8}],'cook':[{'min':3,'max':5},{'min':6,'max':10},{'min':5,'max':5,'wait':True},{'min':1,'max':2}]},'notes':['来源：Iris的食语日记。依据全片抽帧、关键配方画面与烧录字幕整理，未独立转写音频。','原片配方为 12 只鸡翅，人数未注明；腌料与啫啫酱各含生抽 15 毫升，分别准备。','原片明确腌制 30 分钟、加盖小火焖 5 分钟，煎制时间未注明，需以实际熟度调整。','预计累计 55–68 分钟为补充估算；切配菜和调酱可在腌制时完成，实际可缩短约 5–8 分钟。','原片要求可干烧砂锅；没有煎制经验可用不粘锅先煎鸡翅再转入砂锅。','原片未额外加水；控小火并留意锅底，不能将 5 分钟理解为不需检查熟度。','鸡肉充分熟透、米酒避免淋到明火上为补充建议。'],'illustrated_steps':[{'title':s[2],'text':s[3],'source_time':s[4],'image':s[0]+'.jpg'} for s in steps]}
+(root/'recipe.json').write_text(json.dumps(r,ensure_ascii=False,indent=2))
+css=re.search(r'<style>(.*?)</style>',(root.parent/'pepper-ribs/index.html').read_text(),re.S)[1]+'.step img,.step:nth-child(4) img{object-position:50% 55%}'
+def img(n):return 'data:image/jpeg;base64,'+base64.b64encode((root/(n+'.jpg')).read_bytes()).decode()
+rows=''.join('<li>'+html.escape(n)+'：'+(str(a)+' '+html.escape(u) if a is not None else '适量')+'</li>' for n,a,u in items)
+prep=''.join('<li>'+html.escape(x)+'</li>' for x in r['prep'])
+cards=''.join(f'<article class="step"><img src="{img(n)}" alt="{title}，原视频截图"><div><small>STEP {i:02} · 原片 {time}</small><h2>{title}</h2><p>{text}</p></div></article>' for i,(n,t,title,text,time) in enumerate(steps,1))
+download='data:application/json;base64,'+base64.b64encode(json.dumps(r,ensure_ascii=False).encode()).decode()
+s=f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>啫啫鸡翅煲 · 小厨房</title><style>{css}</style></head><body><main><div class="label">小厨房 / 视频提炼菜谱</div><h1>啫啫鸡翅煲<small>预计 55–68 分钟 · 含备菜、腌制，按步骤累计，补充估算</small></h1><p class="lead">姜蒜洋葱炒香，鸡翅两面煎黄，拌酱小火焖出大排档风味。</p><p class="note">12 只鸡翅配方。腌制时同步切配、调酱，可缩短约 5–8 分钟。手机可左右滑动步骤卡。</p><div class="info"><b>一次备齐 · 一项一行</b><ul class="prep-list">{rows}</ul><p class="note">腌料和啫啫酱分开准备；两份生抽各 15 毫升。用可干烧砂锅，普通砂锅请先核对使用说明。</p><b>备菜顺序</b><ol>{prep}</ol><b>搭配其他菜的顺序建议</b><p>先腌鸡翅，利用 30 分钟等待切配本菜与其他菜、调好酱。接近开饭开始炒配料、煎鸡翅；小火焖时仍需注意锅底，快手青菜最后炒。</p></div><div class="actions"><a href="{download}" download="啫啫鸡翅煲.json">下载小厨房导入 JSON</a></div><section class="grid">{cards}</section><footer>来源：小红书「Iris的食语日记」 · <a href="{r['source']}">原笔记</a><br>图片为原视频截图，文字依据画面及烧录字幕整理，未独立转写音频。总耗时为估算；腌 30 分钟、小火焖 5 分钟为原片时间。鸡肉熟透及加酒避开明火为补充建议。</footer></main></body></html>'''
+(root/'index.html').write_text(s)
+print('Built sizzling wings recipe')

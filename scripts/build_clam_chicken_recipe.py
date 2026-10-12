@@ -1,0 +1,20 @@
+from pathlib import Path
+import json,base64,re,html,subprocess
+root=Path(__file__).resolve().parents[1]/'web/recipes/scallion-clam-chicken-soup'
+root.mkdir(parents=True,exist_ok=True)
+note='69a3f81d000000001503261c'
+steps=[('prep',44,'盐腌鸡腿，准备盐葱','鸡腿排抹盐和黑胡椒，冷藏腌至少 30 分钟，作者推荐隔夜。香葱切末，加盐拌匀腌 15 分钟；白洋葱切丝，大蒜去皮，蛤蜊吐沙后洗净。','00:10–00:55'),('chicken',60,'鸡皮朝下，小火煎香','锅中不放油，鸡皮朝下小火煎出油脂，皮呈金黄色后盛出，剪成大块；此时还需后续煮熟。','00:56–01:07'),('onion',74,'用鸡油炒洋葱和蒜','利用锅中鸡油，下白洋葱丝和蒜头，中火慢炒至焦黄、香味出来。','01:08–01:17'),('soup',84,'鸡肉回锅，加开水煮','鸡腿块回锅，加入开水，煮约 10 分钟至鸡肉熟透。水量原片未注明，按锅具及所需汤量调整。','01:18–01:27'),('clams',94,'蛤蜊最后放，加盖煮','加入洗净的蛤蜊，加盖煮约 3 分钟至开口、充分熟透。不要久煮；煮后未开口的蛤蜊弃用为补充建议。','01:28–01:39'),('finish',109,'砂锅炒盐葱，冲汤焖香','砂锅加适量油，炒香腌好的葱末，将鸡汤、鸡肉和蛤蜊倒入，撒白胡椒，加盖焖约 1 分钟。作者不再额外加盐，盐味来自前面的腌制。','01:40–01:56')]
+for n,t,*_ in steps:
+ subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y','-ss',str(t),'-i',str(root.parents[2]/f'imports/{note}.mp4'),'-vf','scale=480:-1','-frames:v','1',str(root/(n+'.jpg'))],check=True)
+items=[('鸡腿排',2,'块'),('蛤蜊',500,'克'),('白洋葱',0.5,'颗'),('香葱',60,'克'),('大蒜',4,'瓣')]+[(n,None,'适量') for n in ['盐','黑胡椒','白胡椒','食用油','水']]
+r={'id':'xhs-'+note,'title':'盐葱蛤蜊鸡汤','servings':'2–3','source':'https://www.xiaohongshu.com/explore/'+note,'ingredients':[{'name':n,'amount':a,'unit':u} for n,a,u in items],'prep':['鸡腿排抹盐、黑胡椒，冷藏腌至少 30 分钟，推荐隔夜。','蛤蜊吐沙洗净；白洋葱切丝，大蒜去皮，香葱切末。','香葱加盐拌匀，腌 15 分钟；可与鸡腿腌制同时进行。'],'cook':[s[3] for s in steps[1:]],'timing':{'prep':[{'min':30,'max':30,'wait':True},{'min':5,'max':8},{'min':15,'max':15,'wait':True}],'cook':[{'min':6,'max':10},{'min':4,'max':6},{'min':10,'max':10,'wait':True},{'min':3,'max':3},{'min':3,'max':5}]},'notes':['来源：是条不是条。依据全片抽帧、烧录字幕与笔记正文整理，未独立转写音频。','原片为 2–3 人份，鸡腿排 2 块、蛤蜊 500 克、白洋葱半颗、香葱 60 克、大蒜 4 瓣；其余用量显示适量。','鸡腿冷藏腌至少半小时、推荐隔夜为视频说明；正文采用隔夜版本。香葱盐腌 15 分钟。','预计步骤累计 76–87 分钟，采用鸡腿最低腌制时间；盐葱腌制和切配可与其重叠。不含蛤蜊吐沙和额外隔夜等待。','已提前完成鸡腿腌制、蛤蜊吐沙时，当天约 35–45 分钟为并行备菜估算；小厨房显示步骤累计时间。','原片煮鸡约 10 分钟、蛤蜊约 3 分钟、最后焖 1 分钟；应按鸡肉大小和实际熟度调整。','原片吐沙加盐及少许油，未注明盐度与时长；不要将处理蛤蜊的水倒入汤里。','鸡肉熟透、煮后未开口蛤蜊弃用为补充建议。'],'illustrated_steps':[{'title':s[2],'text':s[3],'source_time':s[4],'image':s[0]+'.jpg'} for s in steps]}
+(root/'recipe.json').write_text(json.dumps(r,ensure_ascii=False,indent=2))
+css=re.search(r'<style>(.*?)</style>',(root.parent/'pepper-ribs/index.html').read_text(),re.S)[1]+'.step img,.step:nth-child(4) img{object-position:50% 55%}'
+def img(n):return 'data:image/jpeg;base64,'+base64.b64encode((root/(n+'.jpg')).read_bytes()).decode()
+rows=''.join('<li>'+html.escape(n)+'：'+(str(a)+' '+html.escape(u) if a is not None else '适量')+'</li>' for n,a,u in items)
+prep=''.join('<li>'+html.escape(x)+'</li>' for x in r['prep'])
+cards=''.join(f'<article class="step"><img src="{img(n)}" alt="{title}，原视频截图"><div><small>STEP {i:02} · 原片 {time}</small><h2>{title}</h2><p>{text}</p></div></article>' for i,(n,t,title,text,time) in enumerate(steps,1))
+download='data:application/json;base64,'+base64.b64encode(json.dumps(r,ensure_ascii=False).encode()).decode()
+s=f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>盐葱蛤蜊鸡汤 · 小厨房</title><style>{css}</style></head><body><main><div class="label">小厨房 / 视频提炼菜谱</div><h1>盐葱蛤蜊鸡汤<small>预计 76–87 分钟 · 步骤累计，含最低腌制时间，补充估算</small></h1><p class="lead">鸡皮煎香，洋葱炒甜，蛤蜊最后下锅，盐葱热油激香。</p><p class="note">2–3 人份。鸡腿提前腌好、蛤蜊吐沙完成后，当天约 35–45 分钟；吐沙和隔夜等待另计。手机可左右滑动步骤卡。</p><div class="info"><b>一次备齐 · 一项一行</b><ul class="prep-list">{rows}</ul><p class="note">盐用于腌鸡和盐葱，原片收尾不再加盐。煎鸡不加油，炒葱另用食用油；未知用量显示适量。</p><b>备菜顺序</b><ol>{prep}</ol><b>搭配其他菜的顺序建议</b><p>前晚先腌鸡腿，当天提前处理蛤蜊。备菜时先腌盐葱，再切其他菜；鸡汤煮制期间准备其他菜的调味。接近开饭才下蛤蜊并完成炒葱冲汤，避免海鲜反复久煮。</p></div><div class="actions"><a href="{download}" download="盐葱蛤蜊鸡汤.json">下载小厨房导入 JSON</a></div><section class="grid">{cards}</section><footer>来源：小红书「是条不是条」 · <a href="{r['source']}">原笔记</a><br>图片为原视频截图，文字依据画面及烧录字幕整理，未独立转写音频。时间估算区分累计步骤与并行准备。图片、文字依据视频画面字幕及正文；鸡肉熟透与未开口蛤蜊弃用为补充建议。</footer></main></body></html>'''
+(root/'index.html').write_text(s)
+print('Built clam chicken soup recipe')

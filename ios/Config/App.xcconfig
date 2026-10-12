@@ -1,0 +1,3 @@
+IMPORT_SERVICE_URL =
+IMPORT_SERVICE_TOKEN =
+#include? "Local.xcconfig"
