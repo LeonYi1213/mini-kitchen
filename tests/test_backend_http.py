@@ -61,3 +61,15 @@ class HTTPTests(BackendTests):
         for _ in range(3):
             self.assertEqual(self.request('/imports', 'POST', {'url': 'https://xhslink.cn/o/test'})[0], 202)
         self.assertEqual(self.request('/imports', 'POST', {'url': 'https://xhslink.cn/o/test'})[0], 429)
+
+    def test_images_require_auth_and_reject_traversal(self):
+        reference = 'assets/xhs-' + 'a' * 24 + '/' + 'b' * 32 + '/frame-001.jpg'
+        path = server.STORAGE / reference
+        path.parent.mkdir(parents=True)
+        path.write_bytes(b'jpeg-image')
+        self.assertEqual(self.request('/' + reference, token='wrong')[0], 401)
+        req = urllib.request.Request(self.base + '/' + reference, headers={'Authorization': 'Bearer local-test-token'})
+        with urllib.request.urlopen(req) as response:
+            self.assertEqual(response.headers['Content-Type'], 'image/jpeg')
+            self.assertEqual(response.read(), b'jpeg-image')
+        self.assertEqual(self.request('/assets/../../jobs.sqlite')[0], 404)

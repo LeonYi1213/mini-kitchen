@@ -80,8 +80,13 @@ struct ImportView: View {
             }
             Text("备菜清单").font(.headline)
             IngredientsView(recipe: recipe)
-            ForEach(Array(recipe.steps.enumerated()), id: \.offset) { index, text in Text("\(index + 1). \(text)").font(.subheadline).lineSpacing(5) }
-            PrimaryButton(title: model.duplicate ? "查看已有菜谱" : "收藏这道菜") {
+            if model.updating {
+                Text("已为这道菜补齐图文。更新后，旧的备菜勾选和烹饪进度将重置。").font(.subheadline).foregroundStyle(KitchenStyle.muted)
+            }
+            RecipeSteps(recipe: recipe, preparation: true)
+            RecipeSteps(recipe: recipe, preparation: false)
+            RecipeNotes(recipe: recipe)
+            PrimaryButton(title: model.duplicate ? "查看已有菜谱" : (model.updating ? "更新为图文菜谱" : "收藏这道菜")) {
                 saved = model.duplicate ? recipe : store.add(recipe)
                 model.duplicate = true
             }

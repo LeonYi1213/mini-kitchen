@@ -60,10 +60,24 @@ import SwiftUI
         save()
     }
     func add(_ recipe: Recipe) -> Recipe {
-        if let existing = recipes.first(where: { $0.id == recipe.id || $0.source == recipe.source }) { return existing }
+        if let existing = recipes.first(where: { $0.id == recipe.id || $0.source == recipe.source }) {
+            guard recipe.valid, recipe.upgrades(existing), meal.imported.contains(where: { $0.id == existing.id }) else { return existing }
+            installUpdate(recipe)
+            publish(recipe, key: "recipe.\(recipe.id)")
+            publish(Set<Int>(), key: "checks.\(meal.id).\(recipe.id)")
+            publish(StepSnapshot(step: 0, timer: nil), key: "steps.\(meal.id).\(recipe.id)")
+            save(); return recipe
+        }
         guard recipe.valid else { error = "菜谱信息不完整，请重新生成。"; return recipe }
         recipes.insert(recipe, at: 0); meal.imported.insert(recipe, at: 0)
         publish(recipe, key: "recipe.\(recipe.id)"); save(); return recipe
+    }
+    private func installUpdate(_ recipe: Recipe) {
+        guard let index = recipes.firstIndex(where: { $0.id == recipe.id }),
+              let imported = meal.imported.firstIndex(where: { $0.id == recipe.id }) else { return }
+        recipes[index] = recipe; meal.imported[imported] = recipe
+        // Re-generated steps cannot inherit numeric indexes from the older recipe.
+        meal.progress[recipe.id] = DishProgress()
     }
     private struct MealHeader: Codable { var id: String; var selected: [String] }
     private struct StepSnapshot: Codable { var step: Int; var timer: CookingTimer? }
@@ -86,9 +100,12 @@ import SwiftUI
     }
     private func mergeCloud() {
         for key in cloud.dictionaryRepresentation.keys where key.hasPrefix("recipe.") {
-            if let recipe = incoming(Recipe.self, key: key), recipe.valid,
-               !recipes.contains(where: { $0.id == recipe.id }) {
-                recipes.insert(recipe, at: 0); meal.imported.insert(recipe, at: 0)
+            if let recipe = incoming(Recipe.self, key: key), recipe.valid {
+                if let old = recipes.first(where: { $0.id == recipe.id }) {
+                    if recipe.upgrades(old) { installUpdate(recipe) }
+                } else {
+                    recipes.insert(recipe, at: 0); meal.imported.insert(recipe, at: 0)
+                }
             }
         }
         if let header = incoming(MealHeader.self, key: "meal") {

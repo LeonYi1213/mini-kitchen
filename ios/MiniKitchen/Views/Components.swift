@@ -20,16 +20,26 @@ struct PrimaryButton: View {
 struct RecipePhoto: View {
     let name: String?
     var height: CGFloat = 160
+    @State private var importedImage: UIImage?
     var body: some View {
         GeometryReader { proxy in
             Group {
                 if let name, let url = Bundle.main.url(forResource: name, withExtension: nil), let image = UIImage(contentsOfFile: url.path) {
                     Image(uiImage: image).resizable().scaledToFill()
+                } else if let importedImage {
+                    Image(uiImage: importedImage).resizable().scaledToFill()
                 } else if let name, let url = URL(string: name), url.scheme == "https" {
                     AsyncImage(url: url) { image in image.resizable().scaledToFill() } placeholder: { placeholder }
                 } else { placeholder }
             }.frame(width: proxy.size.width, height: height).clipped()
         }.frame(height: height).accessibilityHidden(true)
+            .task(id: name) {
+                importedImage = nil
+                guard let name, RecipeAssets.localURL(name) != nil else { return }
+                if let data = try? await ImportService().imageData(name), !Task.isCancelled {
+                    importedImage = UIImage(data: data)
+                }
+            }
     }
     private var placeholder: some View {
         Rectangle().fill(KitchenStyle.pale).overlay { Image(systemName: "fork.knife").font(.largeTitle).foregroundStyle(KitchenStyle.muted) }

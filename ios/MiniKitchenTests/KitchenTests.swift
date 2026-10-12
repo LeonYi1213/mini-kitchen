@@ -12,6 +12,30 @@ final class KitchenTests: XCTestCase {
         XCTAssertFalse(ImportService.allowedEndpoint(URL(string: "http://localhost:18080")!))
         #endif
     }
+    func testImportedRecipeUpgradeAndImageReferences() throws {
+        let old = recipe("xhs-" + String(repeating: "a", count: 24), wait: 30)
+        var updated = old
+        let image = "assets/\(old.id)/\(String(repeating: "b", count: 32))/frame-001.jpg"
+        updated.cover = image
+        updated.illustrated_steps = updated.cook.map { IllustratedStep(title: "操作", text: $0, source_time: "约 00:10", image: image) }
+        updated.notes = ["用时为估算。"]
+        updated.format_version = 3
+        XCTAssertTrue(updated.upgrades(old))
+        XCTAssertFalse(old.upgrades(updated))
+        XCTAssertFalse(updated.upgrades(updated))
+        XCTAssertFalse(updated.needsFormatUpgrade)
+        var previous = updated; previous.format_version = 2
+        XCTAssertTrue(previous.needsFormatUpgrade)
+        XCTAssertTrue(updated.upgrades(previous))
+        let restored = try JSONDecoder().decode(Recipe.self, from: JSONEncoder().encode(updated))
+        XCTAssertEqual(restored.notes, updated.notes)
+        XCTAssertEqual(restored.image(at: 1), image)
+        XCTAssertNotNil(RecipeAssets.localURL(image))
+        XCTAssertNil(RecipeAssets.localURL("assets/../../kitchen.json"))
+        XCTAssertNil(RecipeAssets.localURL("https://evil.example/frame-001.jpg"))
+        updated.illustrated_steps?[0].text = "不相关的步骤"
+        XCTAssertFalse(updated.hasIllustratedFormat)
+    }
     private func recipe(_ id: String, wait: Int) -> Recipe {
         Recipe(id: id, title: id, source: "https://www.xiaohongshu.com/explore/" + id,
                ingredients: [Ingredient(name: "水", unit: "适量")], prep: ["清洗"], cook: ["炖煮", "出锅"],
@@ -58,6 +82,8 @@ final class KitchenTests: XCTestCase {
     }
     func testUnknownAmountAndInvalidTiming() {
         XCTAssertEqual(Ingredient(name: "盐", unit: "克").quantity, "适量")
+        XCTAssertEqual(Ingredient(name: "酒", unit: "适量（可选）").quantity, "适量（可选）")
+        XCTAssertEqual(Ingredient(name: "水", unit: "适量（炖煮用）").quantity, "适量（炖煮用）")
         var r = recipe("a", wait: 10); XCTAssertTrue(r.valid)
         r.timing?.cook = []; XCTAssertFalse(r.valid)
     }

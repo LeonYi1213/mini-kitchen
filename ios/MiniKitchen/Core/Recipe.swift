@@ -5,7 +5,9 @@ struct Ingredient: Codable, Hashable {
     var amount: Double?
     var unit: String
     var quantity: String {
-        guard let amount else { return "适量" }
+        guard let amount else {
+            return unit.contains("适量") || unit.contains("未注明") ? unit : "适量"
+        }
         return amount.formatted(.number.precision(.fractionLength(0...2))) + " " + unit
     }
 }
@@ -35,6 +37,19 @@ struct Recipe: Codable, Identifiable, Hashable {
     var timing: RecipeTiming?
     var illustrated_steps: [IllustratedStep]?
     var cover: String?
+    var notes: [String]?
+    var format_version: Int?
+    var hasIllustratedFormat: Bool {
+        guard let cover, !cover.isEmpty, let illustrated_steps else { return false }
+        return cook.allSatisfy { text in illustrated_steps.contains { $0.text == text && !($0.image ?? "").isEmpty } }
+    }
+    var needsFormatUpgrade: Bool {
+        !hasIllustratedFormat || (cover?.hasPrefix("assets/") == true && (format_version ?? 0) < 3)
+    }
+    func upgrades(_ old: Recipe) -> Bool {
+        id == old.id && hasIllustratedFormat &&
+        (!old.hasIllustratedFormat || (format_version ?? 0) > (old.format_version ?? 0))
+    }
     var steps: [String] { prep + cook }
     func time(at index: Int) -> StepTime? {
         let values = (timing?.prep ?? []) + (timing?.cook ?? [])

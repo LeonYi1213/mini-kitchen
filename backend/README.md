@@ -31,7 +31,7 @@
 
 本地 SQLite 持久化任务；重启时将中断任务标失败，供用户重试。单 worker、最多 3 个排队/运行任务，限制重复模型消耗。读取原视频后优先查找已导入 ID，重复笔记不调用模型。
 
-临时视频与抽帧自动清理；任务结果保存在 SQLite。当前生成内容为结构化文本菜谱，没有把新抽帧持久化为图文资源；原生内置 18 道菜使用已打包真实配图。部署网络需允许小红书、视频 CDN 与配置的模型服务。
+临时视频与未选中抽帧自动清理；任务结果保存在 SQLite。API 与原生内置菜谱使用相同图文结构：`cover`、逐项食材、`prep` / `cook`、对应 `timing`、`notes` 与 `illustrated_steps`。模型选择真实视频帧编号和食物/操作中心，服务端校验后裁成 8:5 横图并持久化封面及每个做法步骤的配图，并从 `cook` 原文生成图片关联，避免文字差异导致图片不显示。图片通过鉴权的 `GET /assets/...` 返回，iOS 下载到 Application Support，可离线查看；云同步仅保存图片引用。格式版本或图片缺失时重新生成，旧纯文字缓存不再直接返回。部署网络需允许小红书、视频 CDN 与配置的模型服务。
 
 Mac 本地已复用钥匙串中的 Kimi API 配置并验证图片输入与 JSON 输出；完整小红书视频导入尚未端到端验收。参见 [Mac 本地开发](LOCAL_MAC.md)。
 
@@ -42,3 +42,13 @@ Mac 本地已复用钥匙串中的 Kimi API 配置并验证图片输入与 JSON 
 Mac 的 Chromium 不再默认使用 Linux 路径。项目目录内执行 `npm install --no-save playwright` 与 `npx playwright install chromium` 后使用 Playwright 自带浏览器；或显式设置 `CHROMIUM_PATH`。仍需安装 ffmpeg/ffprobe。
 
 Kimi Key 不填入 Xcode 配置。iOS 的 `IMPORT_SERVICE_URL` 指向这个菜谱服务，`IMPORT_SERVICE_TOKEN` 是私有服务令牌，不是 Kimi Key。本机 Kimi 的图片输入与 JSON 输出已通过真实请求验证。
+
+## 图文格式回归
+
+```sh
+KITCHEN_RUN_HTTP_TESTS=1 .venv/bin/python -m unittest discover -s tests
+```
+
+`backend/recipe_format.py` 定义图文格式与抽帧引用校验。模型仍使用原有 `KIMI_MODEL` 和地址；格式不合格时最多再请求一次纠正，禁止用占位图或编造步骤补齐。已收藏的旧纯文字菜谱重新导入后，可在核对页选择“更新为图文菜谱”，保持相同 ID，不重复收藏。步骤变化后重置旧的步骤索引及勾选。
+
+2026-10-13 使用用户提供的牛肋条烩饭分享链接，以本机 `kimi-k3` 完成真实图文导入验证。原视频约 197 秒，未独立转写音频。抽帧位置标为约数；模型提取内容仍保留用量与耗时的不确定性。

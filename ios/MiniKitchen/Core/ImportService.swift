@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 struct ImportJob: Decodable {
     let id: String
@@ -59,6 +60,28 @@ struct ImportService {
         authorize(&request)
         _ = try? await URLSession.shared.data(for: request)
     }
+    func cacheImages(for recipe: Recipe) async throws {
+        let references = Set(([recipe.cover] + (recipe.illustrated_steps ?? []).map(\.image)).compactMap { $0 })
+        for reference in references where reference.hasPrefix("assets/") {
+            _ = try await imageData(reference)
+        }
+    }
+    func imageData(_ reference: String) async throws -> Data {
+        guard let file = RecipeAssets.localURL(reference) else { throw ImportFailure.incomplete }
+        if let data = try? Data(contentsOf: file), UIImage(data: data) != nil { return data }
+        guard let baseURL, Self.allowedEndpoint(baseURL) else { throw ImportFailure.unavailable }
+        var request = URLRequest(url: baseURL.appendingPathComponent(reference))
+        request.timeoutInterval = 30
+        authorize(&request)
+        let (data, response) = try await URLSession.shared.data(for: request)
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200,
+              response.mimeType == "image/jpeg", data.count <= 10_000_000,
+              UIImage(data: data) != nil else { throw ImportFailure.incomplete }
+        try Task.checkCancellation()
+        try FileManager.default.createDirectory(at: file.deletingLastPathComponent(), withIntermediateDirectories: true)
+        try data.write(to: file, options: .atomic)
+        return data
+    }
     private func authorize(_ request: inout URLRequest) {
         if let token = Bundle.main.object(forInfoDictionaryKey: "ImportServiceToken") as? String, !token.isEmpty {
             request.setValue("Bearer " + token, forHTTPHeaderField: "Authorization")
@@ -72,6 +95,14 @@ struct ImportService {
         return try JSONDecoder().decode(ImportJob.self, from: data)
     }
 }
+enum RecipeAssets {
+    static func localURL(_ reference: String) -> URL? {
+        guard reference.range(of: #"^assets/xhs-[a-f0-9]{24}/[a-f0-9]{32}/frame-[0-9]{3}\.jpg$"#, options: .regularExpression) != nil else { return nil }
+        return FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+            .appendingPathComponent("RecipeImages").appendingPathComponent(reference)
+    }
+}
+
 @MainActor final class ImportModel: ObservableObject {
     enum Phase { case input, working, review, failure }
     @Published var phase: Phase = .input
@@ -80,6 +111,7 @@ struct ImportService {
     @Published var draft: Recipe?
     @Published var message = ""
     @Published var duplicate = false
+    @Published var updating = false
     private var task: Task<Void, Never>?
     private var generation = UUID()
     private var jobID: String?
@@ -87,11 +119,12 @@ struct ImportService {
     func start(existing: [Recipe]) {
         guard let url = ImportService.link(in: text) else { message = ImportFailure.invalidLink.localizedDescription; return }
         cancel()
-        if let recipe = existing.first(where: { $0.source == url.absoluteString || ($0.id.hasPrefix("xhs-") && url.pathComponents.contains(String($0.id.dropFirst(4)))) }) {
+        updating = false
+        if let recipe = existing.first(where: { !$0.needsFormatUpgrade && ($0.source == url.absoluteString || ($0.id.hasPrefix("xhs-") && url.pathComponents.contains(String($0.id.dropFirst(4))))) }) {
             draft = recipe; duplicate = true; stages = 4; phase = .review; return
         }
         generation = UUID(); let run = generation
-        phase = .working; stages = 0; message = ""; duplicate = false
+        phase = .working; stages = 0; message = ""; duplicate = false; updating = false
         task = Task {
             do {
                 var job = try await service.create(url)
@@ -104,8 +137,14 @@ struct ImportService {
                     stages = max(stages, min(3, max(0, job.completedStages)))
                     if job.status == "completed" {
                         guard let recipe = job.recipe, recipe.valid else { throw ImportFailure.incomplete }
-                        draft = existing.first { $0.id == recipe.id || $0.source == recipe.source } ?? recipe
-                        duplicate = existing.contains { $0.id == recipe.id || $0.source == recipe.source }
+                        let old = existing.first { $0.id == recipe.id || $0.source == recipe.source }
+                        updating = old.map { recipe.upgrades($0) } ?? false
+                        let selected = updating ? recipe : (old ?? recipe)
+                        try await service.cacheImages(for: selected)
+                        try Task.checkCancellation()
+                        guard run == generation else { return }
+                        draft = selected
+                        duplicate = old != nil && !updating
                         stages = 4; phase = .review; jobID = nil; return
                     }
                     if job.status == "failed" || job.status == "cancelled" { throw ImportFailure.unreadable }

@@ -68,21 +68,9 @@ struct RecipeDetail: View {
                 }.pickerStyle(.segmented)
                 if section == "食材" { IngredientsView(recipe: recipe) }
                 else {
-                    let steps = section == "备菜" ? recipe.prep : recipe.cook
-                    ForEach(Array(steps.enumerated()), id: \.offset) { index, text in
-                        let absolute = section == "备菜" ? index : recipe.prep.count + index
-                        VStack(alignment: .leading, spacing: 12) {
-                            HStack {
-                                Text("\(index + 1)").font(.title2.bold()); Spacer()
-                                if let time = recipe.time(at: absolute) { Text(time.label).font(.caption).foregroundStyle(KitchenStyle.muted) }
-                            }
-                            if section == "做法", let image = recipe.illustrated_steps?.first(where: { $0.text == text })?.image {
-                                RecipePhoto(name: image, height: 190).clipShape(RoundedRectangle(cornerRadius: 12))
-                            }
-                            Text(text).font(.body).lineSpacing(6)
-                        }.padding(18).frame(maxWidth: .infinity, alignment: .leading).background(.white, in: RoundedRectangle(cornerRadius: 18))
-                    }
+                    RecipeSteps(recipe: recipe, preparation: section == "备菜", showHeading: false)
                 }
+                RecipeNotes(recipe: recipe)
                 if let source = URL(string: recipe.source), source.scheme == "https" { Link("查看原笔记 ↗", destination: source).font(.caption) }
             }.padding(20).frame(maxWidth: 850)
         }.kitchenPage().navigationTitle("菜谱详情").navigationBarTitleDisplayMode(.inline)
@@ -90,5 +78,47 @@ struct RecipeDetail: View {
                 PrimaryButton(title: store.meal.selected.contains(recipe.id) ? "已加入这一餐 · 移除" : "加入这一餐") { store.toggle(recipe) }
                     .padding(16).background(KitchenStyle.background)
             }
+    }
+}
+
+struct RecipeSteps: View {
+    let recipe: Recipe
+    let preparation: Bool
+    var showHeading = true
+    var body: some View {
+        if showHeading { Text(preparation ? "备菜" : "做法").font(.headline) }
+        let steps = preparation ? recipe.prep : recipe.cook
+        ForEach(Array(steps.enumerated()), id: \.offset) { index, text in
+            let absolute = preparation ? index : recipe.prep.count + index
+            let illustration = recipe.illustrated_steps?.first { $0.text == text }
+            VStack(alignment: .leading, spacing: 12) {
+                HStack {
+                    Text("\(index + 1)").font(.title2.bold())
+                    if let illustration { Text(illustration.title).font(.headline) }
+                    Spacer()
+                    if let time = recipe.time(at: absolute) { Text(time.label).font(.caption).foregroundStyle(KitchenStyle.muted) }
+                }
+                if let image = illustration?.image {
+                    RecipePhoto(name: image, height: 190).clipShape(RoundedRectangle(cornerRadius: 12))
+                }
+                Text(text).font(.body).lineSpacing(6)
+                if let time = illustration?.source_time {
+                    Text("视频 \(time)").font(.caption).foregroundStyle(KitchenStyle.muted)
+                }
+            }.padding(18).frame(maxWidth: .infinity, alignment: .leading).background(.white, in: RoundedRectangle(cornerRadius: 18))
+        }
+    }
+}
+struct RecipeNotes: View {
+    let recipe: Recipe
+    var body: some View {
+        if let notes = recipe.notes, !notes.isEmpty {
+            VStack(alignment: .leading, spacing: 8) {
+                Text("用量与时间说明").font(.headline)
+                ForEach(Array(notes.enumerated()), id: \.offset) { _, note in
+                    Text(note).font(.caption).foregroundStyle(KitchenStyle.muted)
+                }
+            }
+        }
     }
 }
