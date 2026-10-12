@@ -62,6 +62,15 @@ class BackendTests(unittest.TestCase):
         self.assertNotIn('recipe', server.read('a'))
         model.assert_not_called()
 
+    def test_network_restriction_is_explained_without_leaking_reader_output(self):
+        server.write({'id': 'a', 'status': 'queued', 'completedStages': 0})
+        error = server.subprocess.CalledProcessError(1, ['reader'], stderr=b'XHS_NETWORK_RESTRICTED secret-token')
+        with patch.object(server.subprocess, 'run', side_effect=error), patch.object(server.urllib.request, 'urlopen') as model:
+            server.run('a', 'https://xhslink.cn/o/test')
+        self.assertIn('300012', server.read('a')['message'])
+        self.assertNotIn('secret', server.read('a')['message'])
+        model.assert_not_called()
+
     def test_real_worker_replaces_legacy_cache_and_persists_illustrations(self):
         note_id = 'a' * 24
         legacy = {'id': 'xhs-' + note_id, 'title': '旧版', 'cook': ['旧步骤']}

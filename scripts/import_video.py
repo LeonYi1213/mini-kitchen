@@ -61,6 +61,8 @@ def browser_download(share, out):
     result = subprocess.run(['node', str(helper)], input=url, text=True,
                             capture_output=True, timeout=65)
     if result.returncode:
+        if 'XHS_NETWORK_RESTRICTED' in result.stderr:
+            raise ValueError('XHS_NETWORK_RESTRICTED')
         raise ValueError('正常浏览器也未取得公开视频；请检查浏览器依赖或使用已授权的视频文件。')
     data = json.loads(result.stdout)
     streams = data['note']['video']['media']['stream']

@@ -185,11 +185,14 @@ def run(job_id, url):
             asset_folder = None  # Published images survive temporary video cleanup.
     except InterruptedError:
         pass
-    except Exception:
+    except Exception as error:
         # Never return source tokens, provider errors or API keys to clients/logs.
         try:
             job = read(job_id)
-            stage(job_id, job['completedStages'], status='failed', message='暂时无法读取或整理这篇笔记，请重试。')
+            message = '暂时无法读取或整理这篇笔记，请重试。'
+            if isinstance(error, subprocess.CalledProcessError) and b'XHS_NETWORK_RESTRICTED' in (error.stderr or b''):
+                message = '小红书暂时限制了服务器网络访问（300012），未能读取笔记；当前无法通过此链接生成菜谱。'
+            stage(job_id, job['completedStages'], status='failed', message=message)
         except InterruptedError:
             pass
     finally:
