@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "build": "3",
+  "app_id": "6822363240",
+  "build_id": "68a13e50-f9f6-4357-b758-f65d54021ce5",
+  "processingState": "VALID",
+  "internalBuildState": "IN_BETA_TESTING",
+  "unit_tests": 11,
+  "ui_tests": 1,
+  "python_local": 46,
+  "python_cloud": 46,
+  "video_upload": "PASS",
+  "video_cache_reuse": "PASS",
+  "downloaded_images": 9,
+  "physical_device_acceptance": "PENDING_USER"
+}
