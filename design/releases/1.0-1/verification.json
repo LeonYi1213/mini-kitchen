@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "build": "1",
+  "bundle": "com.minikitchen.app",
+  "archive": "ARCHIVE SUCCEEDED",
+  "xctest": {
+    "passed": 10
+  },
+  "python_local": {
+    "passed": 37
+  },
+  "python_cloud": {
+    "passed": 37
+  },
+  "https": "https://bubufriends.cn/minikitchen-api/",
+  "unauthenticated_status": 401,
+  "authenticated_missing_status": 404,
+  "cloud_model": {
+    "name": "kimi-k3",
+    "image_and_json": "PASS"
+  },
+  "xhs_cloud": {
+    "status": "BLOCKED_BY_SOURCE",
+    "code": "300012"
+  },
+  "testflight": {
+    "processingState": "VALID",
+    "internalBuildState": "IN_BETA_TESTING",
+    "testerState": "INVITED",
+    "build_id": "270285f9-23b9-449c-aae6-11f6c4cf8299"
+  },
+  "app_id": "6822363240"
+}
