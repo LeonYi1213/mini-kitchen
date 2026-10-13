@@ -3,6 +3,7 @@ import argparse
 import base64
 from concurrent.futures import ThreadPoolExecutor
 import hmac
+import hashlib
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
 import os
@@ -31,11 +32,14 @@ POOL = ThreadPoolExecutor(max_workers=1)
 
 def initialize():
     STORAGE.mkdir(parents=True, exist_ok=True)
+    (STORAGE/'uploads').mkdir(exist_ok=True)
+    for path in (STORAGE/'uploads').glob('*.video'):
+        path.unlink()
     with sqlite3.connect(STORAGE / 'jobs.sqlite') as db:
         db.execute('CREATE TABLE IF NOT EXISTS jobs (id TEXT PRIMARY KEY, payload TEXT NOT NULL)')
         for job_id, payload in db.execute('SELECT id, payload FROM jobs').fetchall():
             job = json.loads(payload)
-            if job['status'] in ('queued', 'running'):
+            if job['status'] in ('uploading', 'queued', 'running'):
                 job.update(status='failed', message='服务已重启，请重试。')
                 db.execute('UPDATE jobs SET payload=? WHERE id=?', (json.dumps(job), job_id))
 
@@ -103,29 +107,36 @@ def model_config():
     return (key, os.environ.get('OPENAI_BASE_URL', 'https://api.openai.com/v1'), os.environ.get('OPENAI_MODEL', 'gpt-4.1'))
 
 
-def run(job_id, url):
+def run(job_id, url=None, uploaded=None, digest=None):
     asset_folder = None
     try:
         stage(job_id, 0, status='running')
         with tempfile.TemporaryDirectory(prefix='recipe-', dir=STORAGE) as folder:
             folder = Path(folder)
-            # The existing reader uses a normal browser and fails on access restrictions.
-            subprocess.run([sys.executable, str(ROOT/'scripts/import_video.py'), url,
-                            '--browser', '--output', str(folder)], capture_output=True, timeout=150, check=True)
-            infos = list(folder.glob('*.info.json'))
-            videos = list(folder.glob('*.mp4'))
-            if len(infos) != 1 or len(videos) != 1:
-                raise ValueError('No content')
-            metadata = json.loads(infos[0].read_text())
-            note_id = metadata.get('id', '')
-            if not re.fullmatch(r'[a-fA-F0-9]{24}', note_id):
-                raise ValueError('Invalid note id')
+            prefix = 'video' if uploaded else 'xhs'
+            if uploaded:
+                target = folder/'upload.mp4'
+                shutil.move(str(uploaded), target)
+                videos = [target]
+                note_id = digest[:24]
+                metadata = {'note': {}}
+            else:
+                # Normal reader; never bypass source access restrictions.
+                subprocess.run([sys.executable, str(ROOT/'scripts/import_video.py'), url,
+                                '--browser', '--output', str(folder)], capture_output=True, timeout=150, check=True)
+                infos = list(folder.glob('*.info.json'))
+                videos = list(folder.glob('*.mp4'))
+                if len(infos) != 1 or len(videos) != 1:
+                    raise ValueError('No content')
+                metadata = json.loads(infos[0].read_text())
+                note_id = metadata.get('id', '')
+                if not re.fullmatch(r'[a-fA-F0-9]{24}', note_id):
+                    raise ValueError('Invalid note id')
             stage(job_id, 1)
-            source = f'https://www.xiaohongshu.com/explore/{note_id}'
             # Canonical ID deduplication happens before invoking a paid model.
             for path in (ROOT/'web/recipes').glob('*/recipe.json'):
                 recipe = json.loads(path.read_text())
-                if recipe['id'] == 'xhs-' + note_id:
+                if recipe['id'] == prefix + '-' + note_id:
                     # Use the same bundled names as the native catalog.
                     for step in recipe.get('illustrated_steps', []):
                         step['image'] = path.parent.name + '-' + step['image']
@@ -135,14 +146,14 @@ def run(job_id, url):
             with sqlite3.connect(STORAGE/'jobs.sqlite') as db:
                 previous = [json.loads(row[0]) for row in db.execute('SELECT payload FROM jobs')]
             for job in previous:
-                if job.get('status') == 'completed' and (job.get('recipe') or {}).get('id') == 'xhs-' + note_id and current_recipe(job['recipe'], STORAGE):
+                if job.get('status') == 'completed' and (job.get('recipe') or {}).get('id') == prefix + '-' + note_id and current_recipe(job['recipe'], STORAGE):
                     stage(job_id, 4, status='completed', recipe=job['recipe'], cacheHit=True)
                     return
-            duration = float(subprocess.check_output(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'default=noprint_wrappers=1:nokey=1', str(videos[0])], timeout=20))
+            duration = float(subprocess.check_output(['ffprobe', '-f', 'mov', '-protocol_whitelist', 'file,pipe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'default=noprint_wrappers=1:nokey=1', str(videos[0])], timeout=20))
             if not 0 < duration <= 900:
                 raise ValueError('Video too long')
             interval = max(1, duration / 80)
-            subprocess.run(['ffmpeg', '-v', 'error', '-i', str(videos[0]), '-vf', f'fps=1/{interval}:start_time=0,scale=768:-2', '-frames:v', '80', str(folder/'frame-%03d.jpg')], capture_output=True, timeout=90, check=True)
+            subprocess.run(['ffmpeg', '-f', 'mov', '-protocol_whitelist', 'file,pipe', '-v', 'error', '-i', str(videos[0]), '-vf', f'fps=1/{interval}:start_time=0,scale=768:-2', '-frames:v', '80', str(folder/'frame-%03d.jpg')], capture_output=True, timeout=90, check=True)
             frames = sorted(folder.glob('frame-*.jpg'))
             if not frames:
                 raise ValueError('No frames')
@@ -179,8 +190,8 @@ def run(job_id, url):
                                  {'role': 'user', 'content': '修正格式后重新输出完整 JSON，不改变素材事实：' + str(error)}]
             stage(job_id, 3)
             generation = uuid.uuid4().hex
-            asset_folder = STORAGE / f'assets/xhs-{note_id}/{generation}'
-            recipe = materialize(recipe, frames, interval, note_id, generation, STORAGE)
+            asset_folder = STORAGE / f'assets/{prefix}-{note_id}/{generation}'
+            recipe = materialize(recipe, frames, interval, note_id, generation, STORAGE, prefix=prefix)
             stage(job_id, 4, status='completed', recipe=recipe)
             asset_folder = None  # Published images survive temporary video cleanup.
     except InterruptedError:
@@ -189,13 +200,15 @@ def run(job_id, url):
         # Never return source tokens, provider errors or API keys to clients/logs.
         try:
             job = read(job_id)
-            message = '暂时无法读取或整理这篇笔记，请重试。'
+            message = '无法整理该视频，请确认包含清晰的烹饪画面、时长不超过 15 分钟。' if uploaded else '暂时无法读取或整理这篇笔记，请重试。'
             if isinstance(error, subprocess.CalledProcessError) and b'XHS_NETWORK_RESTRICTED' in (error.stderr or b''):
                 message = '小红书暂时限制了服务器网络访问（300012），未能读取笔记；当前无法通过此链接生成菜谱。'
             stage(job_id, job['completedStages'], status='failed', message=message)
         except InterruptedError:
             pass
     finally:
+        if uploaded:
+            Path(uploaded).unlink(missing_ok=True)
         if asset_folder is not None:
             shutil.rmtree(asset_folder, ignore_errors=True)
 
@@ -222,6 +235,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         if not self.authorized(): return
+        if self.path == '/imports/video': return self.upload_video()
         if self.path != '/imports': return self.reply(404, {})
         try:
             length = int(self.headers.get('Content-Length', '0'))
@@ -238,12 +252,50 @@ class Handler(BaseHTTPRequestHandler):
             return self.reply(503, {'error': 'unavailable'})
         with LOCK:
             with sqlite3.connect(STORAGE/'jobs.sqlite') as db:
-                active = sum(json.loads(row[0])['status'] in ('queued', 'running') for row in db.execute('SELECT payload FROM jobs'))
+                active = sum(json.loads(row[0])['status'] in ('uploading', 'queued', 'running') for row in db.execute('SELECT payload FROM jobs'))
             if active >= 3: return self.reply(429, {'error': 'busy'})
             job = {'id': str(uuid.uuid4()), 'status': 'queued', 'completedStages': 0}
             write(job)
         POOL.submit(run, job['id'], url)
         self.reply(202, job)
+
+    def upload_video(self):
+        # Raw file body, streamed to disk; never load a 200 MiB video in memory.
+        try:
+            length = int(self.headers.get('Content-Length', '0'))
+        except ValueError:
+            return self.reply(400, {'error': 'invalid_length'})
+        if not 0 < length <= 200 * 1024 * 1024:
+            return self.reply(413, {'error': 'video_too_large'})
+        if self.headers.get('Content-Type', '').split(';')[0] not in ('video/mp4', 'video/quicktime', 'application/octet-stream'):
+            return self.reply(415, {'error': 'unsupported_video'})
+        try:
+            model_config()
+        except ValueError:
+            return self.reply(503, {'error': 'unavailable'})
+        with LOCK:
+            with sqlite3.connect(STORAGE/'jobs.sqlite') as db:
+                active = sum(json.loads(row[0])['status'] in ('uploading', 'queued', 'running') for row in db.execute('SELECT payload FROM jobs'))
+            if active >= 3: return self.reply(429, {'error': 'busy'})
+            job = {'id': str(uuid.uuid4()), 'status': 'uploading', 'completedStages': 0}
+            write(job)
+        target = STORAGE/'uploads'/(job['id'] + '.video')
+        try:
+            self.connection.settimeout(60)
+            digest = hashlib.sha256()
+            remaining = length
+            with target.open('wb') as file:
+                while remaining:
+                    chunk = self.rfile.read(min(1024 * 1024, remaining))
+                    if not chunk: raise ValueError('incomplete_upload')
+                    file.write(chunk); digest.update(chunk); remaining -= len(chunk)
+            stage(job['id'], 0, status='queued')
+            POOL.submit(run, job['id'], uploaded=target, digest=digest.hexdigest())
+        except Exception:
+            target.unlink(missing_ok=True)
+            stage(job['id'], 0, status='failed', message='视频上传中断，请重新选择视频。')
+            return self.reply(400, {'error': 'upload_failed'})
+        self.reply(202, read(job['id']))
 
     def job_id(self):
         match = re.fullmatch(r'/imports/([0-9a-f-]{36})', self.path)
@@ -269,7 +321,7 @@ class Handler(BaseHTTPRequestHandler):
         if not self.authorized(): return
         with LOCK:
             job = read(self.job_id()) if self.job_id() else None
-            if job and job['status'] in ('queued', 'running'):
+            if job and job['status'] in ('uploading', 'queued', 'running'):
                 job['status'] = 'cancelled'
                 write(job)
         self.reply(200 if job else 404, job or {})

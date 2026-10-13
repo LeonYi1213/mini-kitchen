@@ -9,3 +9,5 @@
 用户已明确授权临时共享域名，HTTPS 入口为 `https://bubufriends.cn/minikitchen-api/`；严格 TLS 校验、401/404 鉴权探针与 Kimi 图片/JSON 请求已验证。反代片段见 `minikitchen.locations`，仅加入 HTTPS 域名服务器块。公网仅开放 nginx，不暴露 Python 端口。
 
 小红书可能限制数据中心 IP，当前服务器对牛肋条链接返回 300012；这与 Kimi 的连通性无关，不应以重试、替换输出或伪造菜谱掩盖。遇到原站访问限制时不绕过。
+
+1.0-2 增加 `/imports/video`，Nginx 在小厨房独立路径内允许 200 MiB 请求体，其他项目配置不变。上传阶段包含鉴权、限额和流式临时文件；原视频处理后清理。数据目录下 `uploads/` 只存储在途视频，持久化仍只有任务及选中配图。

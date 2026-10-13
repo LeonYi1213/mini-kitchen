@@ -47,3 +47,11 @@ xcodebuild test -project ios/MiniKitchen.xcodeproj -scheme MiniKitchen \
 `check_ios.py` 检查 Swift 语法树、工程资源引用、配置、菜谱与图片，不代替 Swift 类型检查或 Xcode 编译。仓库已提供 macOS CI，尚需实际触发。
 
 现已在 Mac / Xcode 26.3 完成模拟器编译和单元测试，并接入本机 Kimi 服务；启动方式见 [Mac 本地开发](../backend/LOCAL_MAC.md)。一比一视觉验收、Dynamic Type、横竖屏、iPad 分屏、VoiceOver、系统通知与云同步仍需在 Apple 设备上验收。没有生成真机签名安装包或提交 App Store。
+
+## 1.0 (2) 视频上传
+
+收藏新菜支持从相册或文件选择已保存的 MP4/MOV 视频（200 MB、15 分钟以内）。点击生成后上传至私有服务，由同一 Kimi 模型生成图文菜谱；核对后收藏，配图保存在本机可离线查看。链接入口仍保留，平台限制访问时不会绕过。
+
+## 1.0 (3) 点击区域修复
+
+图片只负责展示，不接收触摸；链接和按钮 label 内设置与显示尺寸一致的 contentShape。新增 MiniKitchenUITests，通过实际边缘坐标点击验证菜谱详情、选择、备菜和计时操作。

@@ -14,7 +14,21 @@ struct PrimaryButton: View {
     var body: some View {
         Button(action: action) {
             Text(title).font(.system(size: 16, weight: .semibold)).frame(maxWidth: .infinity).padding(.vertical, 16)
-        }.buttonStyle(.plain).foregroundStyle(.white).background(KitchenStyle.green, in: RoundedRectangle(cornerRadius: 14))
+                .foregroundStyle(.white).background(KitchenStyle.green, in: RoundedRectangle(cornerRadius: 14))
+                .contentShape(RoundedRectangle(cornerRadius: 14))
+        }.buttonStyle(.plain)
+    }
+}
+// Keep the visible label, padding, and interactive rectangle in the same layout.
+struct SecondaryButton: View {
+    let title: String
+    var expanded = false
+    var action: () -> Void
+    var body: some View {
+        Button(action: action) {
+            Text(title).frame(maxWidth: expanded ? .infinity : nil, minHeight: 44)
+                .padding(.horizontal, 8).contentShape(Rectangle())
+        }.buttonStyle(.plain)
     }
 }
 struct RecipePhoto: View {
@@ -32,7 +46,7 @@ struct RecipePhoto: View {
                     AsyncImage(url: url) { image in image.resizable().scaledToFill() } placeholder: { placeholder }
                 } else { placeholder }
             }.frame(width: proxy.size.width, height: height).clipped()
-        }.frame(height: height).accessibilityHidden(true)
+        }.frame(height: height).clipped().contentShape(Rectangle()).allowsHitTesting(false).accessibilityHidden(true)
             .task(id: name) {
                 importedImage = nil
                 guard let name, RecipeAssets.localURL(name) != nil else { return }
@@ -55,7 +69,7 @@ struct RecipeRow: View {
                 Text(recipe.duration).font(.caption).foregroundStyle(KitchenStyle.muted)
             }
             Spacer()
-        }.padding(14).background(.white, in: RoundedRectangle(cornerRadius: 18))
+        }.padding(14).background(.white, in: RoundedRectangle(cornerRadius: 18)).contentShape(Rectangle())
     }
 }
 struct EmptyMeal: View {

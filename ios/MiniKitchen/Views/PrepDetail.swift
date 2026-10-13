@@ -36,8 +36,8 @@ struct PrepView: View {
                                         Image(systemName: isChecked ? "checkmark.circle.fill" : "circle").font(.title3)
                                         Text(ingredient.name).strikethrough(isChecked); Spacer()
                                         Text(ingredient.quantity).font(.subheadline)
-                                    }.foregroundStyle(isChecked ? KitchenStyle.muted : KitchenStyle.ink).padding(15)
-                                }.buttonStyle(.plain).accessibilityValue(isChecked ? "已备好" : "未备好")
+                                    }.foregroundStyle(isChecked ? KitchenStyle.muted : KitchenStyle.ink).padding(15).contentShape(Rectangle())
+                                }.buttonStyle(.plain).accessibilityIdentifier("ingredient-\(recipe.id)-\(index)").accessibilityValue(isChecked ? "已备好" : "未备好")
                                 if index < recipe.ingredients.count - 1 { Divider().padding(.leading, 48) }
                             }
                         }.background(.white, in: RoundedRectangle(cornerRadius: 18))
@@ -48,7 +48,7 @@ struct PrepView: View {
         }.kitchenPage().onChange(of: store.meal.selected) { _, ids in if let filter, !ids.contains(filter) { self.filter = nil } }
     }
     private func chip(_ title: String, id: String?) -> some View {
-        Button { filter = id } label: { Text(title).font(.caption).padding(.horizontal, 14).frame(minHeight: 44) }
+        Button { filter = id } label: { Text(title).font(.caption).padding(.horizontal, 14).frame(minHeight: 44).contentShape(Rectangle()) }
             .foregroundStyle(filter == id ? .white : KitchenStyle.ink)
             .background(filter == id ? KitchenStyle.green : .white, in: Capsule())
     }

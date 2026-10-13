@@ -9,9 +9,12 @@ struct ImportJob: Decodable {
     let message: String?
 }
 enum ImportFailure: LocalizedError {
-    case invalidLink, unavailable, unreadable, incomplete, timeout
+    case invalidLink, unavailable, unreadable, incomplete, timeout, videoTooLarge, busy, invalidVideo
     var errorDescription: String? {
         switch self {
+        case .videoTooLarge: "视频超过 200 MB，请选择较小的视频。"
+        case .busy: "已有视频正在处理，请稍后再试。"
+        case .invalidVideo: "无法整理该视频，请确认包含清晰的烹饪画面且不超过 15 分钟。"
         case .invalidLink: "请粘贴有效的小红书分享链接。"
         case .unavailable: "暂时无法生成菜谱，请稍后重试。"
         case .unreadable: "暂时读不到这篇笔记，请重新复制分享链接。"
@@ -40,6 +43,30 @@ struct ImportService {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = try JSONEncoder().encode(["url": url.absoluteString])
         return try await send(request)
+    }
+    static func copyVideo(_ source: URL) throws -> URL {
+        let access = source.startAccessingSecurityScopedResource()
+        defer { if access { source.stopAccessingSecurityScopedResource() } }
+        let attributes = try FileManager.default.attributesOfItem(atPath: source.path)
+        guard attributes[.type] as? FileAttributeType == .typeRegular, let count = attributes[.size] as? NSNumber, count.int64Value > 0 else { throw ImportFailure.invalidVideo }
+        guard count.int64Value <= 200 * 1024 * 1024 else { throw ImportFailure.videoTooLarge }
+        let target = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString + ".mp4")
+        try FileManager.default.copyItem(at: source, to: target)
+        return target
+    }
+    func upload(_ file: URL) async throws -> ImportJob {
+        guard let baseURL, Self.allowedEndpoint(baseURL) else { throw ImportFailure.unavailable }
+        var request = URLRequest(url: baseURL.appendingPathComponent("imports/video"))
+        request.httpMethod = "POST"
+        request.timeoutInterval = 300
+        request.setValue("application/octet-stream", forHTTPHeaderField: "Content-Type")
+        authorize(&request)
+        let (data, response) = try await URLSession.shared.upload(for: request, fromFile: file)
+        guard let response = response as? HTTPURLResponse else { throw ImportFailure.unavailable }
+        if response.statusCode == 413 { throw ImportFailure.videoTooLarge }
+        if response.statusCode == 429 { throw ImportFailure.busy }
+        guard response.statusCode == 202 else { throw ImportFailure.unavailable }
+        return try JSONDecoder().decode(ImportJob.self, from: data)
     }
     static func allowedEndpoint(_ url: URL) -> Bool {
         if url.scheme == "https" { return true }
@@ -97,7 +124,7 @@ struct ImportService {
 }
 enum RecipeAssets {
     static func localURL(_ reference: String) -> URL? {
-        guard reference.range(of: #"^assets/xhs-[a-f0-9]{24}/[a-f0-9]{32}/frame-[0-9]{3}\.jpg$"#, options: .regularExpression) != nil else { return nil }
+        guard reference.range(of: #"^assets/(?:xhs|video)-[a-f0-9]{24}/[a-f0-9]{32}/frame-[0-9]{3}\.jpg$"#, options: .regularExpression) != nil else { return nil }
         return FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
             .appendingPathComponent("RecipeImages").appendingPathComponent(reference)
     }
@@ -116,18 +143,22 @@ enum RecipeAssets {
     private var generation = UUID()
     private var jobID: String?
     private let service = ImportService()
-    func start(existing: [Recipe]) {
-        guard let url = ImportService.link(in: text) else { message = ImportFailure.invalidLink.localizedDescription; return }
+    func start(existing: [Recipe], video: URL? = nil) {
+        let url = ImportService.link(in: text)
+        guard video != nil || url != nil else { message = ImportFailure.invalidLink.localizedDescription; return }
         cancel()
         updating = false
-        if let recipe = existing.first(where: { !$0.needsFormatUpgrade && ($0.source == url.absoluteString || ($0.id.hasPrefix("xhs-") && url.pathComponents.contains(String($0.id.dropFirst(4))))) }) {
+        if video == nil, let url, let recipe = existing.first(where: { !$0.needsFormatUpgrade && ($0.source == url.absoluteString || ($0.id.hasPrefix("xhs-") && url.pathComponents.contains(String($0.id.dropFirst(4))))) }) {
             draft = recipe; duplicate = true; stages = 4; phase = .review; return
         }
         generation = UUID(); let run = generation
         phase = .working; stages = 0; message = ""; duplicate = false; updating = false
         task = Task {
             do {
-                var job = try await service.create(url)
+                var job: ImportJob
+                if let video { job = try await service.upload(video) }
+                else if let url { job = try await service.create(url) }
+                else { throw ImportFailure.invalidLink }
                 guard run == generation else { await service.cancel(job.id); return }
                 jobID = job.id
                 let deadline = Date().addingTimeInterval(600)
@@ -137,7 +168,7 @@ enum RecipeAssets {
                     stages = max(stages, min(3, max(0, job.completedStages)))
                     if job.status == "completed" {
                         guard let recipe = job.recipe, recipe.valid else { throw ImportFailure.incomplete }
-                        let old = existing.first { $0.id == recipe.id || $0.source == recipe.source }
+                        let old = existing.first { $0.id == recipe.id || (recipe.source.hasPrefix("https://") && $0.source == recipe.source) }
                         updating = old.map { recipe.upgrades($0) } ?? false
                         let selected = updating ? recipe : (old ?? recipe)
                         try await service.cacheImages(for: selected)
@@ -147,7 +178,7 @@ enum RecipeAssets {
                         duplicate = old != nil && !updating
                         stages = 4; phase = .review; jobID = nil; return
                     }
-                    if job.status == "failed" || job.status == "cancelled" { throw ImportFailure.unreadable }
+                    if job.status == "failed" || job.status == "cancelled" { throw video == nil ? ImportFailure.unreadable : ImportFailure.invalidVideo }
                     guard ["queued", "running"].contains(job.status) else { throw ImportFailure.incomplete }
                     if Date() > deadline { throw ImportFailure.timeout }
                     try await Task.sleep(for: .seconds(1.5))

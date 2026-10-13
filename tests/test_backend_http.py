@@ -62,6 +62,40 @@ class HTTPTests(BackendTests):
             self.assertEqual(self.request('/imports', 'POST', {'url': 'https://xhslink.cn/o/test'})[0], 202)
         self.assertEqual(self.request('/imports', 'POST', {'url': 'https://xhslink.cn/o/test'})[0], 429)
 
+    def upload(self, data=b'video-bytes', declared=None, token='local-test-token', media='video/mp4'):
+        import http.client
+        conn = http.client.HTTPConnection('127.0.0.1', self.http.server_address[1], timeout=5)
+        conn.request('POST', '/imports/video', body=data, headers={'Authorization': 'Bearer ' + token,
+                     'Content-Type': media, 'Content-Length': str(len(data) if declared is None else declared)})
+        response = conn.getresponse()
+        result = response.status, json.loads(response.read())
+        conn.close()
+        return result
+
+    def test_video_upload_stream_and_identity(self):
+        import hashlib
+        code, job = self.upload()
+        self.assertEqual(code, 202)
+        args = self.worker.call_args
+        self.assertEqual(args.kwargs['uploaded'].read_bytes(), b'video-bytes')
+        self.assertEqual(args.kwargs['digest'], hashlib.sha256(b'video-bytes').hexdigest())
+        self.assertEqual(job['status'], 'queued')
+
+    def test_upload_rejection_does_not_queue(self):
+        self.assertEqual(self.upload(token='wrong')[0], 401)
+        self.assertEqual(self.upload(media='text/plain')[0], 415)
+        self.assertEqual(self.upload(data=b'')[0], 413)
+        self.assertEqual(self.upload(data=b'', declared=200*1024*1024+1)[0], 413)
+        self.worker.assert_not_called()
+        self.assertEqual(list((server.STORAGE/'uploads').iterdir()), [])
+
+    def test_uploads_share_queue_limit_and_restart_cleanup(self):
+        for _ in range(3): self.assertEqual(self.upload()[0], 202)
+        self.assertEqual(self.upload()[0], 429)
+        self.assertEqual(self.request('/imports', 'POST', {'url':'https://xhslink.cn/o/test'})[0], 429)
+        server.initialize()
+        self.assertEqual(list((server.STORAGE/'uploads').iterdir()), [])
+
     def test_images_require_auth_and_reject_traversal(self):
         reference = 'assets/xhs-' + 'a' * 24 + '/' + 'b' * 32 + '/frame-001.jpg'
         path = server.STORAGE / reference

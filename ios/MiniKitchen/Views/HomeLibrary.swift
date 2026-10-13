@@ -30,10 +30,10 @@ struct HomeView: View {
                                             Spacer(minLength: 4)
                                             Text("已做 \(store.meal.cookingCount(recipe)) 次")
                                                 .font(.caption).foregroundStyle(KitchenStyle.muted).fixedSize()
-                                        }
+                                        }.contentShape(Rectangle())
                                     }.buttonStyle(.plain)
                                     Button { store.toggle(recipe) } label: {
-                                        Image(systemName: "plus.circle.fill").font(.title2).frame(width: 44, height: 44)
+                                        Image(systemName: "plus.circle.fill").font(.title2).frame(width: 44, height: 44).contentShape(Rectangle())
                                     }.accessibilityLabel("加入这一餐：\(recipe.title)")
                                 }.padding(10).background(.white, in: RoundedRectangle(cornerRadius: 16))
                             }
@@ -50,14 +50,14 @@ struct HomeView: View {
                     }.frame(height: 180).clipShape(RoundedRectangle(cornerRadius: 22))
                     HStack {
                         Text("这一餐 · \(store.selected.count) 道菜").font(.title3.bold()); Spacer()
-                        Button("编辑") { tab = .library }.font(.subheadline)
+                        SecondaryButton(title: "编辑") { tab = .library }.font(.subheadline)
                     }
                     ForEach(store.selected) { recipe in
                         NavigationLink { RecipeDetail(recipe: recipe) } label: { RecipeRow(recipe: recipe) }.buttonStyle(.plain)
                     }
                     RecommendationView()
                     PrimaryButton(title: "开始备菜 →") { tab = .prep }
-                    Button("开始新的一餐") { reset = true }.font(.caption).frame(maxWidth: .infinity).padding(.vertical, 10)
+                    SecondaryButton(title: "开始新的一餐", expanded: true) { reset = true }.font(.caption)
                 }
             }.padding(20).frame(maxWidth: 850)
         }.kitchenPage()
@@ -93,12 +93,12 @@ struct LibraryView: View {
                                     RecipePhoto(name: recipe.cover, height: 130)
                                     Text(recipe.title).font(.subheadline.bold()).padding(.horizontal, 12)
                                     Text(recipe.duration).font(.caption2).foregroundStyle(KitchenStyle.muted).padding(.horizontal, 12)
-                                }
-                            }.buttonStyle(.plain)
+                                }.contentShape(Rectangle())
+                            }.buttonStyle(.plain).accessibilityIdentifier("recipe-\(recipe.id)")
                             Button { store.toggle(recipe) } label: {
                                 Label(store.meal.selected.contains(recipe.id) ? "已加入这一餐" : "加入这一餐", systemImage: store.meal.selected.contains(recipe.id) ? "checkmark.circle.fill" : "plus.circle")
-                                    .font(.caption).frame(maxWidth: .infinity, minHeight: 44)
-                            }
+                                    .font(.caption).frame(maxWidth: .infinity, minHeight: 44).contentShape(Rectangle())
+                            }.accessibilityIdentifier("select-\(recipe.id)")
                         }.background(.white, in: RoundedRectangle(cornerRadius: 17)).clipShape(RoundedRectangle(cornerRadius: 17))
                     }
                 }

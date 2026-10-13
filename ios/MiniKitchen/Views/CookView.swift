@@ -20,9 +20,9 @@ struct CookView: View {
                                     VStack(spacing: 6) {
                                         Text(recipe.title).font(.caption.bold())
                                         Text(status(recipe)).font(.caption2)
-                                    }.padding(12).frame(minHeight: 54)
+                                    }.padding(12).frame(minHeight: 54).contentShape(Rectangle())
                                 }.background(focused == recipe.id ? KitchenStyle.pale : .white, in: RoundedRectangle(cornerRadius: 12))
-                                    .overlay(RoundedRectangle(cornerRadius: 12).stroke(focused == recipe.id ? KitchenStyle.muted : .clear))
+                                    .overlay(RoundedRectangle(cornerRadius: 12).stroke(focused == recipe.id ? KitchenStyle.muted : .clear).allowsHitTesting(false))
                             }
                         }.padding(.horizontal, 20)
                     }
@@ -80,13 +80,13 @@ struct CookingCard: View {
             VStack(alignment: .leading, spacing: 16) {
                 HStack {
                     Text(recipe.title).font(.headline); Spacer()
-                    Button("用量", action: showIngredients).font(.caption).frame(minWidth: 44, minHeight: 44)
+                    SecondaryButton(title: "用量", action: showIngredients).font(.caption)
                 }
                 if complete {
                     Image(systemName: "checkmark.circle.fill").font(.system(size: 42)).foregroundStyle(KitchenStyle.green)
                     Text("这道菜做好了").font(.title2.bold())
                     Text("趁热享用，也看看其他菜的进度。").font(.subheadline).foregroundStyle(KitchenStyle.muted)
-                    Button("返回最后一步") { store.update(recipe) { $0.step = max(0, recipe.steps.count - 1) } }.frame(minHeight: 44)
+                    SecondaryButton(title: "返回最后一步") { store.update(recipe) { $0.step = max(0, recipe.steps.count - 1) } }
                 } else {
                     HStack {
                         Text(state.step < recipe.prep.count ? "备菜" : "烹饪"); Spacer()
@@ -99,7 +99,7 @@ struct CookingCard: View {
                             .font(.caption).foregroundStyle(KitchenStyle.muted)
                         if state.timer == nil {
                             Button { store.update(recipe) { $0.timer = CookingTimer(deadline: Date().addingTimeInterval(Double(max(1, time.min)) * 60)) } } label: {
-                                Label("开始计时 \(max(1, time.min)) 分钟", systemImage: "timer").frame(maxWidth: .infinity, minHeight: 44)
+                                Label("开始计时 \(max(1, time.min)) 分钟", systemImage: "timer").frame(maxWidth: .infinity, minHeight: 44).contentShape(Rectangle())
                             }.font(.subheadline).background(KitchenStyle.pale, in: RoundedRectangle(cornerRadius: 12))
                         }
                     }
@@ -109,9 +109,9 @@ struct CookingCard: View {
                                 HStack {
                                     Text(clock(timer.remaining(at: context.date))).font(.system(size: 29, weight: .medium, design: .rounded)).monospacedDigit()
                                     Spacer()
-                                    Button(timer.deadline == nil ? "继续" : "暂停") {
+                                    SecondaryButton(title: timer.deadline == nil ? "继续" : "暂停") {
                                         store.update(recipe) { $0.timer?.toggle(at: Date()) }
-                                    }.frame(minWidth: 44, minHeight: 44).disabled(timer.remaining(at: context.date) <= 0)
+                                    }.disabled(timer.remaining(at: context.date) <= 0)
                                 }
                                 if timer.remaining(at: context.date) <= 0 { Text("计时到了，请检查熟度").font(.caption.bold()) }
                                 else if timer.deadline == nil { Text("计时已暂停").font(.caption) }
@@ -122,7 +122,7 @@ struct CookingCard: View {
                         if state.timer != nil { confirmAdvance = true } else { store.advance(recipe) }
                     }
                     if state.step > 0 {
-                        Button("上一步") { store.update(recipe) { $0.step -= 1; $0.timer = nil } }.font(.caption).frame(maxWidth: .infinity, minHeight: 44)
+                        SecondaryButton(title: "上一步", expanded: true) { store.update(recipe) { $0.step -= 1; $0.timer = nil } }.font(.caption).contentShape(Rectangle())
                     }
                 }
             }.padding(18)

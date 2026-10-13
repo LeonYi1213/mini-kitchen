@@ -76,7 +76,7 @@ struct KitchenRoot: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button { incomingShare = ""; showImport = true } label: {
-                        Image(systemName: "plus").frame(width: 34, height: 34).background(KitchenStyle.pale, in: Circle())
+                        Image(systemName: "plus").frame(width: 34, height: 34).background(KitchenStyle.pale, in: Circle()).frame(width: 44, height: 44).contentShape(Rectangle())
                     }.accessibilityLabel("收藏新菜")
                 }
             }

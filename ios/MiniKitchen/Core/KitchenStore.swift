@@ -64,7 +64,7 @@ import SwiftUI
         save()
     }
     func add(_ recipe: Recipe) -> Recipe {
-        if let existing = recipes.first(where: { $0.id == recipe.id || $0.source == recipe.source }) {
+        if let existing = recipes.first(where: { $0.id == recipe.id || (recipe.source.hasPrefix("https://") && $0.source == recipe.source) }) {
             guard recipe.valid, recipe.upgrades(existing), meal.imported.contains(where: { $0.id == existing.id }) else { return existing }
             installUpdate(recipe)
             publish(recipe, key: "recipe.\(recipe.id)")

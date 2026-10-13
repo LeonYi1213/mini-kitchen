@@ -36,6 +36,20 @@ final class KitchenTests: XCTestCase {
         updated.illustrated_steps?[0].text = "不相关的步骤"
         XCTAssertFalse(updated.hasIllustratedFormat)
     }
+    func testUploadedVideoImageReferencesAndPrivateCopy() throws {
+        let ref = "assets/video-" + String(repeating: "a", count: 24) + "/" + String(repeating: "b", count: 32) + "/frame-001.jpg"
+        XCTAssertNotNil(RecipeAssets.localURL(ref))
+        XCTAssertNil(RecipeAssets.localURL(ref.replacingOccurrences(of: "frame-001.jpg", with: "../../private.json")))
+        let source = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString + ".mov")
+        defer { try? FileManager.default.removeItem(at: source) }
+        try Data([1, 2, 3]).write(to: source)
+        let copy = try ImportService.copyVideo(source)
+        defer { try? FileManager.default.removeItem(at: copy) }
+        XCTAssertNotEqual(source, copy)
+        XCTAssertEqual(try Data(contentsOf: copy), Data([1, 2, 3]))
+        try Data().write(to: source)
+        XCTAssertThrowsError(try ImportService.copyVideo(source))
+    }
     private func recipe(_ id: String, wait: Int) -> Recipe {
         Recipe(id: id, title: id, source: "https://www.xiaohongshu.com/explore/" + id,
                ingredients: [Ingredient(name: "水", unit: "适量")], prep: ["清洗"], cook: ["炖煮", "出锅"],

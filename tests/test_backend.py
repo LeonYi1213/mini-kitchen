@@ -71,6 +71,24 @@ class BackendTests(unittest.TestCase):
         self.assertNotIn('secret', server.read('a')['message'])
         model.assert_not_called()
 
+    def test_cancelled_upload_deletes_file_without_model_call(self):
+        video = server.STORAGE/'uploads/test.video'; video.write_bytes(b'video')
+        server.write({'id':'cancelled-upload','status':'cancelled','completedStages':0})
+        with patch.object(server.urllib.request, 'urlopen') as model:
+            server.run('cancelled-upload', uploaded=video, digest='a'*64)
+        self.assertFalse(video.exists())
+        model.assert_not_called()
+
+    def test_invalid_uploaded_media_never_calls_model(self):
+        video = server.STORAGE/'uploads/test.video'; video.write_bytes(b'not-video')
+        server.write({'id':'bad-upload','status':'queued','completedStages':0})
+        with patch.object(server.subprocess, 'check_output', side_effect=ValueError('invalid')), patch.object(server.urllib.request, 'urlopen') as model:
+            server.run('bad-upload', uploaded=video, digest='a'*64)
+        self.assertEqual(server.read('bad-upload')['status'], 'failed')
+        self.assertFalse(video.exists())
+        self.assertEqual(list(server.STORAGE.glob('recipe-*')), [])
+        model.assert_not_called()
+
     def test_real_worker_replaces_legacy_cache_and_persists_illustrations(self):
         note_id = 'a' * 24
         legacy = {'id': 'xhs-' + note_id, 'title': '旧版', 'cook': ['旧步骤']}

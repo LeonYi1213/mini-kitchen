@@ -1,6 +1,6 @@
 # 私有菜谱导入服务
 
-使用现有公开小红书解析器下载真实视频，再抽取最多 80 帧，通过视觉模型提炼食材、备菜、步骤与耗时。只接受具体的小红书分享链接，无法读取内容就失败。视频超过 15 分钟拒绝处理；抽帧并非完整音频转写，完成后须核对菜谱。
+使用现有公开小红书解析器下载真实视频，再抽取最多 80 帧，通过视觉模型提炼食材、备菜、步骤与耗时。支持用户主动上传 MP4/MOV 视频，以及可正常访问的小红书分享链接；无法读取内容就失败。视频超过 15 分钟拒绝处理；抽帧并非完整音频转写，完成后须核对菜谱。
 
 ## 运行
 
@@ -24,10 +24,11 @@
 所有接口都要求 `Authorization: Bearer <KITCHEN_SERVICE_TOKEN>`。
 
 - `POST /imports`，JSON `{ "url": "https://xhslink.cn/o/..." }`：返回 202 和任务。
+- `POST /imports/video`：鉴权后的原始视频请求体（`video/mp4`、`video/quicktime` 或 `application/octet-stream`），必须提供 Content-Length，最大 200 MiB；返回 202 和任务。视频流式写入临时文件，SHA-256 内容摘要去重；只使用 MOV/MP4 解码器与本地文件协议，时长最多 15 分钟。处理结束、失败或取消后删除原视频；重启清理残留上传文件。上传与链接共用最多 3 个活跃任务。
 - `GET /imports/{id}`：查询。
 - `DELETE /imports/{id}`：取消。已完成任务保持完成状态；运行中的外部请求可能执行到超时，但迟到结果不会写入已取消任务。
 
-任务格式：`{id, status, completedStages, recipe?, message?}`。status 为 queued / running / completed / failed / cancelled。completedStages 为 0–4；对应完成读取、抽帧、模型整理、结构校验。客户端只在 completed 且菜谱有效后显示 100%。返回菜谱以 `xhs-<笔记ID>` 去重。用量未知为 null/适量。
+任务格式：`{id, status, completedStages, recipe?, message?}`。status 为 uploading / queued / running / completed / failed / cancelled；上传接口在接收完成后才返回任务。completedStages 为 0–4；对应完成读取、抽帧、模型整理、结构校验。客户端只在 completed 且菜谱有效后显示 100%。返回菜谱以 `xhs-<笔记ID>` 去重。用量未知为 null/适量。
 
 本地 SQLite 持久化任务；重启时将中断任务标失败，供用户重试。单 worker、最多 3 个排队/运行任务，限制重复模型消耗。读取原视频后优先查找已导入 ID，重复笔记不调用模型。
 
@@ -52,3 +53,7 @@ KITCHEN_RUN_HTTP_TESTS=1 .venv/bin/python -m unittest discover -s tests
 `backend/recipe_format.py` 定义图文格式与抽帧引用校验。模型仍使用原有 `KIMI_MODEL` 和地址；格式不合格时最多再请求一次纠正，禁止用占位图或编造步骤补齐。已收藏的旧纯文字菜谱重新导入后，可在核对页选择“更新为图文菜谱”，保持相同 ID，不重复收藏。步骤变化后重置旧的步骤索引及勾选。
 
 2026-10-13 使用用户提供的牛肋条烩饭分享链接，以本机 `kimi-k3` 完成真实图文导入验证。原视频约 197 秒，未独立转写音频。抽帧位置标为约数；模型提取内容仍保留用量与耗时的不确定性。
+
+## 视频导入（1.0 build 2）
+
+iOS 支持相册系统选择器和文件选择器，视频上传前提示处理方式。用户核对生成结果后收藏；原视频不持久保存，配图下载到本机。视频导入 ID 使用 `video-<SHA256前24位>`，来源显示“用户上传的视频”，不会冒充小红书笔记。现有 `xhs-` 图片和菜谱保持兼容。
