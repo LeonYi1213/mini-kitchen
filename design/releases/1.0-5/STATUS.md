@@ -6,4 +6,8 @@
 
 验证：50 项 Python 测试、12 项原生测试、原有边缘点击和新增四道菜计时操作 UI 回归通过。Release 签名归档成功，归档内 42 道菜和 277 个引用图片存在。真机体验仍需更新后验收。
 
-发布状态：已归档，上传及 Apple 处理进行中。云端独立服务版本 1.0-5 部署验证中。
+发布状态：2026-10-14 上传成功，Apple processingState=VALID，internalBuildState=IN_BETA_TESTING。已关联“小厨房个人测试”内部组，未开启公共链接。构建 ID：d46d50d7-9e46-4cf1-b359-09eda5b06209。
+
+云端独立服务已切换至 /opt/minikitchen/releases/1.0-5，50 项测试通过；HTTPS 未鉴权返回 401、有效鉴权查询不存在任务返回 404，服务 active。原始任务与数据保留。新的模型语义复核分支通过模拟响应测试，本次未额外调用付费模型或云端链接解析。
+
+应用与源代码提交：61d3532，已推送 GitHub main。实时核验记录见 verification.json。

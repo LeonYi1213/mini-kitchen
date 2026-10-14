@@ -1,0 +1,27 @@
+{
+  "app_id": "6822363240",
+  "build_id": "d46d50d7-9e46-4cf1-b359-09eda5b06209",
+  "version": "1.0",
+  "build": "5",
+  "beta_state": {
+    "autoNotifyEnabled": true,
+    "internalBuildState": "IN_BETA_TESTING",
+    "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+  },
+  "testers": [
+    {
+      "id": "8a679b13-ed46-4d47-b3f7-02c0db2b5947",
+      "state": "INSTALLED"
+    }
+  ],
+  "processingState": "VALID",
+  "group": "小厨房个人测试",
+  "backend": {
+    "release": "1.0-5",
+    "active": true,
+    "tests": 50,
+    "https_unauthenticated": 401,
+    "https_authenticated_missing_job": 404
+  },
+  "source_commit": "61d3532"
+}
