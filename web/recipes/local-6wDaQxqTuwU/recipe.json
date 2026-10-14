@@ -1,0 +1,154 @@
+{
+  "id": "xhs-689637a6000000002302032b",
+  "title": "香肠芝士北非蛋",
+  "servings": null,
+  "source": "https://www.xiaohongshu.com/explore/689637a6000000002302032b",
+  "ingredients": [
+    {
+      "name": "洋葱",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "红甜椒",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "香肠",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "去皮番茄罐头",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "红椒粉",
+      "amount": 1.0,
+      "unit": "大勺"
+    },
+    {
+      "name": "孜然粉",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "盐",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "黑胡椒",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "鸡蛋",
+      "amount": 2.0,
+      "unit": "个"
+    },
+    {
+      "name": "马苏里拉芝士",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "水",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "食用油",
+      "amount": null,
+      "unit": "适量"
+    }
+  ],
+  "prep": [
+    "洋葱、红甜椒切丁，香肠切片；准备番茄罐头和芝士。"
+  ],
+  "cook": [
+    "油热先炒洋葱，再下甜椒和香肠，炒约1分钟至香肠出现焦边。",
+    "加入去皮番茄罐头，用少许水涮罐倒入；加1大勺红椒粉、孜然粉、盐和黑胡椒拌匀。",
+    "盖锅炖约5分钟。",
+    "在番茄底上打入鸡蛋，在周围撒马苏里拉芝士。",
+    "盖锅小火焖，原片先焖约2分钟后继续加热；根据喜欢的熟度延长，熟蛋黄需继续焖至凝固。"
+  ],
+  "timing": {
+    "prep": [
+      {
+        "min": 5,
+        "max": 10,
+        "wait": false
+      }
+    ],
+    "cook": [
+      {
+        "min": 3,
+        "max": 5,
+        "wait": false
+      },
+      {
+        "min": 2,
+        "max": 3,
+        "wait": false
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "wait": true
+      },
+      {
+        "min": 1,
+        "max": 2,
+        "wait": false
+      },
+      {
+        "min": 3,
+        "max": 6,
+        "wait": true
+      }
+    ]
+  },
+  "illustrated_steps": [
+    {
+      "title": "炒香蔬菜香肠",
+      "text": "油热先炒洋葱，再下甜椒和香肠，炒约1分钟至香肠出现焦边。",
+      "source_time": "约 00:32",
+      "image": "step-01.jpg"
+    },
+    {
+      "title": "加番茄调味",
+      "text": "加入去皮番茄罐头，用少许水涮罐倒入；加1大勺红椒粉、孜然粉、盐和黑胡椒拌匀。",
+      "source_time": "约 00:44",
+      "image": "step-02.jpg"
+    },
+    {
+      "title": "焖番茄底",
+      "text": "盖锅炖约5分钟。",
+      "source_time": "约 00:46",
+      "image": "step-03.jpg"
+    },
+    {
+      "title": "打蛋加芝士",
+      "text": "在番茄底上打入鸡蛋，在周围撒马苏里拉芝士。",
+      "source_time": "约 01:14",
+      "image": "step-04.jpg"
+    },
+    {
+      "title": "焖至凝固",
+      "text": "盖锅小火焖，原片先焖约2分钟后继续加热；根据喜欢的熟度延长，熟蛋黄需继续焖至凝固。",
+      "source_time": "约 01:24",
+      "image": "step-05.jpg"
+    }
+  ],
+  "cover": "step-05.jpg",
+  "format_version": 3,
+  "notes": [
+    "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+    "来源：醉酒扶妇《快速早午餐，媳妇说周末就等这一口》。",
+    "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+    "原片另做了饮品，本条只整理主菜北非蛋。主要食材份量未标明；鸡蛋数量按口播2个记录。"
+  ]
+}

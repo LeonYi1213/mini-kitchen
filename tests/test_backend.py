@@ -27,7 +27,7 @@ class BackendTests(unittest.TestCase):
 
     def test_all_bundled_recipes_validate(self):
         paths = list((ROOT/'web/recipes').glob('*/recipe.json'))
-        self.assertEqual(len(paths), 18)
+        self.assertEqual(len(paths), 42)
         for path in paths:
             self.assertTrue(server.valid_recipe(json.loads(path.read_text())), path.parent.name)
 

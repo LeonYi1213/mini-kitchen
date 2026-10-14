@@ -1,0 +1,164 @@
+{
+  "id": "xhs-680cce70000000001e00a8f4",
+  "title": "蒲瓜烧蛏子",
+  "servings": null,
+  "source": "https://www.xiaohongshu.com/explore/680cce70000000001e00a8f4",
+  "ingredients": [
+    {
+      "name": "蛏子",
+      "amount": 300.0,
+      "unit": "克"
+    },
+    {
+      "name": "咸肉",
+      "amount": 30.0,
+      "unit": "克"
+    },
+    {
+      "name": "蒲瓜",
+      "amount": 200.0,
+      "unit": "克"
+    },
+    {
+      "name": "韭菜",
+      "amount": 15.0,
+      "unit": "克"
+    },
+    {
+      "name": "姜",
+      "amount": 25.0,
+      "unit": "克"
+    },
+    {
+      "name": "蒜",
+      "amount": 25.0,
+      "unit": "克"
+    },
+    {
+      "name": "胡萝卜",
+      "amount": 20.0,
+      "unit": "克"
+    },
+    {
+      "name": "春笋",
+      "amount": 20.0,
+      "unit": "克"
+    },
+    {
+      "name": "糖",
+      "amount": 2.0,
+      "unit": "克"
+    },
+    {
+      "name": "盐",
+      "amount": 1.0,
+      "unit": "克"
+    },
+    {
+      "name": "生抽",
+      "amount": 5.0,
+      "unit": "克"
+    },
+    {
+      "name": "花雕酒",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "水",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "食用油",
+      "amount": null,
+      "unit": "适量"
+    }
+  ],
+  "prep": [
+    "蛏子清洗净沙；蒲瓜切厚片，咸肉、姜、胡萝卜和春笋切片，韭菜切段。"
+  ],
+  "cook": [
+    "蛏子下锅煮至开壳，取出蛏肉备用。",
+    "锅放少许油，下咸肉煸香，再下姜蒜炒香。",
+    "加入胡萝卜和笋片翻炒，烹入花雕酒。",
+    "放蒲瓜厚片，炒至边缘微焦，加入少量水烧软。",
+    "放蛏肉，加糖2克、盐1克、生抽5克，稍收汁后加韭菜翻匀装盘。"
+  ],
+  "timing": {
+    "prep": [
+      {
+        "min": 5,
+        "max": 10,
+        "wait": false
+      }
+    ],
+    "cook": [
+      {
+        "min": 3,
+        "max": 5,
+        "wait": false
+      },
+      {
+        "min": 2,
+        "max": 3,
+        "wait": false
+      },
+      {
+        "min": 2,
+        "max": 3,
+        "wait": false
+      },
+      {
+        "min": 4,
+        "max": 6,
+        "wait": false
+      },
+      {
+        "min": 2,
+        "max": 3,
+        "wait": false
+      }
+    ]
+  },
+  "illustrated_steps": [
+    {
+      "title": "煮蛏取肉",
+      "text": "蛏子下锅煮至开壳，取出蛏肉备用。",
+      "source_time": "约 00:12",
+      "image": "step-01.jpg"
+    },
+    {
+      "title": "煸香咸肉姜蒜",
+      "text": "锅放少许油，下咸肉煸香，再下姜蒜炒香。",
+      "source_time": "约 00:16",
+      "image": "step-02.jpg"
+    },
+    {
+      "title": "炒配菜",
+      "text": "加入胡萝卜和笋片翻炒，烹入花雕酒。",
+      "source_time": "约 00:20",
+      "image": "step-03.jpg"
+    },
+    {
+      "title": "煎蒲瓜",
+      "text": "放蒲瓜厚片，炒至边缘微焦，加入少量水烧软。",
+      "source_time": "约 00:24",
+      "image": "step-04.jpg"
+    },
+    {
+      "title": "加蛏调味",
+      "text": "放蛏肉，加糖2克、盐1克、生抽5克，稍收汁后加韭菜翻匀装盘。",
+      "source_time": "约 00:30",
+      "image": "step-05.jpg"
+    }
+  ],
+  "cover": "step-05.jpg",
+  "format_version": 3,
+  "notes": [
+    "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+    "来源：EverettZhu《新荣记春季菜单🔥蒲瓜烧蛏子，在家轻松复刻！》。",
+    "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+    "原片字幕写“萝卜”，画面为橙色胡萝卜；食材名按画面整理。水量原片未注明。"
+  ]
+}

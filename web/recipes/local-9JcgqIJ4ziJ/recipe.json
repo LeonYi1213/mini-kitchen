@@ -1,0 +1,146 @@
+{
+  "id": "xhs-67b2daa30000000028034fc3",
+  "title": "蛤蜊蒸蛋",
+  "servings": null,
+  "source": "https://www.xiaohongshu.com/explore/67b2daa30000000028034fc3",
+  "ingredients": [
+    {
+      "name": "蛤蜊",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "鸡蛋",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "姜",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "葱",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "盐",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "胡椒粉",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "蛤蜊原汤",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "秋油（酱油）",
+      "amount": 1.0,
+      "unit": "勺"
+    }
+  ],
+  "prep": [
+    "蛤蜊清洗吐净沙，姜切片、葱切段并留葱花。"
+  ],
+  "cook": [
+    "水中放蛤蜊与姜葱，煮至开壳后捞出，保留原汤。",
+    "鸡蛋充分打散，加少许盐和胡椒；蛤蜊自带咸味，盐不要多。",
+    "取沉淀后的上层蛤蜊原汤，避开底部沙粒；待汤不烫后拌入蛋液，撇去泡沫。",
+    "蛤蜊逐个摆盘，将蛋液轻轻倒入。",
+    "入蒸锅，上气后蒸10–12分钟，至蛋液凝固。",
+    "出锅淋1勺秋油，撒葱花。"
+  ],
+  "timing": {
+    "prep": [
+      {
+        "min": 5,
+        "max": 10,
+        "wait": false
+      }
+    ],
+    "cook": [
+      {
+        "min": 3,
+        "max": 5,
+        "wait": false
+      },
+      {
+        "min": 2,
+        "max": 3,
+        "wait": false
+      },
+      {
+        "min": 3,
+        "max": 5,
+        "wait": false
+      },
+      {
+        "min": 2,
+        "max": 3,
+        "wait": false
+      },
+      {
+        "min": 10,
+        "max": 12,
+        "wait": true
+      },
+      {
+        "min": 1,
+        "max": 2,
+        "wait": false
+      }
+    ]
+  },
+  "illustrated_steps": [
+    {
+      "title": "煮开蛤蜊",
+      "text": "水中放蛤蜊与姜葱，煮至开壳后捞出，保留原汤。",
+      "source_time": "约 00:52",
+      "image": "step-01.jpg"
+    },
+    {
+      "title": "打蛋调味",
+      "text": "鸡蛋充分打散，加少许盐和胡椒；蛤蜊自带咸味，盐不要多。",
+      "source_time": "约 00:46",
+      "image": "step-02.jpg"
+    },
+    {
+      "title": "混入清汤",
+      "text": "取沉淀后的上层蛤蜊原汤，避开底部沙粒；待汤不烫后拌入蛋液，撇去泡沫。",
+      "source_time": "约 01:12",
+      "image": "step-03.jpg"
+    },
+    {
+      "title": "摆蛤蜊倒蛋液",
+      "text": "蛤蜊逐个摆盘，将蛋液轻轻倒入。",
+      "source_time": "约 01:30",
+      "image": "step-04.jpg"
+    },
+    {
+      "title": "上气蒸熟",
+      "text": "入蒸锅，上气后蒸10–12分钟，至蛋液凝固。",
+      "source_time": "约 01:38",
+      "image": "step-05.jpg"
+    },
+    {
+      "title": "淋油撒葱",
+      "text": "出锅淋1勺秋油，撒葱花。",
+      "source_time": "约 01:48",
+      "image": "step-06.jpg"
+    }
+  ],
+  "cover": "step-06.jpg",
+  "format_version": 3,
+  "notes": [
+    "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+    "来源：宋大厨开饭了《厨房小白也能学会的家常菜蛤蜊蒸蛋》。",
+    "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+    "原片未给鸡蛋数量、蛤蜊重量及蛋汤比例；没有按通用配方冒填。原汤放至不烫为整理补充，避免烫成蛋花。"
+  ]
+}

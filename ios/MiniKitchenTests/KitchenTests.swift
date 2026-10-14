@@ -131,7 +131,7 @@ final class KitchenTests: XCTestCase {
     func testBundledCatalogAndImages() throws {
         let url = try XCTUnwrap(Bundle.main.url(forResource: "recipes", withExtension: "json"))
         let recipes = try JSONDecoder().decode([Recipe].self, from: Data(contentsOf: url))
-        XCTAssertEqual(recipes.count, 18)
+        XCTAssertEqual(recipes.count, 42)
         XCTAssertEqual(Set(recipes.map(\.id)).count, recipes.count)
         for recipe in recipes {
             XCTAssertTrue(recipe.valid, recipe.title)

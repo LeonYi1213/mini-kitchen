@@ -910,6 +910,3863 @@
     "cover": "home-seafood-rice-finish.jpg"
   },
   {
+    "id": "xhs-680cce70000000001e00a8f4",
+    "title": "蒲瓜烧蛏子",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/680cce70000000001e00a8f4",
+    "ingredients": [
+      {
+        "name": "蛏子",
+        "amount": 300.0,
+        "unit": "克"
+      },
+      {
+        "name": "咸肉",
+        "amount": 30.0,
+        "unit": "克"
+      },
+      {
+        "name": "蒲瓜",
+        "amount": 200.0,
+        "unit": "克"
+      },
+      {
+        "name": "韭菜",
+        "amount": 15.0,
+        "unit": "克"
+      },
+      {
+        "name": "姜",
+        "amount": 25.0,
+        "unit": "克"
+      },
+      {
+        "name": "蒜",
+        "amount": 25.0,
+        "unit": "克"
+      },
+      {
+        "name": "胡萝卜",
+        "amount": 20.0,
+        "unit": "克"
+      },
+      {
+        "name": "春笋",
+        "amount": 20.0,
+        "unit": "克"
+      },
+      {
+        "name": "糖",
+        "amount": 2.0,
+        "unit": "克"
+      },
+      {
+        "name": "盐",
+        "amount": 1.0,
+        "unit": "克"
+      },
+      {
+        "name": "生抽",
+        "amount": 5.0,
+        "unit": "克"
+      },
+      {
+        "name": "花雕酒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "水",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "食用油",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "蛏子清洗净沙；蒲瓜切厚片，咸肉、姜、胡萝卜和春笋切片，韭菜切段。"
+    ],
+    "cook": [
+      "蛏子下锅煮至开壳，取出蛏肉备用。",
+      "锅放少许油，下咸肉煸香，再下姜蒜炒香。",
+      "加入胡萝卜和笋片翻炒，烹入花雕酒。",
+      "放蒲瓜厚片，炒至边缘微焦，加入少量水烧软。",
+      "放蛏肉，加糖2克、盐1克、生抽5克，稍收汁后加韭菜翻匀装盘。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 3,
+          "max": 5,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 4,
+          "max": 6,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "煮蛏取肉",
+        "text": "蛏子下锅煮至开壳，取出蛏肉备用。",
+        "source_time": "约 00:12",
+        "image": "local-1LQGVFCYnAu-step-01.jpg"
+      },
+      {
+        "title": "煸香咸肉姜蒜",
+        "text": "锅放少许油，下咸肉煸香，再下姜蒜炒香。",
+        "source_time": "约 00:16",
+        "image": "local-1LQGVFCYnAu-step-02.jpg"
+      },
+      {
+        "title": "炒配菜",
+        "text": "加入胡萝卜和笋片翻炒，烹入花雕酒。",
+        "source_time": "约 00:20",
+        "image": "local-1LQGVFCYnAu-step-03.jpg"
+      },
+      {
+        "title": "煎蒲瓜",
+        "text": "放蒲瓜厚片，炒至边缘微焦，加入少量水烧软。",
+        "source_time": "约 00:24",
+        "image": "local-1LQGVFCYnAu-step-04.jpg"
+      },
+      {
+        "title": "加蛏调味",
+        "text": "放蛏肉，加糖2克、盐1克、生抽5克，稍收汁后加韭菜翻匀装盘。",
+        "source_time": "约 00:30",
+        "image": "local-1LQGVFCYnAu-step-05.jpg"
+      }
+    ],
+    "cover": "local-1LQGVFCYnAu-step-05.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：EverettZhu《新荣记春季菜单🔥蒲瓜烧蛏子，在家轻松复刻！》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "原片字幕写“萝卜”，画面为橙色胡萝卜；食材名按画面整理。水量原片未注明。"
+    ]
+  },
+  {
+    "id": "xhs-6065c572000000000102a367",
+    "title": "香煎芦笋",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/6065c572000000000102a367",
+    "ingredients": [
+      {
+        "name": "芦笋",
+        "amount": 350.0,
+        "unit": "克"
+      },
+      {
+        "name": "酱油",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "盐",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "黑胡椒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "糖",
+        "amount": null,
+        "unit": "适量（原文：少许）"
+      },
+      {
+        "name": "香油",
+        "amount": null,
+        "unit": "适量（原文：少许）"
+      },
+      {
+        "name": "黄油或食用油",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "芦笋洗净去老根，锅小可横切两段，用刀轻拍裂。"
+    ],
+    "cook": [
+      "芦笋加少量盐、酱油、黑胡椒、少许糖和香油搓匀，腌至少30分钟。",
+      "倒掉腌出的汁水；锅烧热后放黄油或食用油。",
+      "小火煎芦笋两面，约5分钟至熟透、表面微焦。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 30,
+          "max": 30,
+          "wait": true
+        },
+        {
+          "min": 1,
+          "max": 2,
+          "wait": false
+        },
+        {
+          "min": 5,
+          "max": 5,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "拌料腌制",
+        "text": "芦笋加少量盐、酱油、黑胡椒、少许糖和香油搓匀，腌至少30分钟。",
+        "source_time": "原笔记图 1",
+        "image": "local-1vvAFCVErIZ-step-01.jpg"
+      },
+      {
+        "title": "沥汁热锅",
+        "text": "倒掉腌出的汁水；锅烧热后放黄油或食用油。",
+        "source_time": "原笔记图 2",
+        "image": "local-1vvAFCVErIZ-step-02.jpg"
+      },
+      {
+        "title": "小火煎熟",
+        "text": "小火煎芦笋两面，约5分钟至熟透、表面微焦。",
+        "source_time": "原笔记图 3",
+        "image": "local-1vvAFCVErIZ-step-03.jpg"
+      }
+    ],
+    "cover": "local-1vvAFCVErIZ-cover.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：三水饱了《食谱菜谱♥香煎芦笋》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "原文写350克芦笋用2小勺盐，同时强调盐勺很小、应少放；不把“2勺”当成标准量。配图为原笔记展示图。"
+    ]
+  },
+  {
+    "id": "xhs-65efb3590000000012020438",
+    "title": "西班牙风味红烩鳕鱼",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/65efb3590000000012020438",
+    "ingredients": [
+      {
+        "name": "鳕鱼",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "红葱头",
+        "amount": null,
+        "unit": "适量（原文：2–3个）"
+      },
+      {
+        "name": "蒜",
+        "amount": 2.0,
+        "unit": "瓣"
+      },
+      {
+        "name": "甜椒",
+        "amount": 0.5,
+        "unit": "个"
+      },
+      {
+        "name": "去皮番茄罐头",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "甜椒粉",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "白葡萄酒",
+        "amount": 70.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "土豆",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "水或鱼高汤",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "黑胡椒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "海盐",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "欧芹",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "橄榄油",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "鳕鱼擦干，用海盐和黑胡椒腌制；红葱头、蒜切碎，甜椒切条，土豆切片。"
+    ],
+    "cook": [
+      "锅放橄榄油，炒香红葱头、蒜末与甜椒条。",
+      "加入去皮番茄罐头、甜椒粉及70毫升白葡萄酒，煮开后撒黑胡椒。",
+      "下土豆片，倒水或鱼高汤，小火焖5分钟。",
+      "放鳕鱼入汤，反复浇淋汤汁，继续加热至鳕鱼和土豆都熟透。",
+      "撒欧芹后盛盘，保留红烩汤汁。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 3,
+          "max": 5,
+          "wait": false
+        },
+        {
+          "min": 3,
+          "max": 5,
+          "wait": false
+        },
+        {
+          "min": 5,
+          "max": 5,
+          "wait": true
+        },
+        {
+          "min": 5,
+          "max": 8,
+          "wait": false
+        },
+        {
+          "min": 1,
+          "max": 2,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "炒香葱蒜甜椒",
+        "text": "锅放橄榄油，炒香红葱头、蒜末与甜椒条。",
+        "source_time": "约 00:28",
+        "image": "local-23z6l7xfYN1-step-01.jpg"
+      },
+      {
+        "title": "炒番茄底",
+        "text": "加入去皮番茄罐头、甜椒粉及70毫升白葡萄酒，煮开后撒黑胡椒。",
+        "source_time": "约 00:44",
+        "image": "local-23z6l7xfYN1-step-02.jpg"
+      },
+      {
+        "title": "焖土豆",
+        "text": "下土豆片，倒水或鱼高汤，小火焖5分钟。",
+        "source_time": "约 00:52",
+        "image": "local-23z6l7xfYN1-step-03.jpg"
+      },
+      {
+        "title": "下鳕鱼浇汁",
+        "text": "放鳕鱼入汤，反复浇淋汤汁，继续加热至鳕鱼和土豆都熟透。",
+        "source_time": "约 00:58",
+        "image": "local-23z6l7xfYN1-step-04.jpg"
+      },
+      {
+        "title": "欧芹点缀",
+        "text": "撒欧芹后盛盘，保留红烩汤汁。",
+        "source_time": "约 01:02",
+        "image": "local-23z6l7xfYN1-step-05.jpg"
+      }
+    ],
+    "cover": "local-23z6l7xfYN1-step-05.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：好叔叔Hasusu《西班牙风味红烩鳕鱼🔥简单家常！美味🥂》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "鳕鱼重量、土豆数量、番茄与汤量原片未标明。"
+    ]
+  },
+  {
+    "id": "xhs-69271a8c000000001b020d64",
+    "title": "啤酒腌香煎五花肉",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/69271a8c000000001b020d64",
+    "ingredients": [
+      {
+        "name": "五花肉",
+        "amount": null,
+        "unit": "适量（原文：原片未明确配方重量）"
+      },
+      {
+        "name": "啤酒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "葱",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "姜",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "蚝油",
+        "amount": 1.0,
+        "unit": "勺"
+      },
+      {
+        "name": "椒盐粉",
+        "amount": null,
+        "unit": "原片半包，包装规格未注明"
+      },
+      {
+        "name": "食用油",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "生粉",
+        "amount": 1.0,
+        "unit": "勺"
+      }
+    ],
+    "prep": [
+      "五花肉切厚片，葱姜切段片。"
+    ],
+    "cook": [
+      "五花肉用啤酒浸泡10分钟。",
+      "加葱姜、蚝油1勺、半包椒盐粉和少许油，抓匀后腌10分钟；椒盐粉规格不明，实际宜少量调整。",
+      "取出葱姜料渣，加1勺生粉抓匀，再腌15分钟。",
+      "锅中放油烧热，下肉片全程小火煎，翻面煎至两面金黄且内部熟透。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 10,
+          "max": 10,
+          "wait": true
+        },
+        {
+          "min": 10,
+          "max": 10,
+          "wait": true
+        },
+        {
+          "min": 15,
+          "max": 15,
+          "wait": true
+        },
+        {
+          "min": 10,
+          "max": 15,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "啤酒浸泡",
+        "text": "五花肉用啤酒浸泡10分钟。",
+        "source_time": "约 00:06",
+        "image": "local-4K2lzG2RPSt-step-01.jpg"
+      },
+      {
+        "title": "调味腌制",
+        "text": "加葱姜、蚝油1勺、半包椒盐粉和少许油，抓匀后腌10分钟；椒盐粉规格不明，实际宜少量调整。",
+        "source_time": "约 00:12",
+        "image": "local-4K2lzG2RPSt-step-02.jpg"
+      },
+      {
+        "title": "去料裹粉",
+        "text": "取出葱姜料渣，加1勺生粉抓匀，再腌15分钟。",
+        "source_time": "约 00:18",
+        "image": "local-4K2lzG2RPSt-step-03.jpg"
+      },
+      {
+        "title": "小火煎熟",
+        "text": "锅中放油烧热，下肉片全程小火煎，翻面煎至两面金黄且内部熟透。",
+        "source_time": "约 00:24",
+        "image": "local-4K2lzG2RPSt-step-04.jpg"
+      }
+    ],
+    "cover": "local-4K2lzG2RPSt-step-04.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：杨掌厨《啤酒腌香煎五花肉》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "原笔记无标题，此标题由实际视频内容整理；“10块钱3斤”是口播价格描述，未当作配方重量。"
+    ]
+  },
+  {
+    "id": "xhs-6abba8b5000000001303ffd3",
+    "title": "土豆烧豆角",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/6abba8b5000000001303ffd3",
+    "ingredients": [
+      {
+        "name": "扁豆",
+        "amount": 500.0,
+        "unit": "克"
+      },
+      {
+        "name": "土豆",
+        "amount": 700.0,
+        "unit": "克"
+      },
+      {
+        "name": "生抽",
+        "amount": 60.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "老抽",
+        "amount": 10.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "盐",
+        "amount": 2.0,
+        "unit": "克"
+      },
+      {
+        "name": "糖",
+        "amount": 5.0,
+        "unit": "克"
+      },
+      {
+        "name": "玉米淀粉",
+        "amount": 3.0,
+        "unit": "克"
+      },
+      {
+        "name": "水",
+        "amount": 100.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "蒜",
+        "amount": 15.0,
+        "unit": "克"
+      },
+      {
+        "name": "葱花",
+        "amount": 15.0,
+        "unit": "克"
+      },
+      {
+        "name": "食用油",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "扁豆掰段，土豆切成手指粗条；蒜切末，留一半出锅前用。"
+    ],
+    "cook": [
+      "生抽60毫升、老抽10毫升、盐2克、糖5克、玉米淀粉3克和水100毫升混匀。",
+      "锅中放油，用中小火将土豆煎至四周金黄、熟透后盛出。",
+      "用锅中余油煸炒扁豆，炒至表皮起皱且彻底熟透。",
+      "加入葱花和一半蒜末炒香，倒回土豆及碗汁翻匀。",
+      "收至汤汁浓稠，加入剩余蒜末翻匀，关火出锅。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 8,
+          "max": 12,
+          "wait": false
+        },
+        {
+          "min": 10,
+          "max": 15,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 4,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "混合碗汁",
+        "text": "生抽60毫升、老抽10毫升、盐2克、糖5克、玉米淀粉3克和水100毫升混匀。",
+        "source_time": "约 00:20",
+        "image": "local-4NkmeQMGJ4k-step-01.jpg"
+      },
+      {
+        "title": "煎香土豆",
+        "text": "锅中放油，用中小火将土豆煎至四周金黄、熟透后盛出。",
+        "source_time": "约 00:28",
+        "image": "local-4NkmeQMGJ4k-step-02.jpg"
+      },
+      {
+        "title": "煸熟扁豆",
+        "text": "用锅中余油煸炒扁豆，炒至表皮起皱且彻底熟透。",
+        "source_time": "约 00:36",
+        "image": "local-4NkmeQMGJ4k-step-03.jpg"
+      },
+      {
+        "title": "合炒入味",
+        "text": "加入葱花和一半蒜末炒香，倒回土豆及碗汁翻匀。",
+        "source_time": "约 00:44",
+        "image": "local-4NkmeQMGJ4k-step-04.jpg"
+      },
+      {
+        "title": "收汁加蒜",
+        "text": "收至汤汁浓稠，加入剩余蒜末翻匀，关火出锅。",
+        "source_time": "约 00:52",
+        "image": "local-4NkmeQMGJ4k-step-05.jpg"
+      }
+    ],
+    "cover": "local-4NkmeQMGJ4k-step-05.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：孩儿他姥姥《给肉都不换‼️土豆烧豆角🤤巨香巨下饭》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "豆角必须充分煮熟，不能仅凭表皮颜色判断。"
+    ]
+  },
+  {
+    "id": "xhs-68ce5023000000000b013dc7",
+    "title": "万能熟醉汁",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/68ce5023000000000b013dc7",
+    "ingredients": [
+      {
+        "name": "桂皮",
+        "amount": 1.0,
+        "unit": "根"
+      },
+      {
+        "name": "香叶",
+        "amount": null,
+        "unit": "适量（原文：3–5片）"
+      },
+      {
+        "name": "八角",
+        "amount": null,
+        "unit": "适量（原文：2–3颗）"
+      },
+      {
+        "name": "花椒",
+        "amount": null,
+        "unit": "适量（原文：20–30粒）"
+      },
+      {
+        "name": "陈皮",
+        "amount": 15.0,
+        "unit": "克"
+      },
+      {
+        "name": "姜",
+        "amount": 4.0,
+        "unit": "厚片"
+      },
+      {
+        "name": "葱结",
+        "amount": null,
+        "unit": "适量（原文：1–2根）"
+      },
+      {
+        "name": "干辣椒",
+        "amount": null,
+        "unit": "适量（原文：3–4个）"
+      },
+      {
+        "name": "话梅",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "黄冰糖",
+        "amount": 150.0,
+        "unit": "克"
+      },
+      {
+        "name": "薄盐生抽",
+        "amount": 500.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "花雕酒",
+        "amount": 500.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "白酒",
+        "amount": 100.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "柠檬",
+        "amount": 0.5,
+        "unit": "个"
+      },
+      {
+        "name": "虾蟹或小海鲜",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "香料清洗沥干，姜切厚片，柠檬去籽；海鲜清理干净。"
+    ],
+    "cook": [
+      "桂皮、香叶、八角、花椒、陈皮、姜、葱结、干辣椒和话梅入锅，加150克冰糖和500毫升薄盐生抽，小火加热至冰糖融化、香料出味。",
+      "倒500毫升花雕酒和100毫升白酒，大火刚煮开即关火，不久煮。",
+      "将醉汁放凉，过滤掉香料。",
+      "半个去籽柠檬挤汁并放入醉汁，冷藏30分钟后取出柠檬，避免发苦。",
+      "海鲜冷水上锅蒸，原片中小火约15分钟；按种类和大小确保完全熟透，放凉后沥干。",
+      "熟海鲜放洁净容器中，加醉汁浸泡，冷藏8–10小时入味。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 8,
+          "max": 12,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 4,
+          "wait": false
+        },
+        {
+          "min": 30,
+          "max": 60,
+          "wait": true
+        },
+        {
+          "min": 30,
+          "max": 30,
+          "wait": true
+        },
+        {
+          "min": 15,
+          "max": 20,
+          "wait": true
+        },
+        {
+          "min": 480,
+          "max": 600,
+          "wait": true
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "低火熬底汁",
+        "text": "桂皮、香叶、八角、花椒、陈皮、姜、葱结、干辣椒和话梅入锅，加150克冰糖和500毫升薄盐生抽，小火加热至冰糖融化、香料出味。",
+        "source_time": "约 00:56",
+        "image": "local-4SxG784UdOF-step-01.jpg"
+      },
+      {
+        "title": "加酒煮开",
+        "text": "倒500毫升花雕酒和100毫升白酒，大火刚煮开即关火，不久煮。",
+        "source_time": "约 01:04",
+        "image": "local-4SxG784UdOF-step-02.jpg"
+      },
+      {
+        "title": "放凉过滤",
+        "text": "将醉汁放凉，过滤掉香料。",
+        "source_time": "约 01:10",
+        "image": "local-4SxG784UdOF-step-03.jpg"
+      },
+      {
+        "title": "柠檬浸香",
+        "text": "半个去籽柠檬挤汁并放入醉汁，冷藏30分钟后取出柠檬，避免发苦。",
+        "source_time": "约 01:18",
+        "image": "local-4SxG784UdOF-step-04.jpg"
+      },
+      {
+        "title": "海鲜蒸熟",
+        "text": "海鲜冷水上锅蒸，原片中小火约15分钟；按种类和大小确保完全熟透，放凉后沥干。",
+        "source_time": "约 02:12",
+        "image": "local-4SxG784UdOF-step-05.jpg"
+      },
+      {
+        "title": "冷藏入味",
+        "text": "熟海鲜放洁净容器中，加醉汁浸泡，冷藏8–10小时入味。",
+        "source_time": "约 02:20",
+        "image": "local-4SxG784UdOF-step-06.jpg"
+      }
+    ],
+    "cover": "local-4SxG784UdOF-step-06.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：阿晨吃饱了《自制万能熟醉汁！目前吃到最好吃的做法！》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "这是熟醉，不适用于生腌。话梅用量未注明；嗜甜可按原片把冰糖加至200克。原片广告内容未纳入菜谱。"
+    ]
+  },
+  {
+    "id": "xhs-6a27ff660000000022009625",
+    "title": "蒜香鸡翅",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/6a27ff660000000022009625",
+    "ingredients": [
+      {
+        "name": "鸡翅",
+        "amount": 1300.0,
+        "unit": "克"
+      },
+      {
+        "name": "料酒",
+        "amount": 40.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "蚝油",
+        "amount": 25.0,
+        "unit": "克"
+      },
+      {
+        "name": "生抽",
+        "amount": 40.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "盐",
+        "amount": 5.0,
+        "unit": "克"
+      },
+      {
+        "name": "白胡椒粉",
+        "amount": 1.0,
+        "unit": "克"
+      },
+      {
+        "name": "玉米淀粉",
+        "amount": 30.0,
+        "unit": "克"
+      },
+      {
+        "name": "蒜",
+        "amount": 300.0,
+        "unit": "克"
+      },
+      {
+        "name": "红椒",
+        "amount": 30.0,
+        "unit": "克"
+      },
+      {
+        "name": "青椒",
+        "amount": 30.0,
+        "unit": "克"
+      },
+      {
+        "name": "洋葱",
+        "amount": 50.0,
+        "unit": "克"
+      },
+      {
+        "name": "葱花",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "熟白芝麻",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "食用油",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "鸡翅清理干净，沥干并扎孔。青红椒和洋葱切碎。蒜切末后冲洗两三遍，挤干水分。"
+    ],
+    "cook": [
+      "鸡翅加入料酒、蚝油、生抽、盐、白胡椒粉和玉米淀粉拌匀腌制，原片未注明腌多久。",
+      "蒜末下油锅，中小火慢炸至金黄浮起，捞出沥油放凉。",
+      "用炸蒜的油炸鸡翅，控制火力，翻动至金黄且内部熟透；大鸡翅需延长时间。",
+      "锅留少量蒜油，炒香青红椒和洋葱。",
+      "倒鸡翅翻匀，加入蒜酥、葱花和熟白芝麻，拌匀出锅。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 15,
+          "max": 30,
+          "wait": true
+        },
+        {
+          "min": 5,
+          "max": 8,
+          "wait": false
+        },
+        {
+          "min": 10,
+          "max": 15,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 1,
+          "max": 2,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "腌鸡翅",
+        "text": "鸡翅加入料酒、蚝油、生抽、盐、白胡椒粉和玉米淀粉拌匀腌制，原片未注明腌多久。",
+        "source_time": "约 00:28",
+        "image": "local-4ePeTP2b5R0-step-01.jpg"
+      },
+      {
+        "title": "炸蒜酥",
+        "text": "蒜末下油锅，中小火慢炸至金黄浮起，捞出沥油放凉。",
+        "source_time": "约 00:58",
+        "image": "local-4ePeTP2b5R0-step-02.jpg"
+      },
+      {
+        "title": "蒜油炸鸡翅",
+        "text": "用炸蒜的油炸鸡翅，控制火力，翻动至金黄且内部熟透；大鸡翅需延长时间。",
+        "source_time": "约 01:12",
+        "image": "local-4ePeTP2b5R0-step-03.jpg"
+      },
+      {
+        "title": "炒香配菜",
+        "text": "锅留少量蒜油，炒香青红椒和洋葱。",
+        "source_time": "约 01:14",
+        "image": "local-4ePeTP2b5R0-step-04.jpg"
+      },
+      {
+        "title": "合炒出锅",
+        "text": "倒鸡翅翻匀，加入蒜酥、葱花和熟白芝麻，拌匀出锅。",
+        "source_time": "约 01:22",
+        "image": "local-4ePeTP2b5R0-step-05.jpg"
+      }
+    ],
+    "cover": "local-4ePeTP2b5R0-step-05.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：孩儿他姥姥《比可乐鸡翅还夯‼️蒜香鸡翅😋外酥里嫩》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "原片未给腌制和炸制精确时间，界面时间为估算。蒜末入油前充分沥干。"
+    ]
+  },
+  {
+    "id": "xhs-6698a6250000000025003ca4",
+    "title": "三杯鸡",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/6698a6250000000025003ca4",
+    "ingredients": [
+      {
+        "name": "鸡腿",
+        "amount": 1200.0,
+        "unit": "克"
+      },
+      {
+        "name": "白胡椒粉",
+        "amount": 0.5,
+        "unit": "克"
+      },
+      {
+        "name": "料酒",
+        "amount": 20.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "盐",
+        "amount": 2.0,
+        "unit": "克"
+      },
+      {
+        "name": "香油",
+        "amount": 70.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "蒜",
+        "amount": 40.0,
+        "unit": "克"
+      },
+      {
+        "name": "姜",
+        "amount": 15.0,
+        "unit": "克"
+      },
+      {
+        "name": "米酒",
+        "amount": 70.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "生抽",
+        "amount": 70.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "冰糖",
+        "amount": 10.0,
+        "unit": "克"
+      },
+      {
+        "name": "九层塔",
+        "amount": 30.0,
+        "unit": "克"
+      }
+    ],
+    "prep": [
+      "鸡腿切块清理干净，控干水；姜切片，九层塔洗净沥水。"
+    ],
+    "cook": [
+      "鸡腿加白胡椒、料酒和盐，拌匀腌入味；原片未给腌制时长。",
+      "锅入70毫升香油，煸香姜片和蒜。",
+      "加入鸡块煎炒至正反面金黄。",
+      "倒70毫升米酒、70毫升生抽，加10克冰糖，全程不另加水，继续焖煮至鸡肉熟透、汁浓。",
+      "收至汤汁黏稠时撒九层塔，翻匀出锅。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 10,
+          "max": 20,
+          "wait": true
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 5,
+          "max": 8,
+          "wait": false
+        },
+        {
+          "min": 12,
+          "max": 20,
+          "wait": true
+        },
+        {
+          "min": 1,
+          "max": 2,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "腌鸡腿",
+        "text": "鸡腿加白胡椒、料酒和盐，拌匀腌入味；原片未给腌制时长。",
+        "source_time": "约 00:16",
+        "image": "local-59Sp7VDujgh-step-01.jpg"
+      },
+      {
+        "title": "煸香姜蒜",
+        "text": "锅入70毫升香油，煸香姜片和蒜。",
+        "source_time": "约 00:32",
+        "image": "local-59Sp7VDujgh-step-02.jpg"
+      },
+      {
+        "title": "煎鸡块",
+        "text": "加入鸡块煎炒至正反面金黄。",
+        "source_time": "约 00:36",
+        "image": "local-59Sp7VDujgh-step-03.jpg"
+      },
+      {
+        "title": "米酒生抽焖鸡",
+        "text": "倒70毫升米酒、70毫升生抽，加10克冰糖，全程不另加水，继续焖煮至鸡肉熟透、汁浓。",
+        "source_time": "约 00:44",
+        "image": "local-59Sp7VDujgh-step-04.jpg"
+      },
+      {
+        "title": "加入九层塔",
+        "text": "收至汤汁黏稠时撒九层塔，翻匀出锅。",
+        "source_time": "约 00:46",
+        "image": "local-59Sp7VDujgh-step-05.jpg"
+      }
+    ],
+    "cover": "local-59Sp7VDujgh-step-05.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：孩儿他姥姥《香迷糊了❗️三杯鸡真的巨下饭🔥超好吃》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "香油可按原片用胡麻油，米酒可用醪糟汤代替；九层塔可用香芹或香菜，风味不同。"
+    ]
+  },
+  {
+    "id": "xhs-6a7b08a000000000350141c0",
+    "title": "老式锅包肉",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/6a7b08a000000000350141c0",
+    "ingredients": [
+      {
+        "name": "猪里脊",
+        "amount": 500.0,
+        "unit": "克"
+      },
+      {
+        "name": "土豆淀粉",
+        "amount": 300.0,
+        "unit": "克"
+      },
+      {
+        "name": "水",
+        "amount": null,
+        "unit": "适量（原文：浸没淀粉）"
+      },
+      {
+        "name": "油（挂糊）",
+        "amount": 50.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "白醋",
+        "amount": 100.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "生抽",
+        "amount": 5.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "盐",
+        "amount": 5.0,
+        "unit": "克"
+      },
+      {
+        "name": "白糖",
+        "amount": 100.0,
+        "unit": "克"
+      },
+      {
+        "name": "淀粉水",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "姜",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "蒜",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "葱",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "胡萝卜",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "香菜",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "食用油（炸制）",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "里脊可先冷冻30–50分钟方便切片，再切约0.5厘米厚、轻拍松，冲洗后挤干水。土豆淀粉提前浸泡至少30分钟，倒掉表面清水。葱姜胡萝卜切丝，蒜切片。"
+    ],
+    "cook": [
+      "肉片裹上沉淀后的湿淀粉糊，调至能牢固挂住，最后加50毫升油拌匀。",
+      "油热后转中火，肉片逐片入锅，先不翻动，定型后分开；原片第一遍约2分钟。",
+      "升高油温，复炸约30–40秒至酥脆，捞出沥油。",
+      "白醋、生抽、盐、白糖及少许淀粉水混匀。锅留底油，姜蒜爆香，倒汁熬至起大泡。",
+      "关火等约30秒，倒入肉片和葱丝、胡萝卜丝、香菜，迅速翻匀裹汁即出锅。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 3,
+          "max": 5,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 1,
+          "max": 2,
+          "wait": false
+        },
+        {
+          "min": 3,
+          "max": 5,
+          "wait": false
+        },
+        {
+          "min": 1,
+          "max": 2,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "挂湿淀粉糊",
+        "text": "肉片裹上沉淀后的湿淀粉糊，调至能牢固挂住，最后加50毫升油拌匀。",
+        "source_time": "约 00:34",
+        "image": "local-5NPVLftOxjq-step-01.jpg"
+      },
+      {
+        "title": "第一遍炸定型",
+        "text": "油热后转中火，肉片逐片入锅，先不翻动，定型后分开；原片第一遍约2分钟。",
+        "source_time": "约 00:48",
+        "image": "local-5NPVLftOxjq-step-02.jpg"
+      },
+      {
+        "title": "升温复炸",
+        "text": "升高油温，复炸约30–40秒至酥脆，捞出沥油。",
+        "source_time": "约 00:54",
+        "image": "local-5NPVLftOxjq-step-03.jpg"
+      },
+      {
+        "title": "熬酸甜汁",
+        "text": "白醋、生抽、盐、白糖及少许淀粉水混匀。锅留底油，姜蒜爆香，倒汁熬至起大泡。",
+        "source_time": "约 01:04",
+        "image": "local-5NPVLftOxjq-step-04.jpg"
+      },
+      {
+        "title": "关火裹汁",
+        "text": "关火等约30秒，倒入肉片和葱丝、胡萝卜丝、香菜，迅速翻匀裹汁即出锅。",
+        "source_time": "约 01:14",
+        "image": "local-5NPVLftOxjq-step-05.jpg"
+      }
+    ],
+    "cover": "local-5NPVLftOxjq-step-05.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：孩儿他姥姥《饭店级超正宗‼️老式锅包肉😋酥脆不回软》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "糖醋比例保留原片；煎炸实际时间按肉片厚度调整并确保熟透。"
+    ]
+  },
+  {
+    "id": "xhs-67fb4aca000000001e009b7b",
+    "title": "韩式辣炒五花肉八爪鱼",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/67fb4aca000000001e009b7b",
+    "ingredients": [
+      {
+        "name": "五花肉",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "八爪鱼",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "豆芽",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "洋葱",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "葱",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "蒜末（炝锅）",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "韩式辣酱",
+        "amount": 2.0,
+        "unit": "勺"
+      },
+      {
+        "name": "辣椒面",
+        "amount": 2.0,
+        "unit": "勺"
+      },
+      {
+        "name": "蚝油",
+        "amount": 1.0,
+        "unit": "勺"
+      },
+      {
+        "name": "生抽",
+        "amount": 2.0,
+        "unit": "勺"
+      },
+      {
+        "name": "白糖",
+        "amount": 2.0,
+        "unit": "大勺"
+      },
+      {
+        "name": "料酒",
+        "amount": 1.0,
+        "unit": "勺"
+      },
+      {
+        "name": "蒜末（料汁）",
+        "amount": 2.0,
+        "unit": "勺"
+      },
+      {
+        "name": "香油",
+        "amount": 1.0,
+        "unit": "勺"
+      },
+      {
+        "name": "黑胡椒粉",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "盐",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "味精",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "水",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "海苔碎",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "食用油",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "五花肉切片，八爪鱼处理干净，洋葱切丝，葱切花及丝。"
+    ],
+    "cook": [
+      "将辣酱、辣椒面、蚝油、生抽、糖、料酒、蒜末、香油及黑胡椒、盐、味精混匀，加少量水调开。",
+      "油热下五花肉，煎至两面金黄出油。",
+      "加葱花和蒜末炒香，再放八爪鱼大火翻炒。",
+      "加入豆芽、洋葱翻炒，将多余水分炒干。",
+      "倒酱汁大火收浓，确保五花肉和八爪鱼熟透，撒海苔碎与葱丝出锅。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 5,
+          "max": 8,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 4,
+          "wait": false
+        },
+        {
+          "min": 3,
+          "max": 5,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 4,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "调韩式酱汁",
+        "text": "将辣酱、辣椒面、蚝油、生抽、糖、料酒、蒜末、香油及黑胡椒、盐、味精混匀，加少量水调开。",
+        "source_time": "约 00:12",
+        "image": "local-5ZWesGL4znk-step-01.jpg"
+      },
+      {
+        "title": "煎五花肉",
+        "text": "油热下五花肉，煎至两面金黄出油。",
+        "source_time": "约 00:18",
+        "image": "local-5ZWesGL4znk-step-02.jpg"
+      },
+      {
+        "title": "加八爪鱼",
+        "text": "加葱花和蒜末炒香，再放八爪鱼大火翻炒。",
+        "source_time": "约 00:24",
+        "image": "local-5ZWesGL4znk-step-03.jpg"
+      },
+      {
+        "title": "加菜炒干水分",
+        "text": "加入豆芽、洋葱翻炒，将多余水分炒干。",
+        "source_time": "约 00:30",
+        "image": "local-5ZWesGL4znk-step-04.jpg"
+      },
+      {
+        "title": "裹酱收汁",
+        "text": "倒酱汁大火收浓，确保五花肉和八爪鱼熟透，撒海苔碎与葱丝出锅。",
+        "source_time": "约 00:36",
+        "image": "local-5ZWesGL4znk-step-05.jpg"
+      }
+    ],
+    "cover": "local-5ZWesGL4znk-step-05.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：辣椒泡咖啡《韩式辣炒五花肉八爪鱼❗️裹满酱汁绝了😭》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "主料重量与用水量原片未注明。"
+    ]
+  },
+  {
+    "id": "xhs-67d78fd6000000001b0274bf",
+    "title": "小炒黄牛肉",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/67d78fd6000000001b0274bf",
+    "ingredients": [
+      {
+        "name": "牛霖肉",
+        "amount": 300.0,
+        "unit": "克"
+      },
+      {
+        "name": "鸡蛋",
+        "amount": 0.5,
+        "unit": "个"
+      },
+      {
+        "name": "鸡粉（腌肉）",
+        "amount": 1.0,
+        "unit": "勺"
+      },
+      {
+        "name": "生抽（腌肉）",
+        "amount": 1.0,
+        "unit": "勺"
+      },
+      {
+        "name": "蚝油（腌肉）",
+        "amount": 0.5,
+        "unit": "勺"
+      },
+      {
+        "name": "老抽（腌肉）",
+        "amount": null,
+        "unit": "适量（原文：小半勺）"
+      },
+      {
+        "name": "料酒（腌肉）",
+        "amount": 2.0,
+        "unit": "勺"
+      },
+      {
+        "name": "白胡椒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "生粉",
+        "amount": 1.0,
+        "unit": "勺"
+      },
+      {
+        "name": "油（腌肉）",
+        "amount": 1.0,
+        "unit": "勺"
+      },
+      {
+        "name": "香菜",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "美人椒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "干葱",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "野山椒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "小米辣",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "姜",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "蒜",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "泡椒水",
+        "amount": 2.0,
+        "unit": "勺"
+      },
+      {
+        "name": "鸡精（碗汁）",
+        "amount": 1.0,
+        "unit": "勺"
+      },
+      {
+        "name": "蚝油（碗汁）",
+        "amount": 1.0,
+        "unit": "勺"
+      },
+      {
+        "name": "生抽（碗汁）",
+        "amount": 1.5,
+        "unit": "勺"
+      },
+      {
+        "name": "老抽（碗汁）",
+        "amount": null,
+        "unit": "适量（原文：小半勺）"
+      },
+      {
+        "name": "料酒（碗汁）",
+        "amount": 2.0,
+        "unit": "勺"
+      },
+      {
+        "name": "菜籽油",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "牛肉逆纹切硬币厚薄片，抓松。配菜全部切好，香菜梗叶分开。"
+    ],
+    "cook": [
+      "牛肉加半个鸡蛋及腌肉用鸡粉、生抽、蚝油、老抽、料酒、白胡椒，抓匀至有黏性，加生粉和油封住。",
+      "泡椒水、鸡精、白胡椒、蚝油、生抽、老抽和料酒按碗汁份量混匀。",
+      "锅烧热后加菜籽油，下牛肉快速炒散，炒至变色，避免低温把牛肉炒出水。",
+      "下姜蒜干葱，再下小米辣、野山椒与美人椒，快速翻炒。",
+      "淋碗汁，放香菜梗炒匀，确保牛肉熟透后装到香菜叶上。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 3,
+          "max": 5,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 1,
+          "max": 2,
+          "wait": false
+        },
+        {
+          "min": 1,
+          "max": 2,
+          "wait": false
+        },
+        {
+          "min": 1,
+          "max": 2,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "抓浆牛肉",
+        "text": "牛肉加半个鸡蛋及腌肉用鸡粉、生抽、蚝油、老抽、料酒、白胡椒，抓匀至有黏性，加生粉和油封住。",
+        "source_time": "约 01:00",
+        "image": "local-6fnS6C8d6bu-step-01.jpg"
+      },
+      {
+        "title": "兑碗汁",
+        "text": "泡椒水、鸡精、白胡椒、蚝油、生抽、老抽和料酒按碗汁份量混匀。",
+        "source_time": "约 01:18",
+        "image": "local-6fnS6C8d6bu-step-02.jpg"
+      },
+      {
+        "title": "热锅炒牛肉",
+        "text": "锅烧热后加菜籽油，下牛肉快速炒散，炒至变色，避免低温把牛肉炒出水。",
+        "source_time": "约 01:44",
+        "image": "local-6fnS6C8d6bu-step-03.jpg"
+      },
+      {
+        "title": "加料快炒",
+        "text": "下姜蒜干葱，再下小米辣、野山椒与美人椒，快速翻炒。",
+        "source_time": "约 01:52",
+        "image": "local-6fnS6C8d6bu-step-04.jpg"
+      },
+      {
+        "title": "碗汁香菜收尾",
+        "text": "淋碗汁，放香菜梗炒匀，确保牛肉熟透后装到香菜叶上。",
+        "source_time": "约 02:04",
+        "image": "local-6fnS6C8d6bu-step-05.jpg"
+      }
+    ],
+    "cover": "local-6fnS6C8d6bu-step-05.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：林述巍-林大厨《小炒黄牛肉又老又柴？！今天手把手教你搞定》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "视频配料板写香菜300克、美人椒300克、干葱300克、野山椒100克、小米辣200克、姜蒜200克，并注明按口味调整；这些与300克牛肉比例异常，因此主清单保留适量，原数值在此留存待核对。"
+    ]
+  },
+  {
+    "id": "xhs-6aca6082000000001303ecb0",
+    "title": "少油地三鲜",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/6aca6082000000001303ecb0",
+    "ingredients": [
+      {
+        "name": "茄子",
+        "amount": 500.0,
+        "unit": "克"
+      },
+      {
+        "name": "土豆",
+        "amount": 300.0,
+        "unit": "克"
+      },
+      {
+        "name": "青椒",
+        "amount": 150.0,
+        "unit": "克"
+      },
+      {
+        "name": "蚝油",
+        "amount": 15.0,
+        "unit": "克"
+      },
+      {
+        "name": "老抽",
+        "amount": 10.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "生抽",
+        "amount": 30.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "水",
+        "amount": 80.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "盐",
+        "amount": 3.0,
+        "unit": "克"
+      },
+      {
+        "name": "糖",
+        "amount": 5.0,
+        "unit": "克"
+      },
+      {
+        "name": "葱",
+        "amount": 10.0,
+        "unit": "克"
+      },
+      {
+        "name": "蒜",
+        "amount": 7.0,
+        "unit": "克"
+      },
+      {
+        "name": "淀粉",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "食用油",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "盐（泡茄子）",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "茄子去皮切滚刀块后泡盐水；土豆、青椒也切块。葱蒜切碎，留部分蒜末最后用。"
+    ],
+    "cook": [
+      "蚝油、老抽、生抽、水、盐和糖按配方混匀备用。",
+      "茄子沥去水分后抓上少许淀粉；土豆焯至约八成熟后捞出沥水。",
+      "锅中少量油煎炒土豆、青椒和茄子，至土豆熟透、茄子变软后盛出。",
+      "用葱蒜炝锅，倒碗汁烧起大泡，再倒回蔬菜翻匀，收至汁浓。",
+      "加入预留蒜末，翻匀后出锅。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 5,
+          "max": 8,
+          "wait": false
+        },
+        {
+          "min": 8,
+          "max": 12,
+          "wait": false
+        },
+        {
+          "min": 3,
+          "max": 5,
+          "wait": false
+        },
+        {
+          "min": 1,
+          "max": 2,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "调碗汁",
+        "text": "蚝油、老抽、生抽、水、盐和糖按配方混匀备用。",
+        "source_time": "约 00:18",
+        "image": "local-6pdeWnBLjCq-step-01.jpg"
+      },
+      {
+        "title": "处理茄子土豆",
+        "text": "茄子沥去水分后抓上少许淀粉；土豆焯至约八成熟后捞出沥水。",
+        "source_time": "约 00:28",
+        "image": "local-6pdeWnBLjCq-step-02.jpg"
+      },
+      {
+        "title": "少油煎炒",
+        "text": "锅中少量油煎炒土豆、青椒和茄子，至土豆熟透、茄子变软后盛出。",
+        "source_time": "约 00:38",
+        "image": "local-6pdeWnBLjCq-step-03.jpg"
+      },
+      {
+        "title": "合炒收汁",
+        "text": "用葱蒜炝锅，倒碗汁烧起大泡，再倒回蔬菜翻匀，收至汁浓。",
+        "source_time": "约 00:48",
+        "image": "local-6pdeWnBLjCq-step-04.jpg"
+      },
+      {
+        "title": "加蒜出锅",
+        "text": "加入预留蒜末，翻匀后出锅。",
+        "source_time": "约 00:52",
+        "image": "local-6pdeWnBLjCq-step-05.jpg"
+      }
+    ],
+    "cover": "local-6pdeWnBLjCq-step-05.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：孩儿他姥姥《下饭神器‼️地三鲜😋简单少油做法地三鲜》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。"
+    ]
+  },
+  {
+    "id": "xhs-66334bb7000000001e019a10",
+    "title": "柠檬黄油香煎三文鱼",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/66334bb7000000001e019a10",
+    "ingredients": [
+      {
+        "name": "三文鱼",
+        "amount": 2.0,
+        "unit": "块"
+      },
+      {
+        "name": "橄榄油",
+        "amount": 30.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "黄油",
+        "amount": 40.0,
+        "unit": "克"
+      },
+      {
+        "name": "柠檬汁",
+        "amount": 20.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "蒜",
+        "amount": 1.0,
+        "unit": "瓣"
+      },
+      {
+        "name": "干葱头",
+        "amount": 20.0,
+        "unit": "克"
+      },
+      {
+        "name": "欧芹",
+        "amount": 2.0,
+        "unit": "克"
+      },
+      {
+        "name": "干白葡萄酒",
+        "amount": 100.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "盐",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "黑胡椒",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "三文鱼两面撒盐与胡椒，蒜切末、干葱切细丁，欧芹切碎。"
+    ],
+    "cook": [
+      "不粘锅淋橄榄油，保持中小火，每一面都煎至上色且鱼肉熟透，取出。",
+      "倒去多余油脂，不洗锅，放干葱和蒜末炒软。",
+      "烹入100毫升干白刮起锅底香味，再加20毫升柠檬汁，稍收浓。",
+      "转微火或关火，加入40克黄油迅速搅拌乳化，再撒欧芹。",
+      "酱汁浓稠能挂勺时淋在三文鱼上，可搭米饭或意面。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 6,
+          "max": 10,
+          "wait": false
+        },
+        {
+          "min": 1,
+          "max": 2,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 1,
+          "max": 2,
+          "wait": false
+        },
+        {
+          "min": 1,
+          "max": 1,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "中小火煎鱼",
+        "text": "不粘锅淋橄榄油，保持中小火，每一面都煎至上色且鱼肉熟透，取出。",
+        "source_time": "约 01:06",
+        "image": "local-6vj8sLAlxXv-step-01.jpg"
+      },
+      {
+        "title": "炒香葱蒜",
+        "text": "倒去多余油脂，不洗锅，放干葱和蒜末炒软。",
+        "source_time": "约 01:26",
+        "image": "local-6vj8sLAlxXv-step-02.jpg"
+      },
+      {
+        "title": "酒与柠檬收汁",
+        "text": "烹入100毫升干白刮起锅底香味，再加20毫升柠檬汁，稍收浓。",
+        "source_time": "约 01:36",
+        "image": "local-6vj8sLAlxXv-step-03.jpg"
+      },
+      {
+        "title": "低温乳化黄油",
+        "text": "转微火或关火，加入40克黄油迅速搅拌乳化，再撒欧芹。",
+        "source_time": "约 01:50",
+        "image": "local-6vj8sLAlxXv-step-04.jpg"
+      },
+      {
+        "title": "淋汁上桌",
+        "text": "酱汁浓稠能挂勺时淋在三文鱼上，可搭米饭或意面。",
+        "source_time": "约 01:58",
+        "image": "local-6vj8sLAlxXv-step-05.jpg"
+      }
+    ],
+    "cover": "local-6vj8sLAlxXv-step-05.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：涛姐做西餐sous_chef_Tao《酱汁浓郁外焦里嫩！10分钟香煎三文鱼》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "标题“10分钟”为原作者描述；这里按分步骤估算，实际取决于鱼块厚度。"
+    ]
+  },
+  {
+    "id": "xhs-689637a6000000002302032b",
+    "title": "香肠芝士北非蛋",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/689637a6000000002302032b",
+    "ingredients": [
+      {
+        "name": "洋葱",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "红甜椒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "香肠",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "去皮番茄罐头",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "红椒粉",
+        "amount": 1.0,
+        "unit": "大勺"
+      },
+      {
+        "name": "孜然粉",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "盐",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "黑胡椒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "鸡蛋",
+        "amount": 2.0,
+        "unit": "个"
+      },
+      {
+        "name": "马苏里拉芝士",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "水",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "食用油",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "洋葱、红甜椒切丁，香肠切片；准备番茄罐头和芝士。"
+    ],
+    "cook": [
+      "油热先炒洋葱，再下甜椒和香肠，炒约1分钟至香肠出现焦边。",
+      "加入去皮番茄罐头，用少许水涮罐倒入；加1大勺红椒粉、孜然粉、盐和黑胡椒拌匀。",
+      "盖锅炖约5分钟。",
+      "在番茄底上打入鸡蛋，在周围撒马苏里拉芝士。",
+      "盖锅小火焖，原片先焖约2分钟后继续加热；根据喜欢的熟度延长，熟蛋黄需继续焖至凝固。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 3,
+          "max": 5,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 5,
+          "max": 5,
+          "wait": true
+        },
+        {
+          "min": 1,
+          "max": 2,
+          "wait": false
+        },
+        {
+          "min": 3,
+          "max": 6,
+          "wait": true
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "炒香蔬菜香肠",
+        "text": "油热先炒洋葱，再下甜椒和香肠，炒约1分钟至香肠出现焦边。",
+        "source_time": "约 00:32",
+        "image": "local-6wDaQxqTuwU-step-01.jpg"
+      },
+      {
+        "title": "加番茄调味",
+        "text": "加入去皮番茄罐头，用少许水涮罐倒入；加1大勺红椒粉、孜然粉、盐和黑胡椒拌匀。",
+        "source_time": "约 00:44",
+        "image": "local-6wDaQxqTuwU-step-02.jpg"
+      },
+      {
+        "title": "焖番茄底",
+        "text": "盖锅炖约5分钟。",
+        "source_time": "约 00:46",
+        "image": "local-6wDaQxqTuwU-step-03.jpg"
+      },
+      {
+        "title": "打蛋加芝士",
+        "text": "在番茄底上打入鸡蛋，在周围撒马苏里拉芝士。",
+        "source_time": "约 01:14",
+        "image": "local-6wDaQxqTuwU-step-04.jpg"
+      },
+      {
+        "title": "焖至凝固",
+        "text": "盖锅小火焖，原片先焖约2分钟后继续加热；根据喜欢的熟度延长，熟蛋黄需继续焖至凝固。",
+        "source_time": "约 01:24",
+        "image": "local-6wDaQxqTuwU-step-05.jpg"
+      }
+    ],
+    "cover": "local-6wDaQxqTuwU-step-05.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：醉酒扶妇《快速早午餐，媳妇说周末就等这一口》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "原片另做了饮品，本条只整理主菜北非蛋。主要食材份量未标明；鸡蛋数量按口播2个记录。"
+    ]
+  },
+  {
+    "id": "xhs-6aa5390c000000002802c057",
+    "title": "无额外放油牛肋条焖饭",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/6aa5390c000000002802c057",
+    "ingredients": [
+      {
+        "name": "牛肋条",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "大米",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "洋葱",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "蒜",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "小葱",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "黑胡椒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "零糖啤酒",
+        "amount": null,
+        "unit": "适量（原文：可选）"
+      },
+      {
+        "name": "水",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "大米淘洗后浸泡至少30分钟至泡透；牛肋条切块，洋葱切碎，蒜切粒，小葱切段。"
+    ],
+    "cook": [
+      "热锅不额外放油，下牛肋条用其自身油脂煎至两面上色，避免煎太久。",
+      "下洋葱和蒜同煎，磨黑胡椒，炒至呈焦糖色而不糊。",
+      "可加少许零糖啤酒煮一会儿，再加足量水；不饮酒可省略啤酒。",
+      "煮开后继续炖至牛肉软烂，按片尾建议至少炖1小时，留意水量。",
+      "转小火，锅中留适量汤，铺入泡透沥干的米并使米接触汤汁；不要把米堆在肉上，盖锅焖10–15分钟至熟。",
+      "打开锅盖，确认米饭熟透后翻松，拌入葱段，关火装盘。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 5,
+          "max": 8,
+          "wait": false
+        },
+        {
+          "min": 4,
+          "max": 6,
+          "wait": false
+        },
+        {
+          "min": 3,
+          "max": 5,
+          "wait": false
+        },
+        {
+          "min": 60,
+          "max": 90,
+          "wait": true
+        },
+        {
+          "min": 10,
+          "max": 15,
+          "wait": true
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "无油煎牛肉",
+        "text": "热锅不额外放油，下牛肋条用其自身油脂煎至两面上色，避免煎太久。",
+        "source_time": "约 00:32",
+        "image": "local-7RG7jNRhK5G-step-01.jpg"
+      },
+      {
+        "title": "煎香洋葱蒜",
+        "text": "下洋葱和蒜同煎，磨黑胡椒，炒至呈焦糖色而不糊。",
+        "source_time": "约 00:58",
+        "image": "local-7RG7jNRhK5G-step-02.jpg"
+      },
+      {
+        "title": "烹啤酒加水",
+        "text": "可加少许零糖啤酒煮一会儿，再加足量水；不饮酒可省略啤酒。",
+        "source_time": "约 01:16",
+        "image": "local-7RG7jNRhK5G-step-03.jpg"
+      },
+      {
+        "title": "炖软牛肉",
+        "text": "煮开后继续炖至牛肉软烂，按片尾建议至少炖1小时，留意水量。",
+        "source_time": "约 01:32",
+        "image": "local-7RG7jNRhK5G-step-04.jpg"
+      },
+      {
+        "title": "铺米焖饭",
+        "text": "转小火，锅中留适量汤，铺入泡透沥干的米并使米接触汤汁；不要把米堆在肉上，盖锅焖10–15分钟至熟。",
+        "source_time": "约 01:56",
+        "image": "local-7RG7jNRhK5G-step-05.jpg"
+      },
+      {
+        "title": "拌葱出锅",
+        "text": "打开锅盖，确认米饭熟透后翻松，拌入葱段，关火装盘。",
+        "source_time": "约 02:34",
+        "image": "local-7RG7jNRhK5G-step-06.jpg"
+      }
+    ],
+    "cover": "local-7RG7jNRhK5G-step-06.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：张曦福《无须放油，香到舔盘，牛肋条烩饭》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "来源为此前已保存的原视频，本次重新在本机抽帧核对。口播炖肉30–60分钟但作者说肉仍偏硬，采用片尾至少1小时；原片未给重量和米水比例。备菜估算未含大米浸泡的30分钟。"
+    ]
+  },
+  {
+    "id": "xhs-6a7466030000000033036c0d",
+    "title": "排骨豆角炖粉条",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/6a7466030000000033036c0d",
+    "ingredients": [
+      {
+        "name": "排骨",
+        "amount": 1000.0,
+        "unit": "克"
+      },
+      {
+        "name": "土豆",
+        "amount": 400.0,
+        "unit": "克"
+      },
+      {
+        "name": "扁豆",
+        "amount": 300.0,
+        "unit": "克"
+      },
+      {
+        "name": "干粉条",
+        "amount": 150.0,
+        "unit": "克"
+      },
+      {
+        "name": "葱（焯水）",
+        "amount": 10.0,
+        "unit": "克"
+      },
+      {
+        "name": "姜（焯水）",
+        "amount": 5.0,
+        "unit": "克"
+      },
+      {
+        "name": "料酒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "桂皮",
+        "amount": 1.0,
+        "unit": "克"
+      },
+      {
+        "name": "八角",
+        "amount": 2.0,
+        "unit": "克"
+      },
+      {
+        "name": "葱（炖煮）",
+        "amount": 50.0,
+        "unit": "克"
+      },
+      {
+        "name": "姜（炖煮）",
+        "amount": 20.0,
+        "unit": "克"
+      },
+      {
+        "name": "干辣椒",
+        "amount": 2.0,
+        "unit": "个"
+      },
+      {
+        "name": "老抽",
+        "amount": 40.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "生抽",
+        "amount": 50.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "盐",
+        "amount": 5.0,
+        "unit": "克"
+      },
+      {
+        "name": "冰糖",
+        "amount": 20.0,
+        "unit": "克"
+      },
+      {
+        "name": "开水",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "食用油",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "土豆切菱形块，扁豆掰段，粉条用开水泡软。"
+    ],
+    "cook": [
+      "排骨冷水下锅，加焯水用葱姜和少许料酒，煮出浮沫后捞出洗净。",
+      "油热炒香桂皮、八角、葱姜和干辣椒，下排骨翻炒；烹料酒，加生抽、老抽、盐和冰糖炒匀。",
+      "加开水没过排骨，盖锅炖至少40分钟，至肉逐渐软烂。",
+      "挑出香料，加入土豆、扁豆与泡软粉条，继续炖至土豆软、扁豆彻底熟透、粉条入味。",
+      "按喜好收浓汤汁，保留一些汤汁拌饭。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 10,
+          "max": 15,
+          "wait": false
+        },
+        {
+          "min": 5,
+          "max": 8,
+          "wait": false
+        },
+        {
+          "min": 40,
+          "max": 60,
+          "wait": true
+        },
+        {
+          "min": 15,
+          "max": 25,
+          "wait": true
+        },
+        {
+          "min": 2,
+          "max": 5,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "排骨焯水",
+        "text": "排骨冷水下锅，加焯水用葱姜和少许料酒，煮出浮沫后捞出洗净。",
+        "source_time": "约 00:16",
+        "image": "local-84OgJIWr1wD-step-01.jpg"
+      },
+      {
+        "title": "炒香上色",
+        "text": "油热炒香桂皮、八角、葱姜和干辣椒，下排骨翻炒；烹料酒，加生抽、老抽、盐和冰糖炒匀。",
+        "source_time": "约 00:26",
+        "image": "local-84OgJIWr1wD-step-02.jpg"
+      },
+      {
+        "title": "加水炖排骨",
+        "text": "加开水没过排骨，盖锅炖至少40分钟，至肉逐渐软烂。",
+        "source_time": "约 00:36",
+        "image": "local-84OgJIWr1wD-step-03.jpg"
+      },
+      {
+        "title": "加配菜炖熟",
+        "text": "挑出香料，加入土豆、扁豆与泡软粉条，继续炖至土豆软、扁豆彻底熟透、粉条入味。",
+        "source_time": "约 00:54",
+        "image": "local-84OgJIWr1wD-step-04.jpg"
+      },
+      {
+        "title": "收汁上桌",
+        "text": "按喜好收浓汤汁，保留一些汤汁拌饭。",
+        "source_time": "约 00:58",
+        "image": "local-84OgJIWr1wD-step-05.jpg"
+      }
+    ],
+    "cover": "local-84OgJIWr1wD-step-05.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：孩儿他姥姥《香晕脑袋‼️排骨豆角炖粉条😋一顿三碗饭》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "最后配菜炖煮时长原片未标明，15–25分钟为整理估算，以豆角彻底熟透为准。"
+    ]
+  },
+  {
+    "id": "xhs-693597c5000000001b03366f",
+    "title": "秘制苹果烤猪排",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/693597c5000000001b03366f",
+    "ingredients": [
+      {
+        "name": "排骨",
+        "amount": 1000.0,
+        "unit": "克"
+      },
+      {
+        "name": "红糖",
+        "amount": 70.0,
+        "unit": "克"
+      },
+      {
+        "name": "盐",
+        "amount": 7.0,
+        "unit": "克"
+      },
+      {
+        "name": "蒜粉",
+        "amount": 4.0,
+        "unit": "克"
+      },
+      {
+        "name": "胡椒粉",
+        "amount": 1.0,
+        "unit": "克"
+      },
+      {
+        "name": "蒜",
+        "amount": 20.0,
+        "unit": "克"
+      },
+      {
+        "name": "姜",
+        "amount": 10.0,
+        "unit": "克"
+      },
+      {
+        "name": "红洋葱",
+        "amount": 180.0,
+        "unit": "克"
+      },
+      {
+        "name": "苹果",
+        "amount": 200.0,
+        "unit": "克"
+      },
+      {
+        "name": "苹果醋",
+        "amount": 40.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "番茄酱",
+        "amount": 80.0,
+        "unit": "克"
+      },
+      {
+        "name": "蜂蜜",
+        "amount": 20.0,
+        "unit": "克"
+      },
+      {
+        "name": "蒸鱼豉油",
+        "amount": 80.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "水",
+        "amount": 100.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "食用油",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "熟芝麻",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "排骨在筋膜处划开；姜蒜切末，洋葱与去皮苹果切丁。烤箱预热160℃。"
+    ],
+    "cook": [
+      "红糖、盐、蒜粉、胡椒粉混匀，均匀涂在排骨两面，用锡纸严密包好。",
+      "放入预热的160℃烤箱烤80分钟。",
+      "油热先炒香洋葱，再加姜蒜和苹果丁炒香。",
+      "加入苹果醋、番茄酱、蜂蜜、蒸鱼豉油及100毫升水，煮一会儿后打成细酱。",
+      "拆开锡纸，排骨刷上苹果酱，放入预热220℃的烤箱再烤20分钟，撒熟芝麻。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 5,
+          "max": 8,
+          "wait": false
+        },
+        {
+          "min": 80,
+          "max": 80,
+          "wait": true
+        },
+        {
+          "min": 4,
+          "max": 6,
+          "wait": false
+        },
+        {
+          "min": 5,
+          "max": 8,
+          "wait": false
+        },
+        {
+          "min": 20,
+          "max": 20,
+          "wait": true
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "裹干料包锡纸",
+        "text": "红糖、盐、蒜粉、胡椒粉混匀，均匀涂在排骨两面，用锡纸严密包好。",
+        "source_time": "约 00:26",
+        "image": "local-8rMFmu1rp0O-step-01.jpg"
+      },
+      {
+        "title": "低温烤排骨",
+        "text": "放入预热的160℃烤箱烤80分钟。",
+        "source_time": "约 00:34",
+        "image": "local-8rMFmu1rp0O-step-02.jpg"
+      },
+      {
+        "title": "炒苹果酱底",
+        "text": "油热先炒香洋葱，再加姜蒜和苹果丁炒香。",
+        "source_time": "约 00:52",
+        "image": "local-8rMFmu1rp0O-step-03.jpg"
+      },
+      {
+        "title": "调酱打细",
+        "text": "加入苹果醋、番茄酱、蜂蜜、蒸鱼豉油及100毫升水，煮一会儿后打成细酱。",
+        "source_time": "约 01:00",
+        "image": "local-8rMFmu1rp0O-step-04.jpg"
+      },
+      {
+        "title": "刷酱再烤",
+        "text": "拆开锡纸，排骨刷上苹果酱，放入预热220℃的烤箱再烤20分钟，撒熟芝麻。",
+        "source_time": "约 01:16",
+        "image": "local-8rMFmu1rp0O-step-05.jpg"
+      }
+    ],
+    "cover": "local-8rMFmu1rp0O-step-05.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：孩儿他姥姥《鲜嫩多汁‼️秘制苹果烤猪排㊙️配方大公开》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "蒜粉可按原片提示换成蒜末；烤箱温度和时间为原片数值，实际以排骨熟度调整。"
+    ]
+  },
+  {
+    "id": "xhs-5d7aef020000000002021035",
+    "title": "花生鲍汁凤爪",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/5d7aef020000000002021035",
+    "ingredients": [
+      {
+        "name": "红皮花生",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "冰鲜凤爪",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "葱",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "姜",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "料酒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "鲍汁",
+        "amount": 4.0,
+        "unit": "勺"
+      },
+      {
+        "name": "红烧老抽",
+        "amount": 2.0,
+        "unit": "勺"
+      },
+      {
+        "name": "蚝油",
+        "amount": 2.0,
+        "unit": "勺"
+      },
+      {
+        "name": "冰糖（调汁）",
+        "amount": null,
+        "unit": "适量（原文：少许）"
+      },
+      {
+        "name": "冰糖（糖色）",
+        "amount": 5.0,
+        "unit": "克"
+      },
+      {
+        "name": "酒酿",
+        "amount": 2.0,
+        "unit": "勺"
+      },
+      {
+        "name": "八角",
+        "amount": 1.0,
+        "unit": "个"
+      },
+      {
+        "name": "啤酒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "食用油",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "冰水",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "花生提前一夜浸泡，备好冰水；凤爪清洗。原片为成品展示，做法依据完整笔记正文。"
+    ],
+    "cook": [
+      "泡好的花生冷水下锅，煮开后转小火至少40分钟；关火再焖至少2小时，保留花生水。",
+      "凤爪加葱姜料酒冷水下锅，水开后煮5分钟，立即放冰水泡10分钟，剪指甲并洗净表面油脂、擦干。",
+      "鲍汁4勺、老抽2勺、蚝油2勺与少许冰糖混合。",
+      "油热加约5克冰糖炒糖色，下凤爪翻炒至金黄，烹2勺酒酿。加花生、花生水和啤酒至没过凤爪，倒调汁和1个八角。",
+      "开盖煮沸，转中小火盖锅炖1小时，期间搅动防粘；关火根据软糯程度焖1–2小时。",
+      "重新开大火，将酱汁收至浓稠红亮。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 160,
+          "max": 180,
+          "wait": true
+        },
+        {
+          "min": 20,
+          "max": 25,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 5,
+          "max": 8,
+          "wait": false
+        },
+        {
+          "min": 120,
+          "max": 180,
+          "wait": true
+        },
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "花生煮焖",
+        "text": "泡好的花生冷水下锅，煮开后转小火至少40分钟；关火再焖至少2小时，保留花生水。",
+        "source_time": "约 00:00",
+        "image": "local-91ugu1m6F9Z-step-01.jpg"
+      },
+      {
+        "title": "凤爪焯水冰镇",
+        "text": "凤爪加葱姜料酒冷水下锅，水开后煮5分钟，立即放冰水泡10分钟，剪指甲并洗净表面油脂、擦干。",
+        "source_time": "约 00:02",
+        "image": "local-91ugu1m6F9Z-step-02.jpg"
+      },
+      {
+        "title": "配鲍汁",
+        "text": "鲍汁4勺、老抽2勺、蚝油2勺与少许冰糖混合。",
+        "source_time": "约 00:04",
+        "image": "local-91ugu1m6F9Z-step-03.jpg"
+      },
+      {
+        "title": "炒糖色入锅",
+        "text": "油热加约5克冰糖炒糖色，下凤爪翻炒至金黄，烹2勺酒酿。加花生、花生水和啤酒至没过凤爪，倒调汁和1个八角。",
+        "source_time": "约 00:04",
+        "image": "local-91ugu1m6F9Z-step-04.jpg"
+      },
+      {
+        "title": "慢炖焖软",
+        "text": "开盖煮沸，转中小火盖锅炖1小时，期间搅动防粘；关火根据软糯程度焖1–2小时。",
+        "source_time": "约 00:06",
+        "image": "local-91ugu1m6F9Z-step-05.jpg"
+      },
+      {
+        "title": "最后收汁",
+        "text": "重新开大火，将酱汁收至浓稠红亮。",
+        "source_time": "约 00:08",
+        "image": "local-91ugu1m6F9Z-step-06.jpg"
+      }
+    ],
+    "cover": "local-91ugu1m6F9Z-step-06.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：谚谚姐《利苑同款花生鲍汁凤爪 附软糯又紧实的秘诀》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "主料重量未注明；浸泡一夜不计入界面总耗时。配图来自原片成品展示，不代表逐步操作。"
+    ]
+  },
+  {
+    "id": "xhs-67b2daa30000000028034fc3",
+    "title": "蛤蜊蒸蛋",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/67b2daa30000000028034fc3",
+    "ingredients": [
+      {
+        "name": "蛤蜊",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "鸡蛋",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "姜",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "葱",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "盐",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "胡椒粉",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "蛤蜊原汤",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "秋油（酱油）",
+        "amount": 1.0,
+        "unit": "勺"
+      }
+    ],
+    "prep": [
+      "蛤蜊清洗吐净沙，姜切片、葱切段并留葱花。"
+    ],
+    "cook": [
+      "水中放蛤蜊与姜葱，煮至开壳后捞出，保留原汤。",
+      "鸡蛋充分打散，加少许盐和胡椒；蛤蜊自带咸味，盐不要多。",
+      "取沉淀后的上层蛤蜊原汤，避开底部沙粒；待汤不烫后拌入蛋液，撇去泡沫。",
+      "蛤蜊逐个摆盘，将蛋液轻轻倒入。",
+      "入蒸锅，上气后蒸10–12分钟，至蛋液凝固。",
+      "出锅淋1勺秋油，撒葱花。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 3,
+          "max": 5,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 3,
+          "max": 5,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 10,
+          "max": 12,
+          "wait": true
+        },
+        {
+          "min": 1,
+          "max": 2,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "煮开蛤蜊",
+        "text": "水中放蛤蜊与姜葱，煮至开壳后捞出，保留原汤。",
+        "source_time": "约 00:52",
+        "image": "local-9JcgqIJ4ziJ-step-01.jpg"
+      },
+      {
+        "title": "打蛋调味",
+        "text": "鸡蛋充分打散，加少许盐和胡椒；蛤蜊自带咸味，盐不要多。",
+        "source_time": "约 00:46",
+        "image": "local-9JcgqIJ4ziJ-step-02.jpg"
+      },
+      {
+        "title": "混入清汤",
+        "text": "取沉淀后的上层蛤蜊原汤，避开底部沙粒；待汤不烫后拌入蛋液，撇去泡沫。",
+        "source_time": "约 01:12",
+        "image": "local-9JcgqIJ4ziJ-step-03.jpg"
+      },
+      {
+        "title": "摆蛤蜊倒蛋液",
+        "text": "蛤蜊逐个摆盘，将蛋液轻轻倒入。",
+        "source_time": "约 01:30",
+        "image": "local-9JcgqIJ4ziJ-step-04.jpg"
+      },
+      {
+        "title": "上气蒸熟",
+        "text": "入蒸锅，上气后蒸10–12分钟，至蛋液凝固。",
+        "source_time": "约 01:38",
+        "image": "local-9JcgqIJ4ziJ-step-05.jpg"
+      },
+      {
+        "title": "淋油撒葱",
+        "text": "出锅淋1勺秋油，撒葱花。",
+        "source_time": "约 01:48",
+        "image": "local-9JcgqIJ4ziJ-step-06.jpg"
+      }
+    ],
+    "cover": "local-9JcgqIJ4ziJ-step-06.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：宋大厨开饭了《厨房小白也能学会的家常菜蛤蜊蒸蛋》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "原片未给鸡蛋数量、蛤蜊重量及蛋汤比例；没有按通用配方冒填。原汤放至不烫为整理补充，避免烫成蛋花。"
+    ]
+  },
+  {
+    "id": "xhs-68e33103000000000700b62e",
+    "title": "奶白大骨头汤",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/68e33103000000000700b62e",
+    "ingredients": [
+      {
+        "name": "大骨头",
+        "amount": 1500.0,
+        "unit": "克"
+      },
+      {
+        "name": "萝卜",
+        "amount": 1.0,
+        "unit": "根"
+      },
+      {
+        "name": "姜",
+        "amount": 8.0,
+        "unit": "片"
+      },
+      {
+        "name": "猪油",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "盐",
+        "amount": null,
+        "unit": "原文2勺，勺容量未注明，按口味减量"
+      },
+      {
+        "name": "红枣或枸杞",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "生抽（蘸料）",
+        "amount": 2.0,
+        "unit": "勺"
+      },
+      {
+        "name": "陈醋",
+        "amount": 1.0,
+        "unit": "勺"
+      },
+      {
+        "name": "糖",
+        "amount": 0.5,
+        "unit": "勺"
+      },
+      {
+        "name": "白芝麻",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "青辣椒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "葱花",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "水（蘸料）",
+        "amount": 2.0,
+        "unit": "勺"
+      },
+      {
+        "name": "开水",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "萝卜切块，姜切片，备好蘸料。姜原文共8片，焯水明确用4片，其余用途未注明。"
+    ],
+    "cook": [
+      "大骨头放盐水中浸泡30分钟。",
+      "大骨头冷水下锅，加4片姜，中火煮开并撇浮沫；捞出后用温热水冲净。",
+      "锅中放猪油，将骨头表面煎至微黄。",
+      "冲入足量开水，撇去浮油与浮沫，炖煮1.5小时。",
+      "加入萝卜、盐和红枣或枸杞，再煮30分钟；盐分次尝味添加。",
+      "生抽2勺、陈醋1勺、糖半勺，加白芝麻、青辣椒、葱花及水2勺拌匀，用来蘸骨头肉。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 30,
+          "max": 30,
+          "wait": true
+        },
+        {
+          "min": 10,
+          "max": 15,
+          "wait": false
+        },
+        {
+          "min": 5,
+          "max": 8,
+          "wait": false
+        },
+        {
+          "min": 90,
+          "max": 90,
+          "wait": true
+        },
+        {
+          "min": 30,
+          "max": 30,
+          "wait": true
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "盐水浸泡",
+        "text": "大骨头放盐水中浸泡30分钟。",
+        "source_time": "原笔记图 5",
+        "image": "local-9s5aKamtPnU-step-01.jpg"
+      },
+      {
+        "title": "焯水冲净",
+        "text": "大骨头冷水下锅，加4片姜，中火煮开并撇浮沫；捞出后用温热水冲净。",
+        "source_time": "原笔记图 5",
+        "image": "local-9s5aKamtPnU-step-02.jpg"
+      },
+      {
+        "title": "煎香骨头",
+        "text": "锅中放猪油，将骨头表面煎至微黄。",
+        "source_time": "原笔记图 6",
+        "image": "local-9s5aKamtPnU-step-03.jpg"
+      },
+      {
+        "title": "冲开水炖汤",
+        "text": "冲入足量开水，撇去浮油与浮沫，炖煮1.5小时。",
+        "source_time": "原笔记图 6",
+        "image": "local-9s5aKamtPnU-step-04.jpg"
+      },
+      {
+        "title": "加萝卜煮软",
+        "text": "加入萝卜、盐和红枣或枸杞，再煮30分钟；盐分次尝味添加。",
+        "source_time": "原笔记图 6",
+        "image": "local-9s5aKamtPnU-step-05.jpg"
+      },
+      {
+        "title": "调蘸料上桌",
+        "text": "生抽2勺、陈醋1勺、糖半勺，加白芝麻、青辣椒、葱花及水2勺拌匀，用来蘸骨头肉。",
+        "source_time": "原笔记图 8",
+        "image": "local-9s5aKamtPnU-step-06.jpg"
+      }
+    ],
+    "cover": "local-9s5aKamtPnU-cover.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：Eating饿了《在家炖奶白的大骨头汤🦴大骨头火锅自由🍲》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "原文盐勺容量不明，未换算克数。"
+    ]
+  },
+  {
+    "id": "xhs-68bdb7fb000000001d013337",
+    "title": "板栗排骨",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/68bdb7fb000000001d013337",
+    "ingredients": [
+      {
+        "name": "排骨",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "去壳板栗",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "葱",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "姜",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "料酒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "糖",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "八角",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "桂皮",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "生抽",
+        "amount": 2.0,
+        "unit": "勺"
+      },
+      {
+        "name": "老抽",
+        "amount": 1.0,
+        "unit": "勺"
+      },
+      {
+        "name": "蚝油",
+        "amount": 1.0,
+        "unit": "勺"
+      },
+      {
+        "name": "盐",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "开水",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "食用油",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "排骨切块，葱切段、姜切片，板栗去壳。"
+    ],
+    "cook": [
+      "排骨冷水下锅，加葱姜料酒焯水，撇浮沫后捞出。",
+      "锅中放油和糖炒出糖色，下排骨翻匀上色。",
+      "加葱姜、八角、桂皮、生抽2勺、老抽1勺、蚝油1勺及少许盐，加入板栗炒匀。",
+      "加开水没过排骨，盖锅转小火焖30分钟，至肉熟软。",
+      "开盖大火收汁，至汤汁浓稠挂在排骨和板栗上。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 10,
+          "max": 15,
+          "wait": false
+        },
+        {
+          "min": 3,
+          "max": 5,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 30,
+          "max": 30,
+          "wait": true
+        },
+        {
+          "min": 3,
+          "max": 5,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "排骨焯水",
+        "text": "排骨冷水下锅，加葱姜料酒焯水，撇浮沫后捞出。",
+        "source_time": "约 00:08",
+        "image": "local-A5kziYAN7TN-step-01.jpg"
+      },
+      {
+        "title": "炒糖色",
+        "text": "锅中放油和糖炒出糖色，下排骨翻匀上色。",
+        "source_time": "约 00:12",
+        "image": "local-A5kziYAN7TN-step-02.jpg"
+      },
+      {
+        "title": "炒香调味",
+        "text": "加葱姜、八角、桂皮、生抽2勺、老抽1勺、蚝油1勺及少许盐，加入板栗炒匀。",
+        "source_time": "约 00:20",
+        "image": "local-A5kziYAN7TN-step-03.jpg"
+      },
+      {
+        "title": "加水焖煮",
+        "text": "加开水没过排骨，盖锅转小火焖30分钟，至肉熟软。",
+        "source_time": "约 00:24",
+        "image": "local-A5kziYAN7TN-step-04.jpg"
+      },
+      {
+        "title": "收浓汤汁",
+        "text": "开盖大火收汁，至汤汁浓稠挂在排骨和板栗上。",
+        "source_time": "约 00:36",
+        "image": "local-A5kziYAN7TN-step-05.jpg"
+      }
+    ],
+    "cover": "local-A5kziYAN7TN-step-05.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：娜娜💕美食记《秋天必吃🌰的板栗排骨🔥粉粉糯糯巨好吃‼️》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "原文也提供更软烂的方式：排骨先炖20分钟再下板栗。肉和板栗用量原文未标明。"
+    ]
+  },
+  {
+    "id": "xhs-6880818c0000000012016c68",
+    "title": "辣炖咖喱牛肉",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/6880818c0000000012016c68",
+    "ingredients": [
+      {
+        "name": "牛肋条",
+        "amount": 800.0,
+        "unit": "克"
+      },
+      {
+        "name": "土豆",
+        "amount": 2.0,
+        "unit": "个"
+      },
+      {
+        "name": "胡萝卜",
+        "amount": 1.0,
+        "unit": "个"
+      },
+      {
+        "name": "洋葱",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "辣椒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "蒜",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "姜",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "大葱",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "料酒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "泰式黄咖喱酱",
+        "amount": 20.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "咖喱粉",
+        "amount": 10.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "沙茶酱",
+        "amount": 20.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "生抽",
+        "amount": 15.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "鱼露",
+        "amount": 15.0,
+        "unit": "毫升"
+      },
+      {
+        "name": "糖",
+        "amount": 5.0,
+        "unit": "克"
+      },
+      {
+        "name": "辣椒粉",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "椰浆",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "欧芹",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "热水",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "食用油",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "牛肋条切大块，土豆和胡萝卜切块，葱姜蒜洋葱切好。"
+    ],
+    "cook": [
+      "牛肉冷水下锅，加葱姜料酒，煮开撇浮沫，捞出沥干。",
+      "锅里少量油，将牛肉煎至微焦，加葱姜蒜和洋葱炒香。",
+      "加入黄咖喱酱、咖喱粉、沙茶酱、生抽、鱼露、糖和辣椒粉，翻匀上色。",
+      "冲入热水没过食材，盖锅炖至软嫩。原文牛肋条约40–60分钟，偏软烂可炖约90分钟。",
+      "加入土豆和胡萝卜，再炖20分钟，至蔬菜熟软。",
+      "加入辣椒，淋少量椰浆调和味道，收至汁浓，撒欧芹。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 10,
+          "max": 15,
+          "wait": false
+        },
+        {
+          "min": 5,
+          "max": 8,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 40,
+          "max": 60,
+          "wait": true
+        },
+        {
+          "min": 20,
+          "max": 20,
+          "wait": true
+        },
+        {
+          "min": 2,
+          "max": 4,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "牛肉焯水",
+        "text": "牛肉冷水下锅，加葱姜料酒，煮开撇浮沫，捞出沥干。",
+        "source_time": "约 00:22",
+        "image": "local-AChYFYZlCbu-step-01.jpg"
+      },
+      {
+        "title": "煎香炒料",
+        "text": "锅里少量油，将牛肉煎至微焦，加葱姜蒜和洋葱炒香。",
+        "source_time": "约 00:28",
+        "image": "local-AChYFYZlCbu-step-02.jpg"
+      },
+      {
+        "title": "咖喱调味",
+        "text": "加入黄咖喱酱、咖喱粉、沙茶酱、生抽、鱼露、糖和辣椒粉，翻匀上色。",
+        "source_time": "约 00:38",
+        "image": "local-AChYFYZlCbu-step-03.jpg"
+      },
+      {
+        "title": "加水炖肉",
+        "text": "冲入热水没过食材，盖锅炖至软嫩。原文牛肋条约40–60分钟，偏软烂可炖约90分钟。",
+        "source_time": "约 00:48",
+        "image": "local-AChYFYZlCbu-step-04.jpg"
+      },
+      {
+        "title": "加土豆胡萝卜",
+        "text": "加入土豆和胡萝卜，再炖20分钟，至蔬菜熟软。",
+        "source_time": "约 00:52",
+        "image": "local-AChYFYZlCbu-step-05.jpg"
+      },
+      {
+        "title": "椰浆收尾",
+        "text": "加入辣椒，淋少量椰浆调和味道，收至汁浓，撒欧芹。",
+        "source_time": "约 00:58",
+        "image": "local-AChYFYZlCbu-step-06.jpg"
+      }
+    ],
+    "cover": "local-AChYFYZlCbu-step-06.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：kikibonbon《一口开胃❗️浓郁下饭的辣炖咖喱牛肉🍛》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "咖喱粉原片用毫升标注，保留原单位。换牛腩时原文建议炖1.5–2小时。"
+    ]
+  },
+  {
+    "id": "xhs-68ac31fb000000001b03195a",
+    "title": "街边炒方便面",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/68ac31fb000000001b03195a",
+    "ingredients": [
+      {
+        "name": "方便面",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "鸡蛋",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "火腿肠",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "洋葱",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "青菜",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "生抽",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "方便面调味料包",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "食用油",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "火腿肠切片，洋葱切块，青菜洗净沥水。"
+    ],
+    "cook": [
+      "方便面先用冷水浸泡，仍未软透时转到水已烧开的蒸锅上蒸至柔软有弹性；原片没有清晰标明时长。",
+      "锅中热油炒散鸡蛋，加入火腿肠、洋葱和青菜翻炒。",
+      "青菜炒至断生后下方便面，加生抽和适量原料包。",
+      "大火快速翻炒，炒散拌匀并收干多余水分，至面条干香后出锅。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": true
+        },
+        {
+          "min": 3,
+          "max": 5,
+          "wait": false
+        },
+        {
+          "min": 1,
+          "max": 2,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "泡面后蒸软",
+        "text": "方便面先用冷水浸泡，仍未软透时转到水已烧开的蒸锅上蒸至柔软有弹性；原片没有清晰标明时长。",
+        "source_time": "约 00:06",
+        "image": "local-ADhQomBegs1-step-01.jpg"
+      },
+      {
+        "title": "炒蛋与配菜",
+        "text": "锅中热油炒散鸡蛋，加入火腿肠、洋葱和青菜翻炒。",
+        "source_time": "约 00:12",
+        "image": "local-ADhQomBegs1-step-02.jpg"
+      },
+      {
+        "title": "下面调味",
+        "text": "青菜炒至断生后下方便面，加生抽和适量原料包。",
+        "source_time": "约 00:18",
+        "image": "local-ADhQomBegs1-step-03.jpg"
+      },
+      {
+        "title": "大火炒香",
+        "text": "大火快速翻炒，炒散拌匀并收干多余水分，至面条干香后出锅。",
+        "source_time": "约 00:20",
+        "image": "local-ADhQomBegs1-step-04.jpg"
+      }
+    ],
+    "cover": "local-ADhQomBegs1-step-04.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：小贝的菜《炒方便面》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "原视频未给食材重量和清楚的泡蒸时长，均未猜填。调味料包与生抽都含盐，分次添加。"
+    ]
+  },
+  {
+    "id": "xhs-604b75280000000001029fb7",
+    "title": "牛油果三文鱼开放式三明治",
+    "servings": null,
+    "source": "https://www.xiaohongshu.com/explore/604b75280000000001029fb7",
+    "ingredients": [
+      {
+        "name": "全麦面包",
+        "amount": 4.0,
+        "unit": "片"
+      },
+      {
+        "name": "鸡蛋",
+        "amount": 2.0,
+        "unit": "个"
+      },
+      {
+        "name": "零脂酸奶",
+        "amount": null,
+        "unit": "适量（原文：2–3勺）"
+      },
+      {
+        "name": "牛油果",
+        "amount": 2.0,
+        "unit": "个"
+      },
+      {
+        "name": "烟熏三文鱼",
+        "amount": 4.0,
+        "unit": "小片"
+      },
+      {
+        "name": "海盐",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "黑胡椒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "干罗勒",
+        "amount": null,
+        "unit": "适量"
+      },
+      {
+        "name": "干薄荷",
+        "amount": null,
+        "unit": "适量"
+      }
+    ],
+    "prep": [
+      "牛油果去核切片，准备4片面包和烟熏三文鱼。此配方为4片三明治的量。"
+    ],
+    "cook": [
+      "鸡蛋煮全熟，去壳后用叉子压碎。",
+      "蛋碎加2–3勺零脂酸奶，调入海盐、黑胡椒、干罗勒和干薄荷，拌成不太稀的酱。",
+      "面包不放油，两面煎至微焦，或用吐司机烤。",
+      "面包抹蛋酱，每片铺半个牛油果及1小片烟熏三文鱼，最后撒黑胡椒。"
+    ],
+    "timing": {
+      "prep": [
+        {
+          "min": 5,
+          "max": 10,
+          "wait": false
+        }
+      ],
+      "cook": [
+        {
+          "min": 10,
+          "max": 12,
+          "wait": true
+        },
+        {
+          "min": 2,
+          "max": 3,
+          "wait": false
+        },
+        {
+          "min": 2,
+          "max": 4,
+          "wait": false
+        },
+        {
+          "min": 3,
+          "max": 5,
+          "wait": false
+        }
+      ]
+    },
+    "illustrated_steps": [
+      {
+        "title": "煮熟压碎鸡蛋",
+        "text": "鸡蛋煮全熟，去壳后用叉子压碎。",
+        "source_time": "原笔记图 2",
+        "image": "local-qlXcd9gqEy-step-01.jpg"
+      },
+      {
+        "title": "拌酸奶蛋酱",
+        "text": "蛋碎加2–3勺零脂酸奶，调入海盐、黑胡椒、干罗勒和干薄荷，拌成不太稀的酱。",
+        "source_time": "原笔记图 2",
+        "image": "local-qlXcd9gqEy-step-02.jpg"
+      },
+      {
+        "title": "烤面包",
+        "text": "面包不放油，两面煎至微焦，或用吐司机烤。",
+        "source_time": "原笔记图 2",
+        "image": "local-qlXcd9gqEy-step-03.jpg"
+      },
+      {
+        "title": "铺料装配",
+        "text": "面包抹蛋酱，每片铺半个牛油果及1小片烟熏三文鱼，最后撒黑胡椒。",
+        "source_time": "原笔记图 3",
+        "image": "local-qlXcd9gqEy-step-04.jpg"
+      }
+    ],
+    "cover": "local-qlXcd9gqEy-cover.jpg",
+    "format_version": 3,
+    "notes": [
+      "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+      "来源：穆之_《✨高蛋白减脂早餐🥑开放式三明治》。",
+      "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+      "原文明确4片配方，不擅自换算人数。"
+    ]
+  },
+  {
     "id": "xhs-64315112000000000800fd02",
     "title": "抹茶软心巴斯克",
     "servings": null,

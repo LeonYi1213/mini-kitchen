@@ -31,10 +31,10 @@ for obj in objects.values():
 ET.parse(ios/'MiniKitchen.xcodeproj/xcshareddata/xcschemes/MiniKitchen.xcscheme')
 with (ios/'MiniKitchen/Info.plist').open('rb') as f: plistlib.load(f)
 recipes=json.loads((ios/'MiniKitchen/Resources/recipes.json').read_text())
-assert len(recipes)==18 and len({r['id'] for r in recipes})==18
+assert len(recipes)==42 and len({r['id'] for r in recipes})==42
 for recipe in recipes:
     assert (ios/'MiniKitchen/Resources'/recipe['cover']).is_file()
     for step in recipe['illustrated_steps']: assert (ios/'MiniKitchen/Resources'/step['image']).is_file()
 for path in (ios/'MiniKitchen').rglob('*.swift'):
     assert not any(term in path.read_text() for term in ['演示', '同步设计', '界面原型', 'AI 解析服务尚未接入', 'iPhone 与 iPad'])
-print('PASS: Swift syntax, Xcode project references, scheme/plist, 18 bundled recipes and all images, production UI copy')
+print('PASS: Swift syntax, Xcode project references, scheme/plist, 42 bundled recipes and all images, production UI copy')

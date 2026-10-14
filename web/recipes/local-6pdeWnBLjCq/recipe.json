@@ -1,0 +1,163 @@
+{
+  "id": "xhs-6aca6082000000001303ecb0",
+  "title": "少油地三鲜",
+  "servings": null,
+  "source": "https://www.xiaohongshu.com/explore/6aca6082000000001303ecb0",
+  "ingredients": [
+    {
+      "name": "茄子",
+      "amount": 500.0,
+      "unit": "克"
+    },
+    {
+      "name": "土豆",
+      "amount": 300.0,
+      "unit": "克"
+    },
+    {
+      "name": "青椒",
+      "amount": 150.0,
+      "unit": "克"
+    },
+    {
+      "name": "蚝油",
+      "amount": 15.0,
+      "unit": "克"
+    },
+    {
+      "name": "老抽",
+      "amount": 10.0,
+      "unit": "毫升"
+    },
+    {
+      "name": "生抽",
+      "amount": 30.0,
+      "unit": "毫升"
+    },
+    {
+      "name": "水",
+      "amount": 80.0,
+      "unit": "毫升"
+    },
+    {
+      "name": "盐",
+      "amount": 3.0,
+      "unit": "克"
+    },
+    {
+      "name": "糖",
+      "amount": 5.0,
+      "unit": "克"
+    },
+    {
+      "name": "葱",
+      "amount": 10.0,
+      "unit": "克"
+    },
+    {
+      "name": "蒜",
+      "amount": 7.0,
+      "unit": "克"
+    },
+    {
+      "name": "淀粉",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "食用油",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "盐（泡茄子）",
+      "amount": null,
+      "unit": "适量"
+    }
+  ],
+  "prep": [
+    "茄子去皮切滚刀块后泡盐水；土豆、青椒也切块。葱蒜切碎，留部分蒜末最后用。"
+  ],
+  "cook": [
+    "蚝油、老抽、生抽、水、盐和糖按配方混匀备用。",
+    "茄子沥去水分后抓上少许淀粉；土豆焯至约八成熟后捞出沥水。",
+    "锅中少量油煎炒土豆、青椒和茄子，至土豆熟透、茄子变软后盛出。",
+    "用葱蒜炝锅，倒碗汁烧起大泡，再倒回蔬菜翻匀，收至汁浓。",
+    "加入预留蒜末，翻匀后出锅。"
+  ],
+  "timing": {
+    "prep": [
+      {
+        "min": 5,
+        "max": 10,
+        "wait": false
+      }
+    ],
+    "cook": [
+      {
+        "min": 2,
+        "max": 3,
+        "wait": false
+      },
+      {
+        "min": 5,
+        "max": 8,
+        "wait": false
+      },
+      {
+        "min": 8,
+        "max": 12,
+        "wait": false
+      },
+      {
+        "min": 3,
+        "max": 5,
+        "wait": false
+      },
+      {
+        "min": 1,
+        "max": 2,
+        "wait": false
+      }
+    ]
+  },
+  "illustrated_steps": [
+    {
+      "title": "调碗汁",
+      "text": "蚝油、老抽、生抽、水、盐和糖按配方混匀备用。",
+      "source_time": "约 00:18",
+      "image": "step-01.jpg"
+    },
+    {
+      "title": "处理茄子土豆",
+      "text": "茄子沥去水分后抓上少许淀粉；土豆焯至约八成熟后捞出沥水。",
+      "source_time": "约 00:28",
+      "image": "step-02.jpg"
+    },
+    {
+      "title": "少油煎炒",
+      "text": "锅中少量油煎炒土豆、青椒和茄子，至土豆熟透、茄子变软后盛出。",
+      "source_time": "约 00:38",
+      "image": "step-03.jpg"
+    },
+    {
+      "title": "合炒收汁",
+      "text": "用葱蒜炝锅，倒碗汁烧起大泡，再倒回蔬菜翻匀，收至汁浓。",
+      "source_time": "约 00:48",
+      "image": "step-04.jpg"
+    },
+    {
+      "title": "加蒜出锅",
+      "text": "加入预留蒜末，翻匀后出锅。",
+      "source_time": "约 00:52",
+      "image": "step-05.jpg"
+    }
+  ],
+  "cover": "step-05.jpg",
+  "format_version": 3,
+  "notes": [
+    "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+    "来源：孩儿他姥姥《下饭神器‼️地三鲜😋简单少油做法地三鲜》。",
+    "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。"
+  ]
+}

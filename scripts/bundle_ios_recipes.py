@@ -14,7 +14,13 @@ for path in sorted((root/'web/recipes').glob('*/recipe.json')):
         name=f'{slug}-{original.name}'
         shutil.copyfile(original,out/name)
         step['image']=name
-    recipe['cover']=images[-1]['image'] if images else None
+    if recipe.get('cover'):
+        original=path.parent/recipe['cover']
+        name=f'{slug}-{original.name}'
+        shutil.copyfile(original,out/name)
+        recipe['cover']=name
+    else:
+        recipe['cover']=images[-1]['image'] if images else None
     recipes.append(recipe)
 (out/'recipes.json').write_text(json.dumps(recipes,ensure_ascii=False,indent=2)+'\n')
 print(f'Bundled {len(recipes)} recipes')

@@ -1,0 +1,122 @@
+{
+  "id": "xhs-68ac31fb000000001b03195a",
+  "title": "街边炒方便面",
+  "servings": null,
+  "source": "https://www.xiaohongshu.com/explore/68ac31fb000000001b03195a",
+  "ingredients": [
+    {
+      "name": "方便面",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "鸡蛋",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "火腿肠",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "洋葱",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "青菜",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "生抽",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "方便面调味料包",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "食用油",
+      "amount": null,
+      "unit": "适量"
+    }
+  ],
+  "prep": [
+    "火腿肠切片，洋葱切块，青菜洗净沥水。"
+  ],
+  "cook": [
+    "方便面先用冷水浸泡，仍未软透时转到水已烧开的蒸锅上蒸至柔软有弹性；原片没有清晰标明时长。",
+    "锅中热油炒散鸡蛋，加入火腿肠、洋葱和青菜翻炒。",
+    "青菜炒至断生后下方便面，加生抽和适量原料包。",
+    "大火快速翻炒，炒散拌匀并收干多余水分，至面条干香后出锅。"
+  ],
+  "timing": {
+    "prep": [
+      {
+        "min": 5,
+        "max": 10,
+        "wait": false
+      }
+    ],
+    "cook": [
+      {
+        "min": 5,
+        "max": 10,
+        "wait": true
+      },
+      {
+        "min": 3,
+        "max": 5,
+        "wait": false
+      },
+      {
+        "min": 1,
+        "max": 2,
+        "wait": false
+      },
+      {
+        "min": 2,
+        "max": 3,
+        "wait": false
+      }
+    ]
+  },
+  "illustrated_steps": [
+    {
+      "title": "泡面后蒸软",
+      "text": "方便面先用冷水浸泡，仍未软透时转到水已烧开的蒸锅上蒸至柔软有弹性；原片没有清晰标明时长。",
+      "source_time": "约 00:06",
+      "image": "step-01.jpg"
+    },
+    {
+      "title": "炒蛋与配菜",
+      "text": "锅中热油炒散鸡蛋，加入火腿肠、洋葱和青菜翻炒。",
+      "source_time": "约 00:12",
+      "image": "step-02.jpg"
+    },
+    {
+      "title": "下面调味",
+      "text": "青菜炒至断生后下方便面，加生抽和适量原料包。",
+      "source_time": "约 00:18",
+      "image": "step-03.jpg"
+    },
+    {
+      "title": "大火炒香",
+      "text": "大火快速翻炒，炒散拌匀并收干多余水分，至面条干香后出锅。",
+      "source_time": "约 00:20",
+      "image": "step-04.jpg"
+    }
+  ],
+  "cover": "step-04.jpg",
+  "format_version": 3,
+  "notes": [
+    "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+    "来源：小贝的菜《炒方便面》。",
+    "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+    "原视频未给食材重量和清楚的泡蒸时长，均未猜填。调味料包与生抽都含盐，分次添加。"
+  ]
+}

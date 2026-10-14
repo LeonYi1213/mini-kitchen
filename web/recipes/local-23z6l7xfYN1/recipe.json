@@ -1,0 +1,159 @@
+{
+  "id": "xhs-65efb3590000000012020438",
+  "title": "西班牙风味红烩鳕鱼",
+  "servings": null,
+  "source": "https://www.xiaohongshu.com/explore/65efb3590000000012020438",
+  "ingredients": [
+    {
+      "name": "鳕鱼",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "红葱头",
+      "amount": null,
+      "unit": "适量（原文：2–3个）"
+    },
+    {
+      "name": "蒜",
+      "amount": 2.0,
+      "unit": "瓣"
+    },
+    {
+      "name": "甜椒",
+      "amount": 0.5,
+      "unit": "个"
+    },
+    {
+      "name": "去皮番茄罐头",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "甜椒粉",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "白葡萄酒",
+      "amount": 70.0,
+      "unit": "毫升"
+    },
+    {
+      "name": "土豆",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "水或鱼高汤",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "黑胡椒",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "海盐",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "欧芹",
+      "amount": null,
+      "unit": "适量"
+    },
+    {
+      "name": "橄榄油",
+      "amount": null,
+      "unit": "适量"
+    }
+  ],
+  "prep": [
+    "鳕鱼擦干，用海盐和黑胡椒腌制；红葱头、蒜切碎，甜椒切条，土豆切片。"
+  ],
+  "cook": [
+    "锅放橄榄油，炒香红葱头、蒜末与甜椒条。",
+    "加入去皮番茄罐头、甜椒粉及70毫升白葡萄酒，煮开后撒黑胡椒。",
+    "下土豆片，倒水或鱼高汤，小火焖5分钟。",
+    "放鳕鱼入汤，反复浇淋汤汁，继续加热至鳕鱼和土豆都熟透。",
+    "撒欧芹后盛盘，保留红烩汤汁。"
+  ],
+  "timing": {
+    "prep": [
+      {
+        "min": 5,
+        "max": 10,
+        "wait": false
+      }
+    ],
+    "cook": [
+      {
+        "min": 3,
+        "max": 5,
+        "wait": false
+      },
+      {
+        "min": 3,
+        "max": 5,
+        "wait": false
+      },
+      {
+        "min": 5,
+        "max": 5,
+        "wait": true
+      },
+      {
+        "min": 5,
+        "max": 8,
+        "wait": false
+      },
+      {
+        "min": 1,
+        "max": 2,
+        "wait": false
+      }
+    ]
+  },
+  "illustrated_steps": [
+    {
+      "title": "炒香葱蒜甜椒",
+      "text": "锅放橄榄油，炒香红葱头、蒜末与甜椒条。",
+      "source_time": "约 00:28",
+      "image": "step-01.jpg"
+    },
+    {
+      "title": "炒番茄底",
+      "text": "加入去皮番茄罐头、甜椒粉及70毫升白葡萄酒，煮开后撒黑胡椒。",
+      "source_time": "约 00:44",
+      "image": "step-02.jpg"
+    },
+    {
+      "title": "焖土豆",
+      "text": "下土豆片，倒水或鱼高汤，小火焖5分钟。",
+      "source_time": "约 00:52",
+      "image": "step-03.jpg"
+    },
+    {
+      "title": "下鳕鱼浇汁",
+      "text": "放鳕鱼入汤，反复浇淋汤汁，继续加热至鳕鱼和土豆都熟透。",
+      "source_time": "约 00:58",
+      "image": "step-04.jpg"
+    },
+    {
+      "title": "欧芹点缀",
+      "text": "撒欧芹后盛盘，保留红烩汤汁。",
+      "source_time": "约 01:02",
+      "image": "step-05.jpg"
+    }
+  ],
+  "cover": "step-05.jpg",
+  "format_version": 3,
+  "notes": [
+    "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
+    "来源：好叔叔Hasusu《西班牙风味红烩鳕鱼🔥简单家常！美味🥂》。",
+    "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
+    "鳕鱼重量、土豆数量、番茄与汤量原片未标明。"
+  ]
+}
