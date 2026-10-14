@@ -1,0 +1,31 @@
+{
+  "app_id": "6822363240",
+  "build_id": "a4ee9d6f-3b0f-498f-9319-fd9e56287b51",
+  "version": "1.0",
+  "build": "4",
+  "beta_state": {
+    "autoNotifyEnabled": true,
+    "internalBuildState": "IN_BETA_TESTING",
+    "externalBuildState": "READY_FOR_BETA_SUBMISSION"
+  },
+  "testers": [
+    {
+      "id": "8a679b13-ed46-4d47-b3f7-02c0db2b5947",
+      "state": "INSTALLED"
+    }
+  ],
+  "processingState": "VALID",
+  "group": {
+    "id": "c80746e2-9c48-4a0a-af24-cb7aad6af684",
+    "name": "小厨房个人测试",
+    "isInternalGroup": true,
+    "publicLinkEnabled": null,
+    "buildLinked": true
+  },
+  "verified_at": "2026-10-14T08:16:48+08:00",
+  "tests": {
+    "xctest": 11,
+    "python": 46
+  },
+  "bundled_recipes": 42
+}
