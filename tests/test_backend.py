@@ -97,8 +97,8 @@ class BackendTests(unittest.TestCase):
         plan = {'title': '图文菜', 'ingredients': [{'name': '米', 'amount': None, 'unit': '适量'}],
                 'prep': ['泡米。'], 'cook': ['炖肉。', '焖饭。'],
                 'timing': {'prep': [{'min': 30, 'max': 30}], 'cook': [{'min': 30, 'max': 60}, {'min': 10, 'max': 15}]},
-                'notes': ['操作耗时为估算。'], 'cover_frame': 3, 'cover_focus': [0.5, 0.8],
-                'illustrated_steps': [{'title': '炖肉', 'frame_index': 1, 'focus': [0.5, 0.8]}, {'title': '焖饭', 'frame_index': 2, 'focus': [0.5, 0.8]}]}
+                'notes': ['操作耗时为估算。'], 'cover_frame': 3, 'cover_bounds': [0, 0, 1, 1], 'cover_evidence': '成品米饭', 'preparation_steps': [{'title':'泡米','frame_index':None,'image_note':'原片未展示泡米'}],
+                'illustrated_steps': [{'title': '炖肉', 'frame_index': 1, 'bounds': [0, 0, 1, 1], 'evidence':'画面中的对应操作'}, {'title': '焖饭', 'frame_index': 2, 'bounds': [0, 0, 1, 1], 'evidence':'画面中的对应操作'}]}
         bad = copy.deepcopy(plan); bad['cover_frame'] = 999
         def response(value):
             return io.BytesIO(json.dumps({'choices': [{'message': {'content': json.dumps(value)}}]}).encode())
@@ -110,16 +110,17 @@ class BackendTests(unittest.TestCase):
             elif args[0] == 'ffmpeg':
                 folder = Path(args[-1]).parent
                 for i in range(1, 4): (folder / f'frame-{i:03}.jpg').write_bytes(b'frame')
-        with patch('recipe_format.crop_frame', side_effect=lambda source, target, focus: shutil.copyfile(source, target)), \
+        with patch.object(server, 'crop_frame', side_effect=lambda source, target, bounds: shutil.copyfile(source, target)), \
+             patch('recipe_format.crop_frame', side_effect=lambda source, target, focus: shutil.copyfile(source, target)), \
              patch.object(server.subprocess, 'run', side_effect=command), \
              patch.object(server.subprocess, 'check_output', return_value=b'6'), \
              patch.object(server, 'model_config', return_value=('test', 'https://example.invalid/v1', 'test')), \
-             patch.object(server.urllib.request, 'urlopen', side_effect=[response(bad), response(plan)]) as model:
+             patch.object(server.urllib.request, 'urlopen', side_effect=[response(bad), response(plan), response({"checks":[{"key":k,"approved":True,"reason":"对应阶段可见"} for k in ["cover","cook-0","cook-1"]]})]) as model:
             server.run('new', 'https://xhslink.cn/o/test')
         job = server.read('new')
         self.assertEqual(job['status'], 'completed')
         self.assertFalse(job['cacheHit'])
-        self.assertEqual(model.call_count, 2)  # Invalid frame reference is corrected, not silently accepted.
+        self.assertEqual(model.call_count, 3)  # Invalid frame reference is corrected, not silently accepted.
         self.assertTrue(server.current_recipe(job['recipe'], server.STORAGE))
         self.assertEqual([s['text'] for s in job['recipe']['illustrated_steps']], plan['cook'])
         self.assertEqual(list(server.STORAGE.glob('recipe-*')), [])

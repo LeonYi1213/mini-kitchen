@@ -175,40 +175,48 @@
     {
       "title": "抓浆牛肉",
       "text": "牛肉加半个鸡蛋及腌肉用鸡粉、生抽、蚝油、老抽、料酒、白胡椒，抓匀至有黏性，加生粉和油封住。",
-      "source_time": "约 01:00",
-      "image": "step-01.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "视频约 00:58"
     },
     {
       "title": "兑碗汁",
       "text": "泡椒水、鸡精、白胡椒、蚝油、生抽、老抽和料酒按碗汁份量混匀。",
-      "source_time": "约 01:18",
-      "image": "step-02.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "视频约 01:22"
     },
     {
       "title": "热锅炒牛肉",
       "text": "锅烧热后加菜籽油，下牛肉快速炒散，炒至变色，避免低温把牛肉炒出水。",
-      "source_time": "约 01:44",
-      "image": "step-03.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "视频约 01:44"
     },
     {
       "title": "加料快炒",
       "text": "下姜蒜干葱，再下小米辣、野山椒与美人椒，快速翻炒。",
-      "source_time": "约 01:52",
-      "image": "step-04.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "视频约 01:58"
     },
     {
       "title": "碗汁香菜收尾",
       "text": "淋碗汁，放香菜梗炒匀，确保牛肉熟透后装到香菜叶上。",
-      "source_time": "约 02:04",
-      "image": "step-05.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "视频约 02:02"
     }
   ],
-  "cover": "step-05.jpg",
-  "format_version": 3,
+  "cover": "review-cover.jpg",
+  "format_version": 4,
   "notes": [
     "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
     "来源：林述巍-林大厨《小炒黄牛肉又老又柴？！今天手把手教你搞定》。",
     "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
     "视频配料板写香菜300克、美人椒300克、干葱300克、野山椒100克、小米辣200克、姜蒜200克，并注明按口味调整；这些与300克牛肉比例异常，因此主清单保留适量，原数值在此留存待核对。"
+  ],
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "牛肉逆纹切硬币厚薄片，抓松。配菜全部切好，香菜梗叶分开。",
+      "image": "review-prep-01.jpg",
+      "source_time": "视频约 00:32"
+    }
   ]
 }

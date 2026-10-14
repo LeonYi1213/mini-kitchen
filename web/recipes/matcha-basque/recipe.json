@@ -106,38 +106,54 @@
     {
       "title": "70℃水调开抹茶",
       "text": "20 克抹茶粉加 50 克约 70℃热水，搅匀至无明显结块，避免直接用沸水。",
-      "source_time": "00:56–01:10",
-      "image": "matcha.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "00:56–01:10"
     },
     {
       "title": "淡奶油温至 40℃，分次混合",
       "text": "170 克、脂肪含量 35% 的淡奶油加热至约 40℃，分两次与抹茶糊混合均匀，放一旁备用。",
-      "source_time": "01:12–01:22",
-      "image": "cream.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "01:12–01:22"
     },
     {
       "title": "奶酪软化，拌入糖和淀粉",
       "text": "350 克奶油奶酪提前软化。110 克黄蔗糖与 10 克玉米淀粉先混匀，再加入奶酪，用刮刀拌至顺滑；黄蔗糖可换白糖，作者提示会稍微更甜。",
-      "source_time": "01:24–01:53",
-      "image": "cheese.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "01:24–01:53"
     },
     {
       "title": "蛋液分次加，再拌抹茶糊",
       "text": "2 个蛋黄加 3 个全蛋，蛋液总重以 200 克为准。搅散后分 4–5 次加入奶酪，每次拌匀，避免打入太多空气；再混入抹茶奶油糊。",
-      "source_time": "01:54–02:38",
-      "image": "eggs.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "01:54–02:38"
     },
     {
       "title": "6 寸模具，240℃烤约 28 分钟",
       "text": "6 寸／15 厘米模具铺烘焙纸。面糊可过筛后入模，挑破表面气泡。烤箱提前预热至 250℃，入炉后降至 240℃，烤约 28 分钟，按自家烤箱上色和状态调整。",
-      "source_time": "02:40–03:59",
-      "image": "bake.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "02:40–03:59"
     },
     {
       "title": "彻底放凉，冷藏过夜",
       "text": "出炉后完全放凉，盖保鲜膜冷藏一晚，第二天脱模切块。热刀切片更整齐；原片没有把一晚换算成固定小时数。",
-      "source_time": "04:00–04:38",
-      "image": "chill.jpg"
+      "image": "review-step-06.jpg",
+      "source_time": "04:00–04:38"
     }
-  ]
+  ],
+  "cover": "review-cover.jpg",
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "按配方称量；奶油奶酪提前软化，蛋液搅散并称至总重 200 克。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    },
+    {
+      "title": "备菜",
+      "text": "准备 6 寸／15 厘米模具与烘焙纸，烤箱提前预热至 250℃。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    }
+  ],
+  "format_version": 4
 }

@@ -125,40 +125,48 @@
     {
       "title": "排骨焯水",
       "text": "排骨冷水下锅，加葱姜料酒焯水，撇浮沫后捞出。",
-      "source_time": "约 00:08",
-      "image": "step-01.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "视频约 00:08"
     },
     {
       "title": "炒糖色",
       "text": "锅中放油和糖炒出糖色，下排骨翻匀上色。",
-      "source_time": "约 00:12",
-      "image": "step-02.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "视频约 00:12"
     },
     {
       "title": "炒香调味",
       "text": "加葱姜、八角、桂皮、生抽2勺、老抽1勺、蚝油1勺及少许盐，加入板栗炒匀。",
-      "source_time": "约 00:20",
-      "image": "step-03.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "视频约 00:18"
     },
     {
       "title": "加水焖煮",
       "text": "加开水没过排骨，盖锅转小火焖30分钟，至肉熟软。",
-      "source_time": "约 00:24",
-      "image": "step-04.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "视频约 00:22"
     },
     {
       "title": "收浓汤汁",
       "text": "开盖大火收汁，至汤汁浓稠挂在排骨和板栗上。",
-      "source_time": "约 00:36",
-      "image": "step-05.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "视频约 00:28"
     }
   ],
-  "cover": "step-05.jpg",
-  "format_version": 3,
+  "cover": "review-cover.jpg",
+  "format_version": 4,
   "notes": [
     "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
     "来源：娜娜💕美食记《秋天必吃🌰的板栗排骨🔥粉粉糯糯巨好吃‼️》。",
     "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
     "原文也提供更软烂的方式：排骨先炖20分钟再下板栗。肉和板栗用量原文未标明。"
+  ],
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "排骨切块，葱切段、姜切片，板栗去壳。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    }
   ]
 }

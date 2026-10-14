@@ -105,40 +105,48 @@
     {
       "title": "中小火煎鱼",
       "text": "不粘锅淋橄榄油，保持中小火，每一面都煎至上色且鱼肉熟透，取出。",
-      "source_time": "约 01:06",
-      "image": "step-01.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "视频约 01:04"
     },
     {
       "title": "炒香葱蒜",
       "text": "倒去多余油脂，不洗锅，放干葱和蒜末炒软。",
-      "source_time": "约 01:26",
-      "image": "step-02.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "视频约 01:30"
     },
     {
       "title": "酒与柠檬收汁",
       "text": "烹入100毫升干白刮起锅底香味，再加20毫升柠檬汁，稍收浓。",
-      "source_time": "约 01:36",
-      "image": "step-03.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "视频约 01:38"
     },
     {
       "title": "低温乳化黄油",
       "text": "转微火或关火，加入40克黄油迅速搅拌乳化，再撒欧芹。",
-      "source_time": "约 01:50",
-      "image": "step-04.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "视频约 01:46"
     },
     {
       "title": "淋汁上桌",
       "text": "酱汁浓稠能挂勺时淋在三文鱼上，可搭米饭或意面。",
-      "source_time": "约 01:58",
-      "image": "step-05.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "视频约 01:58"
     }
   ],
-  "cover": "step-05.jpg",
-  "format_version": 3,
+  "cover": "review-cover.jpg",
+  "format_version": 4,
   "notes": [
     "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
     "来源：涛姐做西餐sous_chef_Tao《酱汁浓郁外焦里嫩！10分钟香煎三文鱼》。",
     "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
     "标题“10分钟”为原作者描述；这里按分步骤估算，实际取决于鱼块厚度。"
+  ],
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "三文鱼两面撒盐与胡椒，蒜切末、干葱切细丁，欧芹切碎。",
+      "image": "review-prep-01.jpg",
+      "source_time": "视频约 00:26"
+    }
   ]
 }

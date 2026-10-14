@@ -38,7 +38,7 @@ struct CookView: View {
                         }
                     } else {
                         ScrollView(.horizontal, showsIndicators: false) {
-                            LazyHStack(alignment: .top, spacing: 12) {
+                            HStack(alignment: .top, spacing: 12) {
                                 ForEach(store.selected) { recipe in
                                     CookingCard(recipe: recipe) { ingredients = recipe }
                                         .containerRelativeFrame(.horizontal).id(recipe.id)
@@ -48,7 +48,7 @@ struct CookView: View {
                             .scrollTargetBehavior(.viewAligned).scrollPosition(id: $focused)
                     }
                 }
-            }.padding(.vertical, 16)
+            }.padding(.top, 16).padding(.bottom, 32)
         }.kitchenPage()
             .onAppear { if focused == nil { focused = store.selected.first?.id } }
             .onChange(of: store.meal.selected) { _, ids in if focused == nil || !ids.contains(focused!) { focused = ids.first } }
@@ -76,7 +76,12 @@ struct CookingCard: View {
     private var complete: Bool { state.step >= recipe.steps.count }
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            RecipePhoto(name: recipe.image(at: state.step), height: 115)
+            if let image = recipe.image(at: state.step) {
+                RecipePhoto(name: image, height: 230)
+            } else {
+                Label("原素材未提供这一步的过程图", systemImage: "text.book.closed")
+                    .font(.caption).foregroundStyle(KitchenStyle.muted).padding(18)
+            }
             VStack(alignment: .leading, spacing: 16) {
                 HStack {
                     Text(recipe.title).font(.headline); Spacer()
@@ -100,7 +105,7 @@ struct CookingCard: View {
                         if state.timer == nil {
                             Button { store.update(recipe) { $0.timer = CookingTimer(deadline: Date().addingTimeInterval(Double(max(1, time.min)) * 60)) } } label: {
                                 Label("开始计时 \(max(1, time.min)) 分钟", systemImage: "timer").frame(maxWidth: .infinity, minHeight: 44).contentShape(Rectangle())
-                            }.font(.subheadline).background(KitchenStyle.pale, in: RoundedRectangle(cornerRadius: 12))
+                            }.accessibilityIdentifier("start-timer-\(recipe.id)").font(.subheadline).background(KitchenStyle.pale, in: RoundedRectangle(cornerRadius: 12))
                         }
                     }
                     if let timer = state.timer {
@@ -111,7 +116,7 @@ struct CookingCard: View {
                                     Spacer()
                                     SecondaryButton(title: timer.deadline == nil ? "继续" : "暂停") {
                                         store.update(recipe) { $0.timer?.toggle(at: Date()) }
-                                    }.disabled(timer.remaining(at: context.date) <= 0)
+                                    }.accessibilityIdentifier("toggle-timer-\(recipe.id)").disabled(timer.remaining(at: context.date) <= 0)
                                 }
                                 if timer.remaining(at: context.date) <= 0 { Text("计时到了，请检查熟度").font(.caption.bold()) }
                                 else if timer.deadline == nil { Text("计时已暂停").font(.caption) }
@@ -120,13 +125,13 @@ struct CookingCard: View {
                     }
                     PrimaryButton(title: state.step == recipe.steps.count - 1 ? "做好了 ✓" : "完成这步 →") {
                         if state.timer != nil { confirmAdvance = true } else { store.advance(recipe) }
-                    }
+                    }.accessibilityIdentifier("advance-\(recipe.id)")
                     if state.step > 0 {
-                        SecondaryButton(title: "上一步", expanded: true) { store.update(recipe) { $0.step -= 1; $0.timer = nil } }.font(.caption).contentShape(Rectangle())
+                        SecondaryButton(title: "上一步", expanded: true) { store.update(recipe) { $0.step -= 1; $0.timer = nil } }.accessibilityIdentifier("previous-\(recipe.id)").font(.caption).contentShape(Rectangle())
                     }
                 }
             }.padding(18)
-        }.background(.white, in: RoundedRectangle(cornerRadius: 21)).clipShape(RoundedRectangle(cornerRadius: 21))
+        }.fixedSize(horizontal: false, vertical: true).background(.white, in: RoundedRectangle(cornerRadius: 21)).clipShape(RoundedRectangle(cornerRadius: 21))
             .confirmationDialog("确认这一步已完成？", isPresented: $confirmAdvance, titleVisibility: .visible) {
                 Button("结束计时并完成") { store.advance(recipe) }
             }

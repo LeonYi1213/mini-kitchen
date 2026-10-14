@@ -85,40 +85,34 @@
   ],
   "illustrated_steps": [
     {
-      "title": "冷水焯排骨",
-      "text": "排骨冷水下锅，加料酒。煮出浮沫后撇净，捞出沥水。",
-      "source_time": "00:15–00:56",
-      "image": "blanch.jpg"
-    },
-    {
       "title": "煎出肉香",
       "text": "锅中放油，排骨煎至表面微黄；不要煎得太焦。加入葱段和 1 个八角。",
-      "source_time": "00:57–01:38",
-      "image": "sear.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "00:57–01:38"
     },
     {
       "title": "加水炖 40–50 分钟",
       "text": "加温热水，放盐、整根青椒和白胡椒粉，加盖炖约 40–50 分钟。水量按锅具调整，注意别烧干。",
-      "source_time": "01:39–02:22",
-      "image": "simmer.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "01:39–02:22"
     },
     {
       "title": "另锅炒青椒",
       "text": "趁炖排骨时，将剩余青椒去蒂、分段、拍扁，另锅加少许盐翻炒，用铲子压一压，炒软备用。",
-      "source_time": "02:23–02:48",
-      "image": "pepper.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "02:23–02:48"
     },
     {
       "title": "挑椒、调味、收汤",
       "text": "排骨炖熟软后，挑出炖过的整椒和葱段。加入生抽、蚝油、鸡精，煮至汤汁略收浓。",
-      "source_time": "02:49–03:12",
-      "image": "season.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "02:49–03:12"
     },
     {
       "title": "合锅，留一点汤汁",
       "text": "倒入炒软的青椒，翻拌并短暂煮至味道融合。保留一些汤汁即可出锅，不必把青椒久炖变黄。",
-      "source_time": "03:13–03:48",
-      "image": "finish.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "03:13–03:48"
     }
   ],
   "timing": {
@@ -159,5 +153,27 @@
         "max": 5
       }
     ]
-  }
+  },
+  "cover": "review-cover.jpg",
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "青椒洗净分两份：一份留整根炖汤，另一份去蒂、分段、拍扁，最后合锅。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    },
+    {
+      "title": "备菜",
+      "text": "准备葱段、1 个八角及调味料；排骨沥干后再下油锅。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    },
+    {
+      "title": "冷水焯排骨",
+      "text": "排骨冷水下锅，加料酒。煮出浮沫后撇净，捞出沥水。",
+      "image": "review-prep-03.jpg",
+      "source_time": "00:15–00:56"
+    }
+  ],
+  "format_version": 4
 }

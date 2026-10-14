@@ -90,7 +90,7 @@ struct RecipeSteps: View {
         let steps = preparation ? recipe.prep : recipe.cook
         ForEach(Array(steps.enumerated()), id: \.offset) { index, text in
             let absolute = preparation ? index : recipe.prep.count + index
-            let illustration = recipe.illustrated_steps?.first { $0.text == text }
+            let illustration = recipe.illustration(at: absolute)
             VStack(alignment: .leading, spacing: 12) {
                 HStack {
                     Text("\(index + 1)").font(.title2.bold())
@@ -99,11 +99,15 @@ struct RecipeSteps: View {
                     if let time = recipe.time(at: absolute) { Text(time.label).font(.caption).foregroundStyle(KitchenStyle.muted) }
                 }
                 if let image = illustration?.image {
-                    RecipePhoto(name: image, height: 190).clipShape(RoundedRectangle(cornerRadius: 12))
+                    RecipePhoto(name: image, height: 230).clipShape(RoundedRectangle(cornerRadius: 12))
+                }
+                if illustration?.image == nil {
+                    Text(illustration?.image_note ?? "原素材未提供这一步的过程图")
+                        .font(.caption).foregroundStyle(KitchenStyle.muted)
                 }
                 Text(text).font(.body).lineSpacing(6)
                 if let time = illustration?.source_time {
-                    Text("视频 \(time)").font(.caption).foregroundStyle(KitchenStyle.muted)
+                    Text(time).font(.caption).foregroundStyle(KitchenStyle.muted)
                 }
             }.padding(18).frame(maxWidth: .infinity, alignment: .leading).background(.white, in: RoundedRectangle(cornerRadius: 18))
         }

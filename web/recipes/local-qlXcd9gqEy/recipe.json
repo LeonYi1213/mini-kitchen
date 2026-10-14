@@ -94,34 +94,38 @@
     {
       "title": "煮熟压碎鸡蛋",
       "text": "鸡蛋煮全熟，去壳后用叉子压碎。",
-      "source_time": "原笔记图 2",
-      "image": "step-01.jpg"
+      "image": "review-step-01.jpg"
     },
     {
       "title": "拌酸奶蛋酱",
       "text": "蛋碎加2–3勺零脂酸奶，调入海盐、黑胡椒、干罗勒和干薄荷，拌成不太稀的酱。",
-      "source_time": "原笔记图 2",
-      "image": "step-02.jpg"
+      "image": "review-step-02.jpg"
     },
     {
       "title": "烤面包",
       "text": "面包不放油，两面煎至微焦，或用吐司机烤。",
-      "source_time": "原笔记图 2",
-      "image": "step-03.jpg"
+      "image": "review-step-03.jpg"
     },
     {
       "title": "铺料装配",
       "text": "面包抹蛋酱，每片铺半个牛油果及1小片烟熏三文鱼，最后撒黑胡椒。",
-      "source_time": "原笔记图 3",
-      "image": "step-04.jpg"
+      "image": "review-step-04.jpg"
     }
   ],
-  "cover": "cover.jpg",
-  "format_version": 3,
+  "cover": "review-cover.jpg",
+  "format_version": 4,
   "notes": [
     "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
     "来源：穆之_《✨高蛋白减脂早餐🥑开放式三明治》。",
     "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
     "原文明确4片配方，不擅自换算人数。"
+  ],
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "牛油果去核切片，准备4片面包和烟熏三文鱼。此配方为4片三明治的量。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    }
   ]
 }

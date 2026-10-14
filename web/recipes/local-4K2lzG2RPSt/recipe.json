@@ -89,34 +89,42 @@
     {
       "title": "啤酒浸泡",
       "text": "五花肉用啤酒浸泡10分钟。",
-      "source_time": "约 00:06",
-      "image": "step-01.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "视频约 00:06"
     },
     {
       "title": "调味腌制",
       "text": "加葱姜、蚝油1勺、半包椒盐粉和少许油，抓匀后腌10分钟；椒盐粉规格不明，实际宜少量调整。",
-      "source_time": "约 00:12",
-      "image": "step-02.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "视频约 00:12"
     },
     {
       "title": "去料裹粉",
       "text": "取出葱姜料渣，加1勺生粉抓匀，再腌15分钟。",
-      "source_time": "约 00:18",
-      "image": "step-03.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "视频约 00:18"
     },
     {
       "title": "小火煎熟",
       "text": "锅中放油烧热，下肉片全程小火煎，翻面煎至两面金黄且内部熟透。",
-      "source_time": "约 00:24",
-      "image": "step-04.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "视频约 00:22"
     }
   ],
-  "cover": "step-04.jpg",
-  "format_version": 3,
+  "cover": "review-cover.jpg",
+  "format_version": 4,
   "notes": [
     "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
     "来源：杨掌厨《啤酒腌香煎五花肉》。",
     "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
     "原笔记无标题，此标题由实际视频内容整理；“10块钱3斤”是口播价格描述，未当作配方重量。"
+  ],
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "五花肉切厚片，葱姜切段片。",
+      "image": "review-prep-01.jpg",
+      "source_time": "视频约 00:04"
+    }
   ]
 }

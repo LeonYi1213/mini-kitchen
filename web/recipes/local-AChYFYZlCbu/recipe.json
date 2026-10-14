@@ -161,46 +161,54 @@
     {
       "title": "牛肉焯水",
       "text": "牛肉冷水下锅，加葱姜料酒，煮开撇浮沫，捞出沥干。",
-      "source_time": "约 00:22",
-      "image": "step-01.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "视频约 00:22"
     },
     {
       "title": "煎香炒料",
       "text": "锅里少量油，将牛肉煎至微焦，加葱姜蒜和洋葱炒香。",
-      "source_time": "约 00:28",
-      "image": "step-02.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "视频约 00:28"
     },
     {
       "title": "咖喱调味",
       "text": "加入黄咖喱酱、咖喱粉、沙茶酱、生抽、鱼露、糖和辣椒粉，翻匀上色。",
-      "source_time": "约 00:38",
-      "image": "step-03.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "视频约 00:36"
     },
     {
       "title": "加水炖肉",
       "text": "冲入热水没过食材，盖锅炖至软嫩。原文牛肋条约40–60分钟，偏软烂可炖约90分钟。",
-      "source_time": "约 00:48",
-      "image": "step-04.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "视频约 00:44"
     },
     {
       "title": "加土豆胡萝卜",
       "text": "加入土豆和胡萝卜，再炖20分钟，至蔬菜熟软。",
-      "source_time": "约 00:52",
-      "image": "step-05.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "视频约 00:52"
     },
     {
       "title": "椰浆收尾",
       "text": "加入辣椒，淋少量椰浆调和味道，收至汁浓，撒欧芹。",
-      "source_time": "约 00:58",
-      "image": "step-06.jpg"
+      "image": "review-step-06.jpg",
+      "source_time": "视频约 00:56"
     }
   ],
-  "cover": "step-06.jpg",
-  "format_version": 3,
+  "cover": "review-cover.jpg",
+  "format_version": 4,
   "notes": [
     "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
     "来源：kikibonbon《一口开胃❗️浓郁下饭的辣炖咖喱牛肉🍛》。",
     "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
     "咖喱粉原片用毫升标注，保留原单位。换牛腩时原文建议炖1.5–2小时。"
+  ],
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "牛肋条切大块，土豆和胡萝卜切块，葱姜蒜洋葱切好。",
+      "image": "review-prep-01.jpg",
+      "source_time": "视频约 00:08"
+    }
   ]
 }

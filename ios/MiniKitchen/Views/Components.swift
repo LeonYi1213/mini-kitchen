@@ -34,18 +34,19 @@ struct SecondaryButton: View {
 struct RecipePhoto: View {
     let name: String?
     var height: CGFloat = 160
+    var contentMode: ContentMode = .fit
     @State private var importedImage: UIImage?
     var body: some View {
         GeometryReader { proxy in
             Group {
                 if let name, let url = Bundle.main.url(forResource: name, withExtension: nil), let image = UIImage(contentsOfFile: url.path) {
-                    Image(uiImage: image).resizable().scaledToFill()
+                    Image(uiImage: image).resizable().aspectRatio(contentMode: contentMode)
                 } else if let importedImage {
-                    Image(uiImage: importedImage).resizable().scaledToFill()
+                    Image(uiImage: importedImage).resizable().aspectRatio(contentMode: contentMode)
                 } else if let name, let url = URL(string: name), url.scheme == "https" {
-                    AsyncImage(url: url) { image in image.resizable().scaledToFill() } placeholder: { placeholder }
+                    AsyncImage(url: url) { image in image.resizable().aspectRatio(contentMode: contentMode) } placeholder: { placeholder }
                 } else { placeholder }
-            }.frame(width: proxy.size.width, height: height).clipped()
+            }.frame(width: proxy.size.width, height: height).background(KitchenStyle.pale).clipped()
         }.frame(height: height).clipped().contentShape(Rectangle()).allowsHitTesting(false).accessibilityHidden(true)
             .task(id: name) {
                 importedImage = nil

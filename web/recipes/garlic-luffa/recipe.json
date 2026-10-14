@@ -78,40 +78,44 @@
   ],
   "illustrated_steps": [
     {
-      "title": "丝瓜切薄片",
-      "text": "丝瓜洗净、处理外皮后切薄片，蒜切末。原片未注明丝瓜和蒜的用量。",
-      "source_time": "00:04–00:09",
-      "image": "prep.jpg"
-    },
-    {
       "title": "猪油爆香蒜末",
       "text": "锅中放猪油化开，下蒜末稍微爆香，避免炒焦。",
-      "source_time": "00:10–00:12",
-      "image": "garlic.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "00:10–00:12"
     },
     {
       "title": "丝瓜炒软、调味",
       "text": "倒入丝瓜，不断翻炒至略微软化，加适量盐调味。",
-      "source_time": "00:12–00:20",
-      "image": "soften.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "00:12–00:20"
     },
     {
       "title": "沿锅边加开水",
       "text": "沿锅边淋入一圈开水，翻动丝瓜，让汤汁煮开。原片未给具体水量。",
-      "source_time": "00:21–00:25",
-      "image": "water.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "00:21–00:25"
     },
     {
       "title": "中小火煮约 2 分钟",
       "text": "转中小火煮约 2 分钟，观察丝瓜熟软、汤汁浓郁；不用另加鸡精、味精。",
-      "source_time": "00:26–00:29",
-      "image": "simmer.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "00:26–00:29"
     },
     {
       "title": "带汤盛出",
       "text": "丝瓜熟软、汤汁略浓时即可盛出，保留汤汁趁热吃。",
-      "source_time": "00:30–00:33",
-      "image": "finish.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "00:30–00:33"
     }
-  ]
+  ],
+  "cover": "review-cover.jpg",
+  "preparation_steps": [
+    {
+      "title": "丝瓜切薄片",
+      "text": "丝瓜洗净、处理外皮后切薄片，蒜切末。原片未注明丝瓜和蒜的用量。",
+      "image": "review-prep-01.jpg",
+      "source_time": "00:04–00:09"
+    }
+  ],
+  "format_version": 4
 }

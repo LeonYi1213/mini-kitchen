@@ -26,6 +26,7 @@ struct IllustratedStep: Codable, Hashable {
     var text: String
     var source_time: String?
     var image: String?
+    var image_note: String?
 }
 struct Recipe: Codable, Identifiable, Hashable {
     var id: String
@@ -36,15 +37,16 @@ struct Recipe: Codable, Identifiable, Hashable {
     var cook: [String]
     var timing: RecipeTiming?
     var illustrated_steps: [IllustratedStep]?
+    var preparation_steps: [IllustratedStep]?
     var cover: String?
     var notes: [String]?
     var format_version: Int?
     var hasIllustratedFormat: Bool {
         guard let cover, !cover.isEmpty, let illustrated_steps else { return false }
-        return cook.allSatisfy { text in illustrated_steps.contains { $0.text == text && !($0.image ?? "").isEmpty } }
+        return cook.allSatisfy { text in illustrated_steps.contains { $0.text == text && (!($0.image ?? "").isEmpty || !($0.image_note ?? "").isEmpty) } }
     }
     var needsFormatUpgrade: Bool {
-        !hasIllustratedFormat || (cover?.hasPrefix("assets/") == true && (format_version ?? 0) < 3)
+        !hasIllustratedFormat || (cover?.hasPrefix("assets/") == true && (format_version ?? 0) < 4)
     }
     func upgrades(_ old: Recipe) -> Bool {
         id == old.id && hasIllustratedFormat &&
@@ -62,7 +64,12 @@ struct Recipe: Codable, Identifiable, Hashable {
     }
     func image(at index: Int) -> String? {
         guard steps.indices.contains(index) else { return cover }
-        return illustrated_steps?.first(where: { $0.text == steps[index] })?.image ?? cover
+        return illustration(at: index)?.image
+    }
+    func illustration(at index: Int) -> IllustratedStep? {
+        guard steps.indices.contains(index) else { return nil }
+        let illustrations = index < prep.count ? (preparation_steps ?? []) + (illustrated_steps ?? []) : (illustrated_steps ?? [])
+        return illustrations.first { $0.text == steps[index] }
     }
     var valid: Bool {
         !id.isEmpty && !title.trimmingCharacters(in: .whitespaces).isEmpty && !ingredients.isEmpty && !cook.isEmpty &&

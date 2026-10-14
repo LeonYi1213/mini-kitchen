@@ -88,7 +88,7 @@ struct ImportService {
         _ = try? await URLSession.shared.data(for: request)
     }
     func cacheImages(for recipe: Recipe) async throws {
-        let references = Set(([recipe.cover] + (recipe.illustrated_steps ?? []).map(\.image)).compactMap { $0 })
+        let references = Set(([recipe.cover] + ((recipe.illustrated_steps ?? []) + (recipe.preparation_steps ?? [])).map(\.image)).compactMap { $0 })
         for reference in references where reference.hasPrefix("assets/") {
             _ = try await imageData(reference)
         }

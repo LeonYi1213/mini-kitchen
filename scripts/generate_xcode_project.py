@@ -52,7 +52,7 @@ for scope in ['project','app','tests','uitests']:
             settings={'IPHONEOS_DEPLOYMENT_TARGET':'17.0','SDKROOT':'iphoneos','SWIFT_VERSION':'5.0','CLANG_ENABLE_MODULES':'YES','SWIFT_OPTIMIZATION_LEVEL':'-Onone' if mode=='Debug' else '-O','DEBUG_INFORMATION_FORMAT':'dwarf' if mode=='Debug' else 'dwarf-with-dsym','ENABLE_TESTABILITY':'YES' if mode=='Debug' else 'NO','SWIFT_ACTIVE_COMPILATION_CONDITIONS':'DEBUG' if mode=='Debug' else ''}
         else:
             settings={'PRODUCT_NAME':'$(TARGET_NAME)','PRODUCT_BUNDLE_IDENTIFIER':'com.minikitchen.app' + ('.'+scope if scope!='app' else ''),'TARGETED_DEVICE_FAMILY':'1,2','CODE_SIGN_STYLE':'Automatic','DEVELOPMENT_TEAM':'YGQ59J98DJ','SUPPORTED_PLATFORMS':'iphoneos iphonesimulator','SWIFT_EMIT_LOC_STRINGS':'YES','LD_RUNPATH_SEARCH_PATHS':'$(inherited) @executable_path/Frameworks','GENERATE_INFOPLIST_FILE':'YES' if scope!='app' else 'NO'}
-            if scope=='app': settings.update(INFOPLIST_FILE='MiniKitchen/Info.plist', CODE_SIGN_ENTITLEMENTS='MiniKitchen/MiniKitchen.entitlements', ASSETCATALOG_COMPILER_APPICON_NAME='AppIcon', MARKETING_VERSION='1.0', CURRENT_PROJECT_VERSION='4')
+            if scope=='app': settings.update(INFOPLIST_FILE='MiniKitchen/Info.plist', CODE_SIGN_ENTITLEMENTS='MiniKitchen/MiniKitchen.entitlements', ASSETCATALOG_COMPILER_APPICON_NAME='AppIcon', MARKETING_VERSION='1.0', CURRENT_PROJECT_VERSION='5')
             elif scope=='uitests': settings.update(TEST_TARGET_NAME='MiniKitchen')
             else: settings.update(TEST_HOST='$(BUILT_PRODUCTS_DIR)/MiniKitchen.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MiniKitchen',BUNDLE_LOADER='$(TEST_HOST)')
         args={'buildSettings':settings,'name':mode}

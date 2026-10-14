@@ -179,38 +179,66 @@
     {
       "title": "蒜末、洋葱炒香",
       "text": "少量油烧热，中火炒蒜末至微微上色，再加洋葱丁炒香。",
-      "source_time": "00:12–00:30",
-      "image": "aromatics.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "00:12–00:30"
     },
     {
       "title": "加入蔬菜炒出香气",
       "text": "依次加入彩椒条、芹菜梗丁、胡萝卜片和番茄，炒至蔬菜变软、略有焦香，避免炒糊。",
-      "source_time": "00:30–01:18",
-      "image": "vegetables.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "00:30–01:18"
     },
     {
       "title": "加水调成鲜香汤底",
       "text": "加入黑胡椒、酒、香叶和盐；喜欢辣可加干辣椒。加水煮出蔬菜味，十三香按喜好加。取出香叶，尝味后加少量酱油，酌情补盐和黑胡椒。",
-      "source_time": "01:18–02:35",
-      "image": "broth.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "01:18–02:35"
     },
     {
       "title": "生米拌入汤底",
       "text": "将生大米倒入汤底拌匀，按米种和锅具调整水量。原片没有固定米水比例，不要照搬画面水位作为通用配比。",
-      "source_time": "02:59–03:18",
-      "image": "rice.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "02:59–03:18"
     },
     {
       "title": "铺上海鲜，小火加盖焖",
       "text": "放上剖开去虾线的虾、鱿鱼和蛤蜊，让海鲜接触汤汁，加盖小火焖。原片选择米与海鲜同煮，以便米饭吸收鲜味。",
-      "source_time": "03:18–03:59",
-      "image": "seafood.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "03:18–03:59"
     },
     {
       "title": "检查收水与熟度，撒葱花",
       "text": "焖约 10 分钟时开盖检查，仍有水则继续小火焖。米饭无硬芯、海鲜熟透后撒葱花；若水干而米未熟，补少量热水续焖。",
-      "source_time": "04:00–04:42",
-      "image": "finish.jpg"
+      "image": "review-step-06.jpg",
+      "source_time": "04:00–04:42"
     }
-  ]
+  ],
+  "cover": "review-cover.jpg",
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "蒜切末、洋葱和芹菜梗切丁。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    },
+    {
+      "title": "备菜",
+      "text": "彩椒切条，胡萝卜切片，番茄切块，葱切葱花。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    },
+    {
+      "title": "备菜",
+      "text": "虾剖开去虾线；鱿鱼清理切圈，蛤蜊处理干净。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    },
+    {
+      "title": "备菜",
+      "text": "备好大米、水和各项调味料，十三香与干辣椒按喜好准备。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    }
+  ],
+  "format_version": 4
 }

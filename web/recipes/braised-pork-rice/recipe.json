@@ -152,40 +152,56 @@
   ],
   "illustrated_steps": [
     {
-      "title": "五花肉切小条，肥瘦分开",
-      "text": "猪皮刮净，五花肉切成约小拇指粗细的小条，肥肉、瘦肉分开放；紫洋葱切小粒，姜蒜葱白切碎。",
-      "source_time": "00:18–01:09",
-      "image": "cut.jpg"
-    },
-    {
       "title": "肥肉先煸，再下瘦肉",
       "text": "热锅少量油润锅，先下肥肉中火煸出油脂；油太多可倒出一部分，再下瘦肉翻炒，淋花雕酒。",
-      "source_time": "01:21–01:37",
-      "image": "render.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "01:21–01:37"
     },
     {
       "title": "炒香洋葱与香料，调色",
       "text": "放入干辣椒、桂皮、八角、姜蒜葱白，再下紫洋葱炒至半熟。加两颗黄冰糖、生抽、老抽，炒出酱香。",
-      "source_time": "01:38–01:58",
-      "image": "season.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "01:38–01:58"
     },
     {
       "title": "加开水和鸡蛋，炖软",
       "text": "加开水，转入高压锅，放入煮熟去壳的鸡蛋。原片上汽后压 7 分钟；按自家锅说明完成泄压再开盖，检查肉是否软烂。普通锅原片建议至少炖 1 小时，需留意水量。",
-      "source_time": "01:59–02:07",
-      "image": "pressure.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "01:59–02:07"
     },
     {
       "title": "挑出香料，收浓卤汁",
       "text": "泄压开盖后倒回炒锅，挑出桂皮、八角、干辣椒等香料，收至汤汁浓稠但仍有汁可拌饭。",
-      "source_time": "03:21–03:32",
-      "image": "reduce.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "03:21–03:32"
     },
     {
       "title": "米饭铺底，浇肉配菜",
       "text": "米饭装盘，浇上卤肉和卤汁，搭配鸡蛋与熟青菜。青菜焯熟为补充操作，原片仅展示成品配菜。",
-      "source_time": "03:36–03:49",
-      "image": "serve.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "03:36–03:49"
     }
-  ]
+  ],
+  "cover": "review-cover.jpg",
+  "preparation_steps": [
+    {
+      "title": "五花肉切小条，肥瘦分开",
+      "text": "五花肉刮净猪皮，切小条，肥瘦分开。",
+      "image": "review-prep-01.jpg",
+      "source_time": "00:18–01:09"
+    },
+    {
+      "title": "备菜",
+      "text": "紫洋葱切粒，姜蒜葱白切碎，备好干辣椒、桂皮、八角。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    },
+    {
+      "title": "备菜",
+      "text": "鸡蛋煮熟、过冷水后剥壳；青菜洗净，米饭提前煮好。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    }
+  ],
+  "format_version": 4
 }

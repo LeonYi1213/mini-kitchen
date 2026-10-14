@@ -155,40 +155,48 @@
     {
       "title": "调韩式酱汁",
       "text": "将辣酱、辣椒面、蚝油、生抽、糖、料酒、蒜末、香油及黑胡椒、盐、味精混匀，加少量水调开。",
-      "source_time": "约 00:12",
-      "image": "step-01.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "视频约 00:14"
     },
     {
       "title": "煎五花肉",
       "text": "油热下五花肉，煎至两面金黄出油。",
-      "source_time": "约 00:18",
-      "image": "step-02.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "视频约 00:18"
     },
     {
       "title": "加八爪鱼",
       "text": "加葱花和蒜末炒香，再放八爪鱼大火翻炒。",
-      "source_time": "约 00:24",
-      "image": "step-03.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "视频约 00:22"
     },
     {
       "title": "加菜炒干水分",
       "text": "加入豆芽、洋葱翻炒，将多余水分炒干。",
-      "source_time": "约 00:30",
-      "image": "step-04.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "视频约 00:28"
     },
     {
       "title": "裹酱收汁",
       "text": "倒酱汁大火收浓，确保五花肉和八爪鱼熟透，撒海苔碎与葱丝出锅。",
-      "source_time": "约 00:36",
-      "image": "step-05.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "视频约 00:34"
     }
   ],
-  "cover": "step-05.jpg",
-  "format_version": 3,
+  "cover": "review-cover.jpg",
+  "format_version": 4,
   "notes": [
     "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
     "来源：辣椒泡咖啡《韩式辣炒五花肉八爪鱼❗️裹满酱汁绝了😭》。",
     "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
     "主料重量与用水量原片未注明。"
+  ],
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "五花肉切片，八爪鱼处理干净，洋葱切丝，葱切花及丝。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    }
   ]
 }

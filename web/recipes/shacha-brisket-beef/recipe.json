@@ -130,40 +130,44 @@
   ],
   "illustrated_steps": [
     {
-      "title": "稍冻后切薄片",
-      "text": "胸口油和牛肉稍微冷冻至便于下刀，分别尽量切薄片；原片未给冷冻时间。",
-      "source_time": "00:05–00:15",
-      "image": "slice.jpg"
-    },
-    {
-      "title": "两种肉分别调味",
-      "text": "牛肉加酱油、蚝油、沙茶酱、淀粉和食用油拌匀；胸口油只加酱油、水、淀粉拌匀。原片未要求固定腌制时间。",
-      "source_time": "00:16–00:26",
-      "image": "season.jpg"
-    },
-    {
-      "title": "切好配菜，提前调汁",
-      "text": "洋葱、红黄彩椒切条，小葱切段、葱白葱绿分开，姜蒜切好。酱油、蚝油、沙茶酱、黑胡椒粉、水和淀粉调成酱汁。",
-      "source_time": "00:27–00:38",
-      "image": "sauce.jpg"
-    },
-    {
       "title": "中火煸胸口油，盛出",
       "text": "胸口油下锅，中火慢慢煸出油脂，煎至表面焦黄、口感焦脆后盛出，锅中留油继续炒。",
-      "source_time": "00:39–00:48",
-      "image": "render.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "00:39–00:48"
     },
     {
       "title": "牛肉快速煎炒，盛出",
       "text": "牛肉下锅快速煎炒至变色后暂时盛出，后续还需回锅炒熟；避免久炒变老。",
-      "source_time": "00:49–00:55",
-      "image": "beef.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "00:49–00:55"
     },
     {
       "title": "炒香配菜，回锅合炒",
       "text": "姜、蒜、葱白与洋葱、彩椒下锅炒香，再倒回牛肉和胸口油。翻炒时加入调好的酱汁，大火快炒至肉熟、酱汁裹匀，撒葱绿出锅。",
-      "source_time": "00:56–01:10",
-      "image": "finish.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "00:56–01:10"
     }
-  ]
+  ],
+  "cover": "review-cover.jpg",
+  "preparation_steps": [
+    {
+      "title": "稍冻后切薄片",
+      "text": "胸口油和牛肉稍微冷冻至便于下刀，分别尽量切薄片；原片未给冷冻时间。",
+      "image": "review-prep-01.jpg",
+      "source_time": "00:05–00:15"
+    },
+    {
+      "title": "两种肉分别调味",
+      "text": "牛肉加酱油、蚝油、沙茶酱、淀粉和食用油拌匀；胸口油只加酱油、水、淀粉拌匀。原片未要求固定腌制时间。",
+      "image": "review-prep-02.jpg",
+      "source_time": "00:16–00:26"
+    },
+    {
+      "title": "切好配菜，提前调汁",
+      "text": "洋葱、红黄彩椒切条，小葱切段、葱白葱绿分开，姜蒜切好。酱油、蚝油、沙茶酱、黑胡椒粉、水和淀粉调成酱汁。",
+      "image": "review-prep-03.jpg",
+      "source_time": "00:27–00:38"
+    }
+  ],
+  "format_version": 4
 }

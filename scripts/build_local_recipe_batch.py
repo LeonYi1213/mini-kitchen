@@ -50,3 +50,7 @@ for entry in old:
     if entry['url'] in byurl:entry.update(byurl[entry['url']]);entry['source_method']='local_browser_and_local_ocr_review'
 pending.write_text(json.dumps(old,ensure_ascii=False,indent=2)+'\n')
 print(f'Saved {len(report)} reviewed recipes with source images')
+
+# Reapply reviewed frame/step mappings so rebuilding cannot restore known wrong images.
+from apply_recipe_visual_audit import apply
+apply()

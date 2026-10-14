@@ -125,40 +125,48 @@
     {
       "title": "腌鸡翅",
       "text": "鸡翅加入料酒、蚝油、生抽、盐、白胡椒粉和玉米淀粉拌匀腌制，原片未注明腌多久。",
-      "source_time": "约 00:28",
-      "image": "step-01.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "视频约 00:30"
     },
     {
       "title": "炸蒜酥",
       "text": "蒜末下油锅，中小火慢炸至金黄浮起，捞出沥油放凉。",
-      "source_time": "约 00:58",
-      "image": "step-02.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "视频约 00:58"
     },
     {
       "title": "蒜油炸鸡翅",
       "text": "用炸蒜的油炸鸡翅，控制火力，翻动至金黄且内部熟透；大鸡翅需延长时间。",
-      "source_time": "约 01:12",
-      "image": "step-03.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "视频约 01:12"
     },
     {
       "title": "炒香配菜",
       "text": "锅留少量蒜油，炒香青红椒和洋葱。",
-      "source_time": "约 01:14",
-      "image": "step-04.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "视频约 01:14"
     },
     {
       "title": "合炒出锅",
       "text": "倒鸡翅翻匀，加入蒜酥、葱花和熟白芝麻，拌匀出锅。",
-      "source_time": "约 01:22",
-      "image": "step-05.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "视频约 01:18"
     }
   ],
-  "cover": "step-05.jpg",
-  "format_version": 3,
+  "cover": "review-cover.jpg",
+  "format_version": 4,
   "notes": [
     "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
     "来源：孩儿他姥姥《比可乐鸡翅还夯‼️蒜香鸡翅😋外酥里嫩》。",
     "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
     "原片未给腌制和炸制精确时间，界面时间为估算。蒜末入油前充分沥干。"
+  ],
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "鸡翅清理干净，沥干并扎孔。青红椒和洋葱切碎。蒜切末后冲洗两三遍，挤干水分。",
+      "image": "review-prep-01.jpg",
+      "source_time": "视频约 00:24"
+    }
   ]
 }

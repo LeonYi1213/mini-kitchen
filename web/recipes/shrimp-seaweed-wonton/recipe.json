@@ -178,38 +178,60 @@
     {
       "title": "虾头熬出红亮虾油",
       "text": "虾头下热油，翻炒时用铲压一压，炒至油色红亮，取出虾油备用。",
-      "source_time": "00:08–00:26",
-      "image": "oil.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "00:08–00:26"
     },
     {
       "title": "紫菜干焙，捏碎备用",
       "text": "紫菜放入无油锅中干焙，翻面至酥脆，取出捏碎。原片用了两片，大小未注明。",
-      "source_time": "00:27–00:37",
-      "image": "seaweed.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "00:27–00:37"
     },
     {
       "title": "肉馅分次打入香料水",
       "text": "肉馅绞细，葱姜花椒水过滤后少量多次加入；每次抓拌至水分被吸收，再加下一次，拌至黏稠。",
-      "source_time": "00:38–01:07",
-      "image": "water.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "00:38–01:07"
     },
     {
       "title": "拌基础馅，分成两种口味",
       "text": "加入虾仁、紫菜碎、盐、胡椒粉、生抽、蚝油、味精和虾油拌匀。基础馅分两份：一份加韭菜碎，另一份加玉米粒。只做一种也可以。",
-      "source_time": "01:08–01:44",
-      "image": "filling.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "01:08–01:44"
     },
     {
       "title": "包馄饨，多余的冷冻",
       "text": "取馄饨皮放馅，折合捏紧，按自己习惯包好。暂时不吃的分开放在托盘上冷冻，冻硬后密封保存（保存方式为补充建议）。",
-      "source_time": "01:45–02:01",
-      "image": "wrap.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "01:45–02:01"
     },
     {
       "title": "煮熟，冲汤底盛出",
       "text": "水开下馄饨，煮至皮熟、肉虾馅充分熟透。碗中放生抽、盐、虾皮、香菜、葱花、紫菜、胡椒粉、芝麻油，冲入热汤，再盛入馄饨。原片未注明煮制分钟数。",
-      "source_time": "02:02–02:33",
-      "image": "soup.jpg"
+      "image": "review-step-06.jpg",
+      "source_time": "02:02–02:33"
     }
-  ]
+  ],
+  "cover": "review-cover.jpg",
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "虾去壳去虾线，保留虾头熬油，虾仁切小块；肉馅绞细。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    },
+    {
+      "title": "备菜",
+      "text": "准备葱姜花椒水并过滤；原片未注明浸泡用时与比例。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    },
+    {
+      "title": "备菜",
+      "text": "韭菜洗净沥水切碎，玉米备粒；葱、香菜切碎用于汤底。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    }
+  ],
+  "format_version": 4
 }

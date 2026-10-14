@@ -163,38 +163,54 @@
     {
       "title": "焯水，冲净浮沫",
       "text": "牛排骨放入水中，加姜片和料酒焯水，途中撇浮沫。原片焯约 5–6 分钟，捞出用温水冲净、沥水。",
-      "source_time": "00:18–00:23",
-      "image": "blanch.jpg"
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
     },
     {
       "title": "把碗汁一次调好",
       "text": "沙茶酱、花生酱各 1 大勺，冰糖 1 小把，生抽 2 勺、老抽半勺、蚝油 1 勺，加半碗热水搅开。",
-      "source_time": "00:40–00:47",
-      "image": "sauce.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "00:40–00:47"
     },
     {
       "title": "炒香配料，再炒牛排骨",
       "text": "锅中放油，下 2 片姜、蒜粒和洋葱炒香。牛排骨炒至表面焦黄，加入八角、香叶、干辣椒炒香，再倒碗汁炒匀。",
-      "source_time": "00:50–01:18",
-      "image": "fry.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "00:50–01:18"
     },
     {
       "title": "高压炖软：压 45 分钟",
       "text": "转入高压锅，加开水至刚没过食材；原片压约 45 分钟。按设备说明完成升压、烹饪和安全泄压，确认可开盖后再打开。",
-      "source_time": "01:20–01:29",
-      "image": "pressure.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "01:20–01:29"
     },
     {
       "title": "回锅，加 3 块咖喱",
       "text": "牛排骨和汤转回炒锅，挑出八角、香叶和干辣椒，加入 3 块咖喱，搅拌至融化。",
-      "source_time": "01:30–01:38",
-      "image": "curry.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "01:30–01:38"
     },
     {
       "title": "略收浓，留汁拌饭",
       "text": "大火稍微收浓汤汁，仍有足够酱汁时关火。装盘撒香菜，留汁拌饭。",
-      "source_time": "01:50–02:03",
-      "image": "finish.jpg"
+      "image": "review-step-06.jpg",
+      "source_time": "01:50–02:03"
     }
-  ]
+  ],
+  "cover": "review-cover.jpg",
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "准备姜片、蒜粒和洋葱，备好 2 颗八角、2 片香叶、3 根干辣椒。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    },
+    {
+      "title": "备菜",
+      "text": "备好碗汁调料、3 块咖喱和香菜；清洗处理牛排骨。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    }
+  ],
+  "format_version": 4
 }

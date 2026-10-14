@@ -2,6 +2,15 @@ import XCTest
 @testable import MiniKitchen
 
 final class KitchenTests: XCTestCase {
+    func testMissingProcessImageNeverFallsBackToFinishedDish() throws {
+        var dish = recipe("image-mapping", wait: 30)
+        dish.cover = "finished.jpg"
+        XCTAssertNil(dish.image(at: 0))
+        dish.preparation_steps = [IllustratedStep(title: "备菜", text: dish.prep[0], image: "prep.jpg")]
+        XCTAssertEqual(dish.image(at: 0), "prep.jpg")
+        XCTAssertNil(dish.image(at: dish.prep.count))
+        XCTAssertEqual(dish.image(at: dish.steps.count), "finished.jpg")
+    }
     func testServiceOnlyAllowsHTTPSAndDebugSimulatorLoopback() {
         XCTAssertTrue(ImportService.allowedEndpoint(URL(string: "https://kitchen.example.com")!))
         XCTAssertFalse(ImportService.allowedEndpoint(URL(string: "http://kitchen.example.com")!))
@@ -19,7 +28,7 @@ final class KitchenTests: XCTestCase {
         updated.cover = image
         updated.illustrated_steps = updated.cook.map { IllustratedStep(title: "操作", text: $0, source_time: "约 00:10", image: image) }
         updated.notes = ["用时为估算。"]
-        updated.format_version = 3
+        updated.format_version = 4
         XCTAssertTrue(updated.upgrades(old))
         XCTAssertFalse(old.upgrades(updated))
         XCTAssertFalse(updated.upgrades(updated))
@@ -135,7 +144,7 @@ final class KitchenTests: XCTestCase {
         XCTAssertEqual(Set(recipes.map(\.id)).count, recipes.count)
         for recipe in recipes {
             XCTAssertTrue(recipe.valid, recipe.title)
-            for step in recipe.illustrated_steps ?? [] {
+            for step in (recipe.illustrated_steps ?? []) + (recipe.preparation_steps ?? []) {
                 if let image = step.image { XCTAssertNotNil(Bundle.main.url(forResource: image, withExtension: nil), image) }
             }
         }

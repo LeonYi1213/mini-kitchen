@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 from import_video import validate
 sys.path.insert(0, str(ROOT / 'backend'))
-from recipe_format import PROMPT, FORMAT_VERSION, asset_path, current_recipe, materialize, validate_visual_plan
+from recipe_format import REVIEW_PROMPT, crop_frame, visual_selections, validate_visual_review, PROMPT, FORMAT_VERSION, asset_path, current_recipe, materialize, validate_visual_plan
 
 STORAGE = Path(os.environ.get('KITCHEN_DATA_DIR', ROOT / 'imports/service'))
 LOCK = threading.Lock()
@@ -138,9 +138,9 @@ def run(job_id, url=None, uploaded=None, digest=None):
                 recipe = json.loads(path.read_text())
                 if recipe['id'] == prefix + '-' + note_id:
                     # Use the same bundled names as the native catalog.
-                    for step in recipe.get('illustrated_steps', []):
-                        step['image'] = path.parent.name + '-' + step['image']
-                    recipe['cover'] = recipe['illustrated_steps'][-1]['image'] if recipe.get('illustrated_steps') else None
+                    for step in recipe.get('illustrated_steps', []) + recipe.get('preparation_steps', []):
+                        if step.get('image'): step['image'] = path.parent.name + '-' + step['image']
+                    recipe['cover'] = path.parent.name + '-' + recipe['cover'] if recipe.get('cover') else None
                     stage(job_id, 4, status='completed', recipe=recipe, cacheHit=True)
                     return
             with sqlite3.connect(STORAGE/'jobs.sqlite') as db:
@@ -182,6 +182,21 @@ def run(job_id, url=None, uploaded=None, digest=None):
                     if not valid_recipe(recipe):
                         raise ValueError('Invalid ingredients, steps or matching timing arrays')
                     validate_visual_plan(recipe, len(frames))
+                    review_content = []
+                    keys = []
+                    for key, text, index, bounds in visual_selections(recipe):
+                        cropped = folder / f'review-{key}.jpg'
+                        crop_frame(frames[index - 1], cropped, bounds)
+                        keys.append(key)
+                        review_content += [{'type': 'text', 'text': key + ': ' + text},
+                            {'type': 'image_url', 'image_url': {'url': 'data:image/jpeg;base64,' + base64.b64encode(cropped.read_bytes()).decode()}}]
+                    review_body = {'model': model, 'response_format': {'type': 'json_object'},
+                        'messages': [{'role': 'system', 'content': REVIEW_PROMPT}, {'role': 'user', 'content': review_content}]}
+                    review_request = urllib.request.Request(endpoint, data=json.dumps(review_body).encode(),
+                        headers={'Authorization': 'Bearer ' + api_key, 'Content-Type': 'application/json'})
+                    with urllib.request.urlopen(review_request, timeout=180) as response:
+                        review_result = json.load(response)
+                    validate_visual_review(json.loads(review_result['choices'][0]['message']['content']), keys)
                     break
                 except (ValueError, TypeError, KeyError) as error:
                     if attempt == 1 or (isinstance(recipe, dict) and recipe.get('error') == 'unreadable'):

@@ -1,0 +1,2335 @@
+{
+  "local-1LQGVFCYnAu": {
+    "cover": {
+      "frame": 1,
+      "bounds": [
+        0,
+        0.16,
+        1,
+        0.91
+      ]
+    },
+    "cook": [
+      6,
+      8,
+      10,
+      13,
+      14
+    ],
+    "prep": {
+      "0": 12
+    },
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "蒲瓜烧蛏子",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "local-1vvAFCVErIZ": {
+    "cover": "image-00.webp",
+    "cook": [
+      "image-02.webp",
+      "image-03.webp",
+      "image-04.webp"
+    ],
+    "prep": {
+      "0": "image-01.webp"
+    },
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "香煎芦笋",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 3
+  },
+  "local-23z6l7xfYN1": {
+    "cover": 3,
+    "cook": [
+      16,
+      22,
+      27,
+      30,
+      32
+    ],
+    "prep": {
+      "0": 6
+    },
+    "default_bounds": [
+      0,
+      0.12,
+      1,
+      0.88
+    ],
+    "title": "西班牙风味红烩鳕鱼",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "local-4K2lzG2RPSt": {
+    "cover": 15,
+    "cook": [
+      4,
+      7,
+      10,
+      12
+    ],
+    "prep": {
+      "0": 3
+    },
+    "default_bounds": [
+      0,
+      0.51,
+      1,
+      1
+    ],
+    "title": "啤酒腌香煎五花肉",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 4
+  },
+  "local-4NkmeQMGJ4k": {
+    "cover": 2,
+    "cook": [
+      {
+        "frame": 12,
+        "bounds": [
+          0,
+          0.5,
+          1,
+          0.98
+        ]
+      },
+      15,
+      19,
+      23,
+      25
+    ],
+    "prep": {
+      "0": 9
+    },
+    "default_bounds": [
+      0,
+      0.15,
+      1,
+      0.94
+    ],
+    "title": "土豆烧豆角",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "local-4SxG784UdOF": {
+    "cover": 9,
+    "cook": [
+      25,
+      33,
+      36,
+      40,
+      67,
+      69
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "万能熟醉汁",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 6
+  },
+  "local-4ePeTP2b5R0": {
+    "cover": 2,
+    "cook": [
+      {
+        "frame": 16,
+        "bounds": [
+          0,
+          0.51,
+          1,
+          1
+        ]
+      },
+      30,
+      37,
+      38,
+      40
+    ],
+    "prep": {
+      "0": {
+        "frame": 13,
+        "bounds": [
+          0,
+          0.35,
+          1,
+          1
+        ]
+      }
+    },
+    "default_bounds": [
+      0,
+      0.14,
+      1,
+      0.96
+    ],
+    "title": "蒜香鸡翅",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "local-59Sp7VDujgh": {
+    "cover": 26,
+    "cook": [
+      {
+        "frame": 9,
+        "bounds": [
+          0,
+          0.5,
+          1,
+          1
+        ]
+      },
+      17,
+      20,
+      23,
+      24
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0.13,
+      1,
+      0.96
+    ],
+    "title": "三杯鸡",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "local-5NPVLftOxjq": {
+    "cover": 39,
+    "cook": [
+      18,
+      22,
+      28,
+      33,
+      37
+    ],
+    "prep": {
+      "0": {
+        "frame": 8,
+        "bounds": [
+          0,
+          0.48,
+          1,
+          1
+        ]
+      }
+    },
+    "default_bounds": [
+      0,
+      0.12,
+      1,
+      0.96
+    ],
+    "title": "老式锅包肉",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "local-5ZWesGL4znk": {
+    "cover": 21,
+    "cook": [
+      8,
+      10,
+      12,
+      15,
+      18
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0.25,
+      1,
+      0.99
+    ],
+    "title": "韩式辣炒五花肉八爪鱼",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "local-6fnS6C8d6bu": {
+    "cover": {
+      "frame": 3,
+      "bounds": [
+        0,
+        0.25,
+        1,
+        0.88
+      ]
+    },
+    "cook": [
+      30,
+      42,
+      53,
+      60,
+      62
+    ],
+    "prep": {
+      "0": 17
+    },
+    "default_bounds": [
+      0,
+      0.22,
+      1,
+      0.9
+    ],
+    "title": "小炒黄牛肉",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "local-6pdeWnBLjCq": {
+    "cover": 27,
+    "cook": [
+      10,
+      15,
+      20,
+      24,
+      26
+    ],
+    "prep": {
+      "0": 6
+    },
+    "default_bounds": [
+      0,
+      0.18,
+      1,
+      0.96
+    ],
+    "title": "少油地三鲜",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "local-6vj8sLAlxXv": {
+    "cover": {
+      "frame": 4,
+      "bounds": [
+        0,
+        0.3,
+        1,
+        0.88
+      ]
+    },
+    "cook": [
+      33,
+      46,
+      50,
+      54,
+      60
+    ],
+    "prep": {
+      "0": 14
+    },
+    "default_bounds": [
+      0,
+      0.18,
+      1,
+      0.94
+    ],
+    "title": "柠檬黄油香煎三文鱼",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "local-6wDaQxqTuwU": {
+    "cover": 44,
+    "cook": [
+      17,
+      23,
+      {
+        "frame": 25,
+        "bounds": [
+          0,
+          0.4,
+          1,
+          1
+        ]
+      },
+      38,
+      41
+    ],
+    "prep": {
+      "0": {
+        "frame": 8,
+        "bounds": [
+          0,
+          0.25,
+          1,
+          0.85
+        ]
+      }
+    },
+    "default_bounds": [
+      0,
+      0.42,
+      1,
+      0.99
+    ],
+    "title": "香肠芝士北非蛋",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "local-7RG7jNRhK5G": {
+    "cover": {
+      "frame": 3,
+      "bounds": [
+        0,
+        0.18,
+        1,
+        0.95
+      ]
+    },
+    "cook": [
+      {
+        "frame": 14,
+        "bounds": [
+          0.2,
+          0.55,
+          1,
+          0.97
+        ]
+      },
+      {
+        "frame": 29,
+        "bounds": [
+          0.04,
+          0.3,
+          1,
+          0.96
+        ]
+      },
+      {
+        "frame": 40,
+        "bounds": [
+          0.04,
+          0.6,
+          0.86,
+          1
+        ]
+      },
+      {
+        "frame": 44,
+        "bounds": [
+          0.04,
+          0.57,
+          0.88,
+          1
+        ]
+      },
+      {
+        "frame": 56,
+        "bounds": [
+          0.04,
+          0.5,
+          1,
+          1
+        ]
+      },
+      {
+        "frame": 78,
+        "bounds": [
+          0.06,
+          0.53,
+          1,
+          1
+        ]
+      }
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "无额外放油牛肋条焖饭",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 6
+  },
+  "local-84OgJIWr1wD": {
+    "cover": 30,
+    "cook": [
+      {
+        "frame": 9,
+        "bounds": [
+          0,
+          0.5,
+          0.85,
+          0.99
+        ]
+      },
+      14,
+      19,
+      27,
+      30
+    ],
+    "prep": {
+      "0": 24
+    },
+    "default_bounds": [
+      0,
+      0.16,
+      1,
+      0.96
+    ],
+    "title": "排骨豆角炖粉条",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "local-8rMFmu1rp0O": {
+    "cover": 40,
+    "cook": [
+      15,
+      {
+        "frame": 18,
+        "bounds": [
+          0,
+          0.4,
+          1,
+          1
+        ]
+      },
+      28,
+      33,
+      35
+    ],
+    "prep": {
+      "0": 7
+    },
+    "default_bounds": [
+      0,
+      0.15,
+      1,
+      0.96
+    ],
+    "title": "秘制苹果烤猪排",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "local-91ugu1m6F9Z": {
+    "cover": 1,
+    "cook": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "花生鲍汁凤爪",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 6
+  },
+  "local-9JcgqIJ4ziJ": {
+    "cover": 55,
+    "cook": [
+      25,
+      24,
+      32,
+      47,
+      49,
+      54
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0.17,
+      1,
+      0.98
+    ],
+    "title": "蛤蜊蒸蛋",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 6
+  },
+  "local-9s5aKamtPnU": {
+    "cover": "image-00.webp",
+    "cook": [
+      {
+        "frame": "image-04.webp",
+        "bounds": [
+          0,
+          0,
+          1,
+          0.48
+        ]
+      },
+      {
+        "frame": "image-04.webp",
+        "bounds": [
+          0.51,
+          0.5,
+          1,
+          1
+        ]
+      },
+      {
+        "frame": "image-05.webp",
+        "bounds": [
+          0.51,
+          0,
+          1,
+          0.49
+        ]
+      },
+      {
+        "frame": "image-05.webp",
+        "bounds": [
+          0,
+          0.5,
+          0.5,
+          1
+        ]
+      },
+      {
+        "frame": "image-05.webp",
+        "bounds": [
+          0.51,
+          0.5,
+          1,
+          1
+        ]
+      },
+      {
+        "frame": "image-07.webp",
+        "bounds": [
+          0,
+          0.35,
+          0.61,
+          1
+        ]
+      }
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "奶白大骨头汤",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 6
+  },
+  "local-A5kziYAN7TN": {
+    "cover": 1,
+    "cook": [
+      5,
+      7,
+      10,
+      12,
+      15
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "板栗排骨",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "local-AChYFYZlCbu": {
+    "cover": {
+      "frame": 32,
+      "bounds": [
+        0,
+        0.15,
+        1,
+        0.96
+      ]
+    },
+    "cook": [
+      12,
+      15,
+      19,
+      23,
+      27,
+      29
+    ],
+    "prep": {
+      "0": 5
+    },
+    "default_bounds": [
+      0,
+      0.15,
+      1,
+      0.96
+    ],
+    "title": "辣炖咖喱牛肉",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 6
+  },
+  "local-ADhQomBegs1": {
+    "cover": 13,
+    "cook": [
+      3,
+      6,
+      9,
+      11
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "街边炒方便面",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 4
+  },
+  "local-qlXcd9gqEy": {
+    "cover": "image-05.webp",
+    "cook": [
+      {
+        "frame": "image-01.webp",
+        "bounds": [
+          0.51,
+          0,
+          1,
+          0.33
+        ]
+      },
+      {
+        "frame": "image-01.webp",
+        "bounds": [
+          0,
+          0.34,
+          0.5,
+          0.67
+        ]
+      },
+      {
+        "frame": "image-01.webp",
+        "bounds": [
+          0,
+          0,
+          0.5,
+          0.33
+        ]
+      },
+      "image-02.webp"
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "牛油果三文鱼开放式三明治",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 4
+  },
+  "braised-pork-rice": {
+    "cover": {
+      "file": "serve.jpg",
+      "bounds": [
+        0,
+        0.28,
+        1,
+        0.9
+      ]
+    },
+    "cook": [
+      {
+        "file": "render.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "肥肉先煸，再下瘦肉",
+        "source_time": "01:21–01:37"
+      },
+      {
+        "file": "season.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "炒香洋葱与香料，调色",
+        "source_time": "01:38–01:58"
+      },
+      {
+        "file": "pressure.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "加开水和鸡蛋，炖软",
+        "source_time": "01:59–02:07"
+      },
+      {
+        "file": "reduce.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "挑出香料，收浓卤汁",
+        "source_time": "03:21–03:32"
+      },
+      {
+        "file": "serve.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "米饭铺底，浇肉配菜",
+        "source_time": "03:36–03:49"
+      }
+    ],
+    "prep": {
+      "0": {
+        "file": "cut.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "五花肉切小条，肥瘦分开",
+        "source_time": "00:18–01:09"
+      }
+    },
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "洋葱卤肉饭",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "crispy-garlic-ribs": {
+    "cover": {
+      "file": "finish.jpg",
+      "bounds": [
+        0,
+        0.38,
+        1,
+        0.99
+      ]
+    },
+    "cook": [
+      {
+        "file": "fry-garlic.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "中小火炸蒜，过滤留油",
+        "source_time": "00:34–00:45"
+      },
+      {
+        "file": "coat.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "去掉葱姜，裹蛋黄淀粉",
+        "source_time": "00:46–00:51"
+      },
+      {
+        "file": "fry-ribs.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "蒜油炸排骨，控油盛出",
+        "source_time": "00:52–01:05"
+      },
+      {
+        "file": "finish.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "配菜炒香，拌入蒜酥",
+        "source_time": "01:06–01:13"
+      }
+    ],
+    "prep": {
+      "0": {
+        "file": "garlic.jpg",
+        "bounds": [
+          0,
+          0.49,
+          1,
+          1
+        ],
+        "title": "蒜末洗净沥干，留下蒜水",
+        "source_time": "00:08–00:21"
+      },
+      "2": {
+        "file": "marinate.jpg",
+        "bounds": [
+          0,
+          0.49,
+          1,
+          1
+        ],
+        "title": "排骨洗净，调味腌半小时",
+        "source_time": "00:22–00:33"
+      }
+    },
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "酥脆蒜香排骨",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 4
+  },
+  "curry-beef-ribs": {
+    "cover": {
+      "file": "finish.jpg",
+      "bounds": [
+        0,
+        0.4,
+        1,
+        0.96
+      ]
+    },
+    "cook": [
+      null,
+      {
+        "file": "sauce.jpg",
+        "bounds": [
+          0,
+          0.48,
+          1,
+          1
+        ],
+        "title": "把碗汁一次调好",
+        "source_time": "00:40–00:47"
+      },
+      {
+        "file": "fry.jpg",
+        "bounds": [
+          0,
+          0.36,
+          1,
+          1
+        ],
+        "title": "炒香配料，再炒牛排骨",
+        "source_time": "00:50–01:18"
+      },
+      {
+        "file": "pressure.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "高压炖软：压 45 分钟",
+        "source_time": "01:20–01:29"
+      },
+      {
+        "file": "curry.jpg",
+        "bounds": [
+          0,
+          0.36,
+          1,
+          1
+        ],
+        "title": "回锅，加 3 块咖喱",
+        "source_time": "01:30–01:38"
+      },
+      {
+        "file": "finish.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "略收浓，留汁拌饭",
+        "source_time": "01:50–02:03"
+      }
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "辣咖喱牛排骨",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 6
+  },
+  "garlic-luffa": {
+    "cover": {
+      "file": "finish.jpg",
+      "bounds": [
+        0,
+        0.15,
+        1,
+        0.96
+      ]
+    },
+    "cook": [
+      {
+        "file": "garlic.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "猪油爆香蒜末",
+        "source_time": "00:10–00:12"
+      },
+      {
+        "file": "soften.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "丝瓜炒软、调味",
+        "source_time": "00:12–00:20"
+      },
+      {
+        "file": "water.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "沿锅边加开水",
+        "source_time": "00:21–00:25"
+      },
+      {
+        "file": "simmer.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "中小火煮约 2 分钟",
+        "source_time": "00:26–00:29"
+      },
+      {
+        "file": "finish.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "带汤盛出",
+        "source_time": "00:30–00:33"
+      }
+    ],
+    "prep": {
+      "0": {
+        "file": "prep.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "丝瓜切薄片",
+        "source_time": "00:04–00:09"
+      }
+    },
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "猪油蒜香清炒丝瓜",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "home-seafood-rice": {
+    "cover": {
+      "file": "finish.jpg",
+      "bounds": [
+        0.04,
+        0.58,
+        0.87,
+        0.96
+      ]
+    },
+    "cook": [
+      {
+        "file": "aromatics.jpg",
+        "bounds": [
+          0,
+          0.46,
+          1,
+          1
+        ],
+        "title": "蒜末、洋葱炒香",
+        "source_time": "00:12–00:30"
+      },
+      {
+        "file": "vegetables.jpg",
+        "bounds": [
+          0,
+          0.46,
+          1,
+          1
+        ],
+        "title": "加入蔬菜炒出香气",
+        "source_time": "00:30–01:18"
+      },
+      {
+        "file": "broth.jpg",
+        "bounds": [
+          0,
+          0.46,
+          1,
+          1
+        ],
+        "title": "加水调成鲜香汤底",
+        "source_time": "01:18–02:35"
+      },
+      {
+        "file": "rice.jpg",
+        "bounds": [
+          0,
+          0.46,
+          1,
+          1
+        ],
+        "title": "生米拌入汤底",
+        "source_time": "02:59–03:18"
+      },
+      {
+        "file": "seafood.jpg",
+        "bounds": [
+          0,
+          0.46,
+          1,
+          1
+        ],
+        "title": "铺上海鲜，小火加盖焖",
+        "source_time": "03:18–03:59"
+      },
+      {
+        "file": "finish.jpg",
+        "bounds": [
+          0,
+          0.46,
+          1,
+          1
+        ],
+        "title": "检查收水与熟度，撒葱花",
+        "source_time": "04:00–04:42"
+      }
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "家常海鲜饭",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 6
+  },
+  "matcha-basque": {
+    "cover": {
+      "file": "chill.jpg",
+      "bounds": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "cook": [
+      {
+        "file": "matcha.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "70℃水调开抹茶",
+        "source_time": "00:56–01:10"
+      },
+      {
+        "file": "cream.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "淡奶油温至 40℃，分次混合",
+        "source_time": "01:12–01:22"
+      },
+      {
+        "file": "cheese.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "奶酪软化，拌入糖和淀粉",
+        "source_time": "01:24–01:53"
+      },
+      {
+        "file": "eggs.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "蛋液分次加，再拌抹茶糊",
+        "source_time": "01:54–02:38"
+      },
+      {
+        "file": "bake.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "6 寸模具，240℃烤约 28 分钟",
+        "source_time": "02:40–03:59"
+      },
+      {
+        "file": "chill.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "彻底放凉，冷藏过夜",
+        "source_time": "04:00–04:38"
+      }
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "抹茶软心巴斯克",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 6
+  },
+  "milk-basque-cheesecake": {
+    "cover": {
+      "file": "chill.jpg",
+      "bounds": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "cook": [
+      {
+        "file": "soften.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "奶酪软化，拌入面粉和黄油",
+        "source_time": "00:12–00:17"
+      },
+      {
+        "file": "sugar.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "加入蜂蜜和白糖",
+        "source_time": "00:18–00:25"
+      },
+      {
+        "file": "egg.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "全蛋液分三次加",
+        "source_time": "00:26–00:31"
+      },
+      {
+        "file": "milk.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "加柠檬汁、温牛奶，过滤",
+        "source_time": "00:32–00:39"
+      },
+      {
+        "file": "bake.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "参考 230℃烤 21 分钟",
+        "source_time": "00:40–00:47"
+      },
+      {
+        "file": "chill.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "放凉冷藏后脱模",
+        "source_time": "00:46–00:54"
+      }
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "无淡奶油巴斯克",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 6
+  },
+  "milk-pudding": {
+    "cover": {
+      "file": "serve.jpg",
+      "bounds": [
+        0,
+        0.36,
+        1,
+        0.9
+      ]
+    },
+    "cook": [
+      {
+        "file": "mix.jpg",
+        "bounds": [
+          0,
+          0.26,
+          1,
+          0.97
+        ],
+        "title": "称料混合，吉利丁冷水泡软",
+        "source_time": "00:08–00:20"
+      },
+      {
+        "file": "heat.jpg",
+        "bounds": [
+          0,
+          0.26,
+          1,
+          0.97
+        ],
+        "title": "中火加热至约 70℃",
+        "source_time": "00:21–00:22"
+      },
+      {
+        "file": "gelatin.jpg",
+        "bounds": [
+          0,
+          0.26,
+          1,
+          0.97
+        ],
+        "title": "加入泡软吉利丁，调味",
+        "source_time": "00:23–00:28"
+      },
+      {
+        "file": "strain.jpg",
+        "bounds": [
+          0,
+          0.26,
+          1,
+          0.97
+        ],
+        "title": "过滤倒入容器",
+        "source_time": "00:29–00:32"
+      },
+      {
+        "file": "chill.jpg",
+        "bounds": [
+          0,
+          0.26,
+          1,
+          0.97
+        ],
+        "title": "撇去气泡，冷藏至少 6 小时",
+        "source_time": "00:33–00:35"
+      },
+      {
+        "file": "serve.jpg",
+        "bounds": [
+          0,
+          0.26,
+          1,
+          0.97
+        ],
+        "title": "凝固后用勺享用",
+        "source_time": "00:36–00:43"
+      }
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "嫩滑牛乳布丁",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 6
+  },
+  "mustard-sea-snails": {
+    "cover": {
+      "file": "finish.jpg",
+      "bounds": [
+        0,
+        0.26,
+        1,
+        0.86
+      ]
+    },
+    "cook": [
+      {
+        "file": "snails.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "花螺直接下锅，烹白酒",
+        "source_time": "00:00–00:05"
+      },
+      {
+        "file": "mustard.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "下姜蒜辣椒与芥末",
+        "source_time": "00:06–00:10"
+      },
+      {
+        "file": "beer.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "加啤酒和料汁",
+        "source_time": "00:11–00:13"
+      },
+      {
+        "file": "simmer.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "加盖小火焖约 4 分钟",
+        "source_time": "00:14–00:15"
+      },
+      {
+        "file": "finish.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "补蒜末和芥末，拌匀出锅",
+        "source_time": "00:16–00:25"
+      }
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "芥辣花螺",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "pepper-crispy-pork": {
+    "cover": {
+      "file": "refry.jpg",
+      "bounds": [
+        0,
+        0.33,
+        1,
+        0.96
+      ]
+    },
+    "cook": [
+      {
+        "file": "pepper.jpg",
+        "bounds": [
+          0,
+          0.27,
+          1,
+          1
+        ],
+        "title": "花椒干炒香，碾成细末",
+        "source_time": "01:04–01:19"
+      },
+      {
+        "file": "coat.jpg",
+        "bounds": [
+          0,
+          0.27,
+          1,
+          1
+        ],
+        "title": "挑葱姜，加红薯粉挂糊",
+        "source_time": "01:20–01:35"
+      },
+      {
+        "file": "fry.jpg",
+        "bounds": [
+          0,
+          0.27,
+          1,
+          1
+        ],
+        "title": "逐条下锅，分批初炸",
+        "source_time": "01:36–01:59"
+      },
+      {
+        "file": "refry.jpg",
+        "bounds": [
+          0,
+          0.27,
+          1,
+          1
+        ],
+        "title": "升温复炸 1 分钟，沥油",
+        "source_time": "02:04–02:16"
+      }
+    ],
+    "prep": {
+      "0": {
+        "file": "cut.jpg",
+        "bounds": [
+          0,
+          0.27,
+          1,
+          1
+        ],
+        "title": "去皮擦干，切肉条",
+        "source_time": "00:18–00:44"
+      },
+      "1": {
+        "file": "marinate.jpg",
+        "bounds": [
+          0,
+          0.27,
+          1,
+          1
+        ],
+        "title": "抓入葱姜水，腌 10 分钟",
+        "source_time": "00:46–01:03"
+      }
+    },
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "花椒小酥肉",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 4
+  },
+  "pepper-ribs": {
+    "cover": {
+      "file": "finish.jpg",
+      "bounds": [
+        0,
+        0.22,
+        1,
+        0.84
+      ]
+    },
+    "cook": [
+      {
+        "file": "sear.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "煎出肉香",
+        "source_time": "00:57–01:38"
+      },
+      {
+        "file": "simmer.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "加水炖 40–50 分钟",
+        "source_time": "01:39–02:22"
+      },
+      {
+        "file": "pepper.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "另锅炒青椒",
+        "source_time": "02:23–02:48"
+      },
+      {
+        "file": "season.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "挑椒、调味、收汤",
+        "source_time": "02:49–03:12"
+      },
+      {
+        "file": "finish.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "合锅，留一点汤汁",
+        "source_time": "03:13–03:48"
+      }
+    ],
+    "prep": {
+      "2": {
+        "file": "blanch.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "冷水焯排骨",
+        "source_time": "00:15–00:56"
+      }
+    },
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "青椒炖排骨",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "pork-bean-rice": {
+    "cover": {
+      "file": "finish.jpg",
+      "bounds": [
+        0,
+        0.12,
+        1,
+        0.94
+      ]
+    },
+    "cook": [
+      {
+        "file": "rice.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "大米先煮 3 分钟",
+        "source_time": "00:00–00:09"
+      },
+      {
+        "file": "pork.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "五花肉和香肠煸香",
+        "source_time": "00:10–00:18"
+      },
+      {
+        "file": "veg.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "配菜炒至变软",
+        "source_time": "00:19–00:23"
+      },
+      {
+        "file": "season.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "调味，炒出酱香",
+        "source_time": "00:24–00:32"
+      },
+      {
+        "file": "cover.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "铺米、扎孔、小火焖",
+        "source_time": "00:33–00:51"
+      },
+      {
+        "file": "finish.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "检查熟度，撒葱拌匀",
+        "source_time": "00:52–01:08"
+      }
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "五花肉土豆豆角焖饭",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 6
+  },
+  "scallion-clam-chicken-soup": {
+    "cover": {
+      "file": "finish.jpg",
+      "bounds": [
+        0,
+        0.24,
+        1,
+        0.95
+      ]
+    },
+    "cook": [
+      {
+        "file": "chicken.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "鸡皮朝下，小火煎香",
+        "source_time": "00:56–01:07"
+      },
+      {
+        "file": "onion.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "用鸡油炒洋葱和蒜",
+        "source_time": "01:08–01:17"
+      },
+      {
+        "file": "soup.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "鸡肉回锅，加开水煮",
+        "source_time": "01:18–01:27"
+      },
+      {
+        "file": "clams.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "蛤蜊最后放，加盖煮",
+        "source_time": "01:28–01:39"
+      },
+      {
+        "file": "finish.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "砂锅炒盐葱，冲汤焖香",
+        "source_time": "01:40–01:56"
+      }
+    ],
+    "prep": {
+      "0": {
+        "file": "prep.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "盐腌鸡腿，准备盐葱",
+        "source_time": "00:10–00:55"
+      }
+    },
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "盐葱蛤蜊鸡汤",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "shacha-brisket-beef": {
+    "cover": {
+      "file": "finish.jpg",
+      "bounds": [
+        0,
+        0.24,
+        1,
+        0.89
+      ]
+    },
+    "cook": [
+      {
+        "file": "render.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "中火煸胸口油，盛出",
+        "source_time": "00:39–00:48"
+      },
+      {
+        "file": "beef.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "牛肉快速煎炒，盛出",
+        "source_time": "00:49–00:55"
+      },
+      {
+        "file": "finish.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "炒香配菜，回锅合炒",
+        "source_time": "00:56–01:10"
+      }
+    ],
+    "prep": {
+      "0": {
+        "file": "slice.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "稍冻后切薄片",
+        "source_time": "00:05–00:15"
+      },
+      "1": {
+        "file": "season.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "两种肉分别调味",
+        "source_time": "00:16–00:26"
+      },
+      "2": {
+        "file": "sauce.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "切好配菜，提前调汁",
+        "source_time": "00:27–00:38"
+      }
+    },
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "沙茶胸口油炒牛肉",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 3
+  },
+  "shrimp-seaweed-wonton": {
+    "cover": {
+      "file": "soup.jpg",
+      "bounds": [
+        0,
+        0.49,
+        1,
+        1
+      ]
+    },
+    "cook": [
+      {
+        "file": "oil.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "虾头熬出红亮虾油",
+        "source_time": "00:08–00:26"
+      },
+      {
+        "file": "seaweed.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "紫菜干焙，捏碎备用",
+        "source_time": "00:27–00:37"
+      },
+      {
+        "file": "water.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "肉馅分次打入香料水",
+        "source_time": "00:38–01:07"
+      },
+      {
+        "file": "filling.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "拌基础馅，分成两种口味",
+        "source_time": "01:08–01:44"
+      },
+      {
+        "file": "wrap.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "包馄饨，多余的冷冻",
+        "source_time": "01:45–02:01"
+      },
+      {
+        "file": "soup.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "煮熟，冲汤底盛出",
+        "source_time": "02:02–02:33"
+      }
+    ],
+    "prep": {},
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "虾仁紫菜鲜肉馄饨",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 6
+  },
+  "sizzling-chicken-wings": {
+    "cover": {
+      "file": "finish.jpg",
+      "bounds": [
+        0,
+        0.2,
+        1,
+        0.94
+      ]
+    },
+    "cook": [
+      {
+        "file": "aromatics.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "砂锅加油，炒香配料",
+        "source_time": "00:42–00:49"
+      },
+      {
+        "file": "sear.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "鸡翅煎至两面金黄",
+        "source_time": "00:50–00:54"
+      },
+      {
+        "file": "simmer.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "配料回锅，加酱焖 5 分钟",
+        "source_time": "00:54–01:00"
+      },
+      {
+        "file": "finish.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "沿锅盖边淋米酒，拌香菜",
+        "source_time": "01:02–01:08"
+      }
+    ],
+    "prep": {
+      "0": {
+        "file": "marinate.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "鸡翅剪半，腌 30 分钟",
+        "source_time": "00:14–00:27"
+      },
+      "1": {
+        "file": "marinate.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "鸡翅剪半，腌 30 分钟",
+        "source_time": "00:14–00:27"
+      },
+      "2": {
+        "file": "sauce.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "切配菜，调啫啫酱",
+        "source_time": "00:28–00:40"
+      }
+    },
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "啫啫鸡翅煲",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 4
+  },
+  "squid-rice-cakes": {
+    "cover": {
+      "file": "finish.jpg",
+      "bounds": [
+        0,
+        0.19,
+        1,
+        0.94
+      ]
+    },
+    "cook": [
+      {
+        "file": "aromatics.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "炒香姜粒、肉片和蒜瓣",
+        "source_time": "00:46–00:59"
+      },
+      {
+        "file": "sauce.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "烹花雕，倒酱汁",
+        "source_time": "01:00–01:05"
+      },
+      {
+        "file": "rice.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "先把年糕煮软",
+        "source_time": "01:06–01:12"
+      },
+      {
+        "file": "squid.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "最后下鱿鱼，大火快煮",
+        "source_time": "01:12–01:20"
+      },
+      {
+        "file": "finish.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "装盘，留住鲜味汤汁",
+        "source_time": "01:21–01:39"
+      }
+    ],
+    "prep": {
+      "0": {
+        "file": "prep.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "备好鱿鱼与酱汁",
+        "source_time": "00:20–00:35"
+      }
+    },
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "小管鱿鱼烧年糕",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 5
+  },
+  "steamed-bass": {
+    "cover": {
+      "file": "finish.jpg",
+      "bounds": [
+        0,
+        0.12,
+        1,
+        0.98
+      ]
+    },
+    "cook": [
+      null,
+      {
+        "file": "steam.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "按鱼重参考蒸制时间",
+        "source_time": "01:36–01:41"
+      },
+      {
+        "file": "finish.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "倒汁、铺三丝、淋油豉油",
+        "source_time": "01:42–01:59"
+      }
+    ],
+    "prep": {
+      "0": {
+        "file": "clean.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "清理鱼身，沿背部改刀",
+        "source_time": "00:16–00:50"
+      },
+      "1": {
+        "file": "marinate.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "姜葱水腌至少 20 分钟",
+        "source_time": "00:51–01:00"
+      },
+      "2": {
+        "file": "shreds.jpg",
+        "bounds": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "title": "腌鱼时准备三丝",
+        "source_time": "01:01–01:11"
+      }
+    },
+    "default_bounds": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "title": "清蒸鲈鱼",
+    "review": "逐项核对原图与步骤；封面单独选成品；缺少可靠过程图时留空，不用成品替代。",
+    "reviewed_cook_count": 3
+  }
+}

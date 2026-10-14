@@ -148,40 +148,50 @@
   ],
   "illustrated_steps": [
     {
-      "title": "鸡翅剪半，腌 30 分钟",
-      "text": "12 只鸡翅处理干净后对半剪开，加盐 4 克、糖 4 克、盐焗鸡粉 3 克、白胡椒粉 2 克、生抽 15 毫升、淀粉 10 克，抓匀腌 30 分钟。",
-      "source_time": "00:14–00:27",
-      "image": "marinate.jpg"
-    },
-    {
-      "title": "切配菜，调啫啫酱",
-      "text": "小洋葱 2 个切块，姜 80 克切块拍松，半头蒜剥好。另将老抽 10 毫升、生抽 15 毫升、蚝油 15 克、柱候酱 15 克拌匀。",
-      "source_time": "00:28–00:40",
-      "image": "sauce.jpg"
-    },
-    {
       "title": "砂锅加油，炒香配料",
       "text": "使用可干烧的砂锅，加适量食用油，炒香洋葱、姜、蒜后盛出，保留锅中的油。",
-      "source_time": "00:42–00:49",
-      "image": "aromatics.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "00:42–00:49"
     },
     {
       "title": "鸡翅煎至两面金黄",
       "text": "用锅中余油煎鸡翅，先让一面煎定型，再翻面，煎至两面金黄。原片提示没经验可先用不粘锅煎好再转入砂锅。",
-      "source_time": "00:50–00:54",
-      "image": "sear.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "00:50–00:54"
     },
     {
       "title": "配料回锅，加酱焖 5 分钟",
       "text": "倒回洋葱姜蒜，加入啫啫酱翻拌均匀，加盖转小火焖 5 分钟。实际按鸡翅大小、锅具调整，确认鸡肉熟透。",
-      "source_time": "00:54–01:00",
-      "image": "simmer.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "00:54–01:00"
     },
     {
       "title": "沿锅盖边淋米酒，拌香菜",
       "text": "沿锅盖边淋适量米酒，开盖加入香菜或小葱，翻拌后出锅。米酒用量未注明，避免淋到明火上。",
-      "source_time": "01:02–01:08",
-      "image": "finish.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "01:02–01:08"
     }
-  ]
+  ],
+  "cover": "review-cover.jpg",
+  "preparation_steps": [
+    {
+      "title": "鸡翅剪半，腌 30 分钟",
+      "text": "鸡翅处理干净、剪半，加入腌料抓匀。",
+      "image": "review-prep-01.jpg",
+      "source_time": "00:14–00:27"
+    },
+    {
+      "title": "鸡翅剪半，腌 30 分钟",
+      "text": "鸡翅腌制 30 分钟；等待时可切配菜、调酱。",
+      "image": "review-prep-02.jpg",
+      "source_time": "00:14–00:27"
+    },
+    {
+      "title": "切配菜，调啫啫酱",
+      "text": "小洋葱 2 个切块，姜 80 克切块拍松，半头蒜剥好。另将老抽 10 毫升、生抽 15 毫升、蚝油 15 克、柱候酱 15 克拌匀。",
+      "image": "review-prep-03.jpg",
+      "source_time": "00:28–00:40"
+    }
+  ],
+  "format_version": 4
 }

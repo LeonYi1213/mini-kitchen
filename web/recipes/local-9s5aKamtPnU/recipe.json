@@ -131,46 +131,48 @@
     {
       "title": "盐水浸泡",
       "text": "大骨头放盐水中浸泡30分钟。",
-      "source_time": "原笔记图 5",
-      "image": "step-01.jpg"
+      "image": "review-step-01.jpg"
     },
     {
       "title": "焯水冲净",
       "text": "大骨头冷水下锅，加4片姜，中火煮开并撇浮沫；捞出后用温热水冲净。",
-      "source_time": "原笔记图 5",
-      "image": "step-02.jpg"
+      "image": "review-step-02.jpg"
     },
     {
       "title": "煎香骨头",
       "text": "锅中放猪油，将骨头表面煎至微黄。",
-      "source_time": "原笔记图 6",
-      "image": "step-03.jpg"
+      "image": "review-step-03.jpg"
     },
     {
       "title": "冲开水炖汤",
       "text": "冲入足量开水，撇去浮油与浮沫，炖煮1.5小时。",
-      "source_time": "原笔记图 6",
-      "image": "step-04.jpg"
+      "image": "review-step-04.jpg"
     },
     {
       "title": "加萝卜煮软",
       "text": "加入萝卜、盐和红枣或枸杞，再煮30分钟；盐分次尝味添加。",
-      "source_time": "原笔记图 6",
-      "image": "step-05.jpg"
+      "image": "review-step-05.jpg"
     },
     {
       "title": "调蘸料上桌",
       "text": "生抽2勺、陈醋1勺、糖半勺，加白芝麻、青辣椒、葱花及水2勺拌匀，用来蘸骨头肉。",
-      "source_time": "原笔记图 8",
-      "image": "step-06.jpg"
+      "image": "review-step-06.jpg"
     }
   ],
-  "cover": "cover.jpg",
-  "format_version": 3,
+  "cover": "review-cover.jpg",
+  "format_version": 4,
   "notes": [
     "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
     "来源：Eating饿了《在家炖奶白的大骨头汤🦴大骨头火锅自由🍲》。",
     "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
     "原文盐勺容量不明，未换算克数。"
+  ],
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "萝卜切块，姜切片，备好蘸料。姜原文共8片，焯水明确用4片，其余用途未注明。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    }
   ]
 }

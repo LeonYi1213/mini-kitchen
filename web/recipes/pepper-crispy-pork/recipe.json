@@ -103,40 +103,44 @@
   ],
   "illustrated_steps": [
     {
-      "title": "去皮擦干，切肉条",
-      "text": "选梅花肉或偏瘦五花肉，处理干净后擦干，去皮切条。原片给出的比例为 400 克肉配 150 克红薯淀粉。",
-      "source_time": "00:18–00:44",
-      "image": "cut.jpg"
-    },
-    {
-      "title": "抓入葱姜水，腌 10 分钟",
-      "text": "肉中加半勺盐、1 勺生抽、半勺白胡椒粉及三分之一碗葱姜水，抓至水分被吸收，腌 10 分钟。勺、碗容量未注明。",
-      "source_time": "00:46–01:03",
-      "image": "marinate.jpg"
-    },
-    {
       "title": "花椒干炒香，碾成细末",
       "text": "趁腌肉时把花椒放入无油锅炒香，盛出碾碎；原片未注明克数和炒制分钟数，避免炒焦。",
-      "source_time": "01:04–01:19",
-      "image": "pepper.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "01:04–01:19"
     },
     {
       "title": "挑葱姜，加红薯粉挂糊",
       "text": "挑出葱姜，加入红薯淀粉和花椒碎，少量加水抓拌，调至肉条能挂住糊。原片称加小半碗水，按淀粉吸水性调整，不加鸡蛋。",
-      "source_time": "01:20–01:35",
-      "image": "coat.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "01:20–01:35"
     },
     {
       "title": "逐条下锅，分批初炸",
       "text": "原片用中高火，肉条逐条下油锅，定型后轻轻拨散，分批炸约 5–6 分钟后捞出。肉条粗细、油量不同，以内部熟透为准。",
-      "source_time": "01:36–01:59",
-      "image": "fry.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "01:36–01:59"
     },
     {
       "title": "升温复炸 1 分钟，沥油",
       "text": "第一遍炸好后升高油温，分批复炸约 1 分钟，表面金黄酥脆即捞出，放网架沥油。复炸时间采用画面纠正的 1 分钟；不要将油烧至冒烟。",
-      "source_time": "02:04–02:16",
-      "image": "refry.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "02:04–02:16"
     }
-  ]
+  ],
+  "cover": "review-cover.jpg",
+  "preparation_steps": [
+    {
+      "title": "去皮擦干，切肉条",
+      "text": "肉处理干净擦干，去皮切条；葱姜用水抓出味后取汁备用。",
+      "image": "review-prep-01.jpg",
+      "source_time": "00:18–00:44"
+    },
+    {
+      "title": "抓入葱姜水，腌 10 分钟",
+      "text": "加盐、生抽、白胡椒粉及葱姜水抓匀，腌 10 分钟；期间可炒花椒。",
+      "image": "review-prep-02.jpg",
+      "source_time": "00:46–01:03"
+    }
+  ],
+  "format_version": 4
 }

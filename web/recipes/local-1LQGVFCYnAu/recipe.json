@@ -125,40 +125,48 @@
     {
       "title": "煮蛏取肉",
       "text": "蛏子下锅煮至开壳，取出蛏肉备用。",
-      "source_time": "约 00:12",
-      "image": "step-01.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "视频约 00:10"
     },
     {
       "title": "煸香咸肉姜蒜",
       "text": "锅放少许油，下咸肉煸香，再下姜蒜炒香。",
-      "source_time": "约 00:16",
-      "image": "step-02.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "视频约 00:14"
     },
     {
       "title": "炒配菜",
       "text": "加入胡萝卜和笋片翻炒，烹入花雕酒。",
-      "source_time": "约 00:20",
-      "image": "step-03.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "视频约 00:18"
     },
     {
       "title": "煎蒲瓜",
       "text": "放蒲瓜厚片，炒至边缘微焦，加入少量水烧软。",
-      "source_time": "约 00:24",
-      "image": "step-04.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "视频约 00:24"
     },
     {
       "title": "加蛏调味",
       "text": "放蛏肉，加糖2克、盐1克、生抽5克，稍收汁后加韭菜翻匀装盘。",
-      "source_time": "约 00:30",
-      "image": "step-05.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "视频约 00:26"
     }
   ],
-  "cover": "step-05.jpg",
-  "format_version": 3,
+  "cover": "review-cover.jpg",
+  "format_version": 4,
   "notes": [
     "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
     "来源：EverettZhu《新荣记春季菜单🔥蒲瓜烧蛏子，在家轻松复刻！》。",
     "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
     "原片字幕写“萝卜”，画面为橙色胡萝卜；食材名按画面整理。水量原片未注明。"
+  ],
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "蛏子清洗净沙；蒲瓜切厚片，咸肉、姜、胡萝卜和春笋切片，韭菜切段。",
+      "image": "review-prep-01.jpg",
+      "source_time": "视频约 00:22"
+    }
   ]
 }

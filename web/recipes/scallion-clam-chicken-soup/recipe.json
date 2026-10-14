@@ -120,40 +120,56 @@
   ],
   "illustrated_steps": [
     {
-      "title": "盐腌鸡腿，准备盐葱",
-      "text": "鸡腿排抹盐和黑胡椒，冷藏腌至少 30 分钟，作者推荐隔夜。香葱切末，加盐拌匀腌 15 分钟；白洋葱切丝，大蒜去皮，蛤蜊吐沙后洗净。",
-      "source_time": "00:10–00:55",
-      "image": "prep.jpg"
-    },
-    {
       "title": "鸡皮朝下，小火煎香",
       "text": "锅中不放油，鸡皮朝下小火煎出油脂，皮呈金黄色后盛出，剪成大块；此时还需后续煮熟。",
-      "source_time": "00:56–01:07",
-      "image": "chicken.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "00:56–01:07"
     },
     {
       "title": "用鸡油炒洋葱和蒜",
       "text": "利用锅中鸡油，下白洋葱丝和蒜头，中火慢炒至焦黄、香味出来。",
-      "source_time": "01:08–01:17",
-      "image": "onion.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "01:08–01:17"
     },
     {
       "title": "鸡肉回锅，加开水煮",
       "text": "鸡腿块回锅，加入开水，煮约 10 分钟至鸡肉熟透。水量原片未注明，按锅具及所需汤量调整。",
-      "source_time": "01:18–01:27",
-      "image": "soup.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "01:18–01:27"
     },
     {
       "title": "蛤蜊最后放，加盖煮",
       "text": "加入洗净的蛤蜊，加盖煮约 3 分钟至开口、充分熟透。不要久煮；煮后未开口的蛤蜊弃用为补充建议。",
-      "source_time": "01:28–01:39",
-      "image": "clams.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "01:28–01:39"
     },
     {
       "title": "砂锅炒盐葱，冲汤焖香",
       "text": "砂锅加适量油，炒香腌好的葱末，将鸡汤、鸡肉和蛤蜊倒入，撒白胡椒，加盖焖约 1 分钟。作者不再额外加盐，盐味来自前面的腌制。",
-      "source_time": "01:40–01:56",
-      "image": "finish.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "01:40–01:56"
     }
-  ]
+  ],
+  "cover": "review-cover.jpg",
+  "preparation_steps": [
+    {
+      "title": "盐腌鸡腿，准备盐葱",
+      "text": "鸡腿排抹盐、黑胡椒，冷藏腌至少 30 分钟，推荐隔夜。",
+      "image": "review-prep-01.jpg",
+      "source_time": "00:10–00:55"
+    },
+    {
+      "title": "备菜",
+      "text": "蛤蜊吐沙洗净；白洋葱切丝，大蒜去皮，香葱切末。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    },
+    {
+      "title": "备菜",
+      "text": "香葱加盐拌匀，腌 15 分钟；可与鸡腿腌制同时进行。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    }
+  ],
+  "format_version": 4
 }

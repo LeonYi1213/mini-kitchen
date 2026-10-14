@@ -145,40 +145,48 @@
     {
       "title": "排骨焯水",
       "text": "排骨冷水下锅，加焯水用葱姜和少许料酒，煮出浮沫后捞出洗净。",
-      "source_time": "约 00:16",
-      "image": "step-01.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "视频约 00:16"
     },
     {
       "title": "炒香上色",
       "text": "油热炒香桂皮、八角、葱姜和干辣椒，下排骨翻炒；烹料酒，加生抽、老抽、盐和冰糖炒匀。",
-      "source_time": "约 00:26",
-      "image": "step-02.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "视频约 00:26"
     },
     {
       "title": "加水炖排骨",
       "text": "加开水没过排骨，盖锅炖至少40分钟，至肉逐渐软烂。",
-      "source_time": "约 00:36",
-      "image": "step-03.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "视频约 00:36"
     },
     {
       "title": "加配菜炖熟",
       "text": "挑出香料，加入土豆、扁豆与泡软粉条，继续炖至土豆软、扁豆彻底熟透、粉条入味。",
-      "source_time": "约 00:54",
-      "image": "step-04.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "视频约 00:52"
     },
     {
       "title": "收汁上桌",
       "text": "按喜好收浓汤汁，保留一些汤汁拌饭。",
-      "source_time": "约 00:58",
-      "image": "step-05.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "视频约 00:58"
     }
   ],
-  "cover": "step-05.jpg",
-  "format_version": 3,
+  "cover": "review-cover.jpg",
+  "format_version": 4,
   "notes": [
     "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
     "来源：孩儿他姥姥《香晕脑袋‼️排骨豆角炖粉条😋一顿三碗饭》。",
     "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
     "最后配菜炖煮时长原片未标明，15–25分钟为整理估算，以豆角彻底熟透为准。"
+  ],
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "土豆切菱形块，扁豆掰段，粉条用开水泡软。",
+      "image": "review-prep-01.jpg",
+      "source_time": "视频约 00:46"
+    }
   ]
 }

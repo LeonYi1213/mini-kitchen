@@ -9,7 +9,11 @@ import SwiftUI
     private var cloudObserver: NSObjectProtocol?
     init() {
         let folder = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+        #if DEBUG
+        file = folder.appendingPathComponent(ProcessInfo.processInfo.arguments.contains("--visual-regression") ? "ui-regression.json" : "kitchen.json")
+        #else
         file = folder.appendingPathComponent("kitchen.json")
+        #endif
         do {
             try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
             guard let url = Bundle.main.url(forResource: "recipes", withExtension: "json") else { throw CocoaError(.fileNoSuchFile) }
@@ -20,6 +24,15 @@ import SwiftUI
             recipes += meal.imported.filter { r in !recipes.contains { $0.id == r.id } }
             meal.selected = meal.selected.filter { id in recipes.contains { $0.id == id } }
         } catch { self.error = "读取菜谱失败，请重新打开小厨房。" }
+        #if DEBUG
+        // Simulator UI regression fixtures never read/write the user's meal or iCloud.
+        if ProcessInfo.processInfo.arguments.contains("--visual-regression") {
+            meal = MealState()
+            let titles = ["啫啫鸡翅煲", "洋葱卤肉饭", "酥脆蒜香排骨", "猪油蒜香清炒丝瓜"]
+            meal.selected = titles.compactMap { title in recipes.first { $0.title == title }?.id }
+            return
+        }
+        #endif
         cloudObserver = NotificationCenter.default.addObserver(forName: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: cloud, queue: .main) { [weak self] _ in
             Task { @MainActor [weak self] in self?.mergeCloud() }
         }
@@ -87,6 +100,9 @@ import SwiftUI
     private struct StepSnapshot: Codable { var step: Int; var timer: CookingTimer? }
     private struct CloudValue<T: Codable>: Codable { var timestamp: Double; var value: T }
     private func publish<T: Codable>(_ value: T, key: String) {
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("--visual-regression") { return }
+        #endif
         let timestamp = Date().timeIntervalSince1970
         guard let data = try? JSONEncoder().encode(CloudValue(timestamp: timestamp, value: value)) else { return }
         let used = cloud.dictionaryRepresentation.filter { $0.key != key }.values.compactMap { $0 as? Data }.reduce(0) { $0 + $1.count }

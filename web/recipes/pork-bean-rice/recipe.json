@@ -127,38 +127,54 @@
     {
       "title": "大米先煮 3 分钟",
       "text": "一碗大米倒入沸水中煮约 3 分钟，捞出沥水；留一碗米汤备用。此时大米尚未熟透。",
-      "source_time": "00:00–00:09",
-      "image": "rice.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "00:00–00:09"
     },
     {
       "title": "五花肉和香肠煸香",
       "text": "五花肉、广式香肠切片下锅，煸至肉片焦黄、油脂析出；油太多可舀出一部分。",
-      "source_time": "00:10–00:18",
-      "image": "pork.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "00:10–00:18"
     },
     {
       "title": "配菜炒至变软",
       "text": "加入切好的土豆块、胡萝卜块和豆角段，翻炒至变软，再继续后续焖制至熟透。",
-      "source_time": "00:19–00:23",
-      "image": "veg.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "00:19–00:23"
     },
     {
       "title": "调味，炒出酱香",
       "text": "加入少量盐、生抽、老抽和蚝油，翻炒均匀，炒出酱香味。调料用量均未注明。",
-      "source_time": "00:24–00:32",
-      "image": "season.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "00:24–00:32"
     },
     {
       "title": "铺米、扎孔、小火焖",
       "text": "把半熟大米铺在菜上，用锅铲铺平、筷子扎孔。沿锅边淋入米汤，加盖小火焖约 10 分钟；检查水分，避免烧干。",
-      "source_time": "00:33–00:51",
-      "image": "cover.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "00:33–00:51"
     },
     {
       "title": "检查熟度，撒葱拌匀",
       "text": "确认米饭没有硬芯、豆角充分熟透、土豆软熟后，撒葱花，把底部配菜与米饭拌匀出锅。未熟时补少量热水继续焖。",
-      "source_time": "00:52–01:08",
-      "image": "finish.jpg"
+      "image": "review-step-06.jpg",
+      "source_time": "00:52–01:08"
     }
-  ]
+  ],
+  "cover": "review-cover.jpg",
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "土豆、胡萝卜洗净切块，豆角洗净切段，葱切葱花。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    },
+    {
+      "title": "备菜",
+      "text": "五花肉与广式香肠切片；准备盐、生抽、老抽和蚝油。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    }
+  ],
+  "format_version": 4
 }

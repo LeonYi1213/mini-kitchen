@@ -130,40 +130,48 @@
     {
       "title": "挂湿淀粉糊",
       "text": "肉片裹上沉淀后的湿淀粉糊，调至能牢固挂住，最后加50毫升油拌匀。",
-      "source_time": "约 00:34",
-      "image": "step-01.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "视频约 00:34"
     },
     {
       "title": "第一遍炸定型",
       "text": "油热后转中火，肉片逐片入锅，先不翻动，定型后分开；原片第一遍约2分钟。",
-      "source_time": "约 00:48",
-      "image": "step-02.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "视频约 00:42"
     },
     {
       "title": "升温复炸",
       "text": "升高油温，复炸约30–40秒至酥脆，捞出沥油。",
-      "source_time": "约 00:54",
-      "image": "step-03.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "视频约 00:54"
     },
     {
       "title": "熬酸甜汁",
       "text": "白醋、生抽、盐、白糖及少许淀粉水混匀。锅留底油，姜蒜爆香，倒汁熬至起大泡。",
-      "source_time": "约 01:04",
-      "image": "step-04.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "视频约 01:04"
     },
     {
       "title": "关火裹汁",
       "text": "关火等约30秒，倒入肉片和葱丝、胡萝卜丝、香菜，迅速翻匀裹汁即出锅。",
-      "source_time": "约 01:14",
-      "image": "step-05.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "视频约 01:12"
     }
   ],
-  "cover": "step-05.jpg",
-  "format_version": 3,
+  "cover": "review-cover.jpg",
+  "format_version": 4,
   "notes": [
     "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
     "来源：孩儿他姥姥《饭店级超正宗‼️老式锅包肉😋酥脆不回软》。",
     "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
     "糖醋比例保留原片；煎炸实际时间按肉片厚度调整并确保熟透。"
+  ],
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "里脊可先冷冻30–50分钟方便切片，再切约0.5厘米厚、轻拍松，冲洗后挤干水。土豆淀粉提前浸泡至少30分钟，倒掉表面清水。葱姜胡萝卜切丝，蒜切片。",
+      "image": "review-prep-01.jpg",
+      "source_time": "视频约 00:14"
+    }
   ]
 }

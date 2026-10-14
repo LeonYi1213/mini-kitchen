@@ -131,40 +131,50 @@
   ],
   "illustrated_steps": [
     {
-      "title": "提前调好料汁",
-      "text": "生抽 1 勺、清水 2 勺、蚝油 1 勺、白糖半勺、生粉半勺搅匀。原片未说明勺容量和花螺重量，按实际食材量调整。",
-      "source_time": "00:12–00:13",
-      "image": "sauce.jpg"
-    },
-    {
       "title": "花螺直接下锅，烹白酒",
       "text": "花螺清理干净、沥水后下油锅，原片不焯水。烹入适量白酒，翻炒挥发水汽；家庭操作建议先离火加酒再加热。",
-      "source_time": "00:00–00:05",
-      "image": "snails.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "00:00–00:05"
     },
     {
       "title": "下姜蒜辣椒与芥末",
       "text": "加入姜末、蒜末、干辣椒，挤入大半管芥末，大火炒香。管装规格未注明，芥末强度按个人接受程度调整。",
-      "source_time": "00:06–00:10",
-      "image": "mustard.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "00:06–00:10"
     },
     {
       "title": "加啤酒和料汁",
       "text": "倒入小半碗啤酒，再倒入预先调匀的料汁。碗容量未注明，注意锅中保留足够焖制的水分。",
-      "source_time": "00:11–00:13",
-      "image": "beer.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "00:11–00:13"
     },
     {
       "title": "加盖小火焖约 4 分钟",
       "text": "加盖小火焖约 4 分钟，这是原片时间；花螺大小与锅具不同，仍需确保螺肉充分熟透，未熟继续加热。",
-      "source_time": "00:14–00:15",
-      "image": "simmer.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "00:14–00:15"
     },
     {
       "title": "补蒜末和芥末，拌匀出锅",
       "text": "加入预留的生蒜末，再挤适量芥末，翻拌均匀后出锅。两次加芥末，分别炒香与补足辛香。",
-      "source_time": "00:16–00:25",
-      "image": "finish.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "00:16–00:25"
     }
-  ]
+  ],
+  "cover": "review-cover.jpg",
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "花螺清理干净、沥水；姜蒜切末，蒜末分成炒香与出锅前加入两份，准备干辣椒。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    },
+    {
+      "title": "备菜",
+      "text": "生抽 1 勺、清水 2 勺、蚝油 1 勺、白糖半勺、生粉半勺搅匀。原片未说明勺容量和花螺重量，按实际食材量调整。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    }
+  ],
+  "format_version": 4
 }

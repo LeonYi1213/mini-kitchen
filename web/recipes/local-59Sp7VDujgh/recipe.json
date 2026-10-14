@@ -110,40 +110,48 @@
     {
       "title": "腌鸡腿",
       "text": "鸡腿加白胡椒、料酒和盐，拌匀腌入味；原片未给腌制时长。",
-      "source_time": "约 00:16",
-      "image": "step-01.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "视频约 00:16"
     },
     {
       "title": "煸香姜蒜",
       "text": "锅入70毫升香油，煸香姜片和蒜。",
-      "source_time": "约 00:32",
-      "image": "step-02.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "视频约 00:32"
     },
     {
       "title": "煎鸡块",
       "text": "加入鸡块煎炒至正反面金黄。",
-      "source_time": "约 00:36",
-      "image": "step-03.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "视频约 00:38"
     },
     {
       "title": "米酒生抽焖鸡",
       "text": "倒70毫升米酒、70毫升生抽，加10克冰糖，全程不另加水，继续焖煮至鸡肉熟透、汁浓。",
-      "source_time": "约 00:44",
-      "image": "step-04.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "视频约 00:44"
     },
     {
       "title": "加入九层塔",
       "text": "收至汤汁黏稠时撒九层塔，翻匀出锅。",
-      "source_time": "约 00:46",
-      "image": "step-05.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "视频约 00:46"
     }
   ],
-  "cover": "step-05.jpg",
-  "format_version": 3,
+  "cover": "review-cover.jpg",
+  "format_version": 4,
   "notes": [
     "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
     "来源：孩儿他姥姥《香迷糊了❗️三杯鸡真的巨下饭🔥超好吃》。",
     "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
     "香油可按原片用胡麻油，米酒可用醪糟汤代替；九层塔可用香芹或香菜，风味不同。"
+  ],
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "鸡腿切块清理干净，控干水；姜切片，九层塔洗净沥水。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    }
   ]
 }

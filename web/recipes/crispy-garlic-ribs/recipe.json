@@ -142,40 +142,50 @@
   ],
   "illustrated_steps": [
     {
-      "title": "蒜末洗净沥干，留下蒜水",
-      "text": "200 克蒜切末，用水淘洗去黏汁，过滤后保留蒜水。蒜末充分沥干，减少炸制时溅油。",
-      "source_time": "00:08–00:21",
-      "image": "garlic.jpg"
-    },
-    {
-      "title": "排骨洗净，调味腌半小时",
-      "text": "900 克排骨用面粉抓洗、冲净并擦干。加葱 30 克、姜 5 克、白胡椒粉 1 克、蚝油 15 克、料酒 30 毫升、盐 3 克、白糖 8 克及适量蒜水，抓匀腌 30 分钟。",
-      "source_time": "00:22–00:33",
-      "image": "marinate.jpg"
-    },
-    {
       "title": "中小火炸蒜，过滤留油",
       "text": "利用腌制时间，将沥干的蒜末放入油锅，中小火炸至浮起、金黄，及时过滤。蒜酥摊凉，蒜油留下炸排骨。",
-      "source_time": "00:34–00:45",
-      "image": "fry-garlic.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "00:34–00:45"
     },
     {
       "title": "去掉葱姜，裹蛋黄淀粉",
       "text": "排骨腌好后挑去葱姜，加入 2 个蛋黄和 40 克玉米淀粉，抓拌均匀。",
-      "source_time": "00:46–00:51",
-      "image": "coat.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "00:46–00:51"
     },
     {
       "title": "蒜油炸排骨，控油盛出",
       "text": "用过滤的蒜油炸排骨，原片先中小火约 10 分钟，再大火约 5 分钟后捞出控油。实际随排骨大小及油温调整，避免上色过深，确认内部熟透。",
-      "source_time": "00:52–01:05",
-      "image": "fry-ribs.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "00:52–01:05"
     },
     {
       "title": "配菜炒香，拌入蒜酥",
       "text": "洋葱碎和彩椒丁共 50 克下锅炒香，倒入排骨与炸好的蒜酥，翻拌均匀，撒葱花出锅。",
-      "source_time": "01:06–01:13",
-      "image": "finish.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "01:06–01:13"
     }
-  ]
+  ],
+  "cover": "review-cover.jpg",
+  "preparation_steps": [
+    {
+      "title": "蒜末洗净沥干，留下蒜水",
+      "text": "蒜切末、淘洗、过滤留蒜水，蒜末充分沥干。",
+      "image": "review-prep-01.jpg",
+      "source_time": "00:08–00:21"
+    },
+    {
+      "title": "备菜",
+      "text": "排骨用面粉抓洗冲净、擦干，葱姜切好，洋葱和彩椒切丁，另备葱花。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    },
+    {
+      "title": "排骨洗净，调味腌半小时",
+      "text": "排骨按配方加入葱姜、调料和蒜水抓匀，腌 30 分钟；期间可炸蒜酥。",
+      "image": "review-prep-03.jpg",
+      "source_time": "00:22–00:33"
+    }
+  ],
+  "format_version": 4
 }

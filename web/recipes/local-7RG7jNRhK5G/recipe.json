@@ -101,46 +101,54 @@
     {
       "title": "无油煎牛肉",
       "text": "热锅不额外放油，下牛肋条用其自身油脂煎至两面上色，避免煎太久。",
-      "source_time": "约 00:32",
-      "image": "step-01.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "视频约 00:26"
     },
     {
       "title": "煎香洋葱蒜",
       "text": "下洋葱和蒜同煎，磨黑胡椒，炒至呈焦糖色而不糊。",
-      "source_time": "约 00:58",
-      "image": "step-02.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "视频约 00:56"
     },
     {
       "title": "烹啤酒加水",
       "text": "可加少许零糖啤酒煮一会儿，再加足量水；不饮酒可省略啤酒。",
-      "source_time": "约 01:16",
-      "image": "step-03.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "视频约 01:18"
     },
     {
       "title": "炖软牛肉",
       "text": "煮开后继续炖至牛肉软烂，按片尾建议至少炖1小时，留意水量。",
-      "source_time": "约 01:32",
-      "image": "step-04.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "视频约 01:26"
     },
     {
       "title": "铺米焖饭",
       "text": "转小火，锅中留适量汤，铺入泡透沥干的米并使米接触汤汁；不要把米堆在肉上，盖锅焖10–15分钟至熟。",
-      "source_time": "约 01:56",
-      "image": "step-05.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "视频约 01:50"
     },
     {
       "title": "拌葱出锅",
       "text": "打开锅盖，确认米饭熟透后翻松，拌入葱段，关火装盘。",
-      "source_time": "约 02:34",
-      "image": "step-06.jpg"
+      "image": "review-step-06.jpg",
+      "source_time": "视频约 02:34"
     }
   ],
-  "cover": "step-06.jpg",
-  "format_version": 3,
+  "cover": "review-cover.jpg",
+  "format_version": 4,
   "notes": [
     "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
     "来源：张曦福《无须放油，香到舔盘，牛肋条烩饭》。",
     "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
     "来源为此前已保存的原视频，本次重新在本机抽帧核对。口播炖肉30–60分钟但作者说肉仍偏硬，采用片尾至少1小时；原片未给重量和米水比例。备菜估算未含大米浸泡的30分钟。"
+  ],
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "大米淘洗后浸泡至少30分钟至泡透；牛肋条切块，洋葱切碎，蒜切粒，小葱切段。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    }
   ]
 }

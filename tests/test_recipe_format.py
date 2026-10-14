@@ -23,8 +23,8 @@ class IllustratedContractTests(unittest.TestCase):
         self.recipe = {'title': '测试菜', 'ingredients': [{'name': '米', 'amount': None, 'unit': '适量（浸泡用）'}],
                        'prep': ['浸泡米。'], 'cook': ['炖牛肉。', '焖米饭。'],
                        'timing': {'prep': [{'min': 30, 'max': 30}], 'cook': [{'min': 30, 'max': 60}, {'min': 10, 'max': 15}]},
-                       'notes': ['除原片明确等待时间外，其余为估算。'], 'cover_frame': 3, 'cover_focus': [0.5, 0.8],
-                       'illustrated_steps': [{'title': '炖肉', 'frame_index': 1, 'focus': [0.5, 0.8]}, {'title': '焖饭', 'frame_index': 2, 'focus': [0.5, 0.8]}]}
+                       'notes': ['除原片明确等待时间外，其余为估算。'], 'cover_frame': 3, 'cover_bounds': [0, 0, 1, 1], 'cover_evidence': '成品米饭', 'preparation_steps': [{'title':'泡米','frame_index':None,'image_note':'原片未展示泡米'}],
+                       'illustrated_steps': [{'title': '炖肉', 'frame_index': 1, 'bounds': [0, 0, 1, 1], 'evidence':'画面中的对应操作'}, {'title': '焖饭', 'frame_index': 2, 'bounds': [0, 0, 1, 1], 'evidence':'画面中的对应操作'}]}
 
     def tearDown(self): self.temp.cleanup()
 
@@ -47,7 +47,7 @@ class IllustratedContractTests(unittest.TestCase):
         for change in [lambda r: r.update(cover_frame=4), lambda r: r.update(illustrated_steps=[]),
                        lambda r: r['illustrated_steps'][0].update(frame_index=0),
                        lambda r: r['illustrated_steps'][0].update(frame_index=2),
-                       lambda r: r.update(notes=[]), lambda r: r.update(cover_focus=[0.5, 2])]:
+                       lambda r: r.update(notes=[]), lambda r: r.update(cover_bounds=[0, 0, 1, 2])]:
             bad = copy.deepcopy(self.recipe); change(bad)
             with self.assertRaises(ValueError): validate_visual_plan(bad, 3)
 
@@ -57,3 +57,19 @@ class IllustratedContractTests(unittest.TestCase):
             self.assertIsNone(asset_path(self.root, name))
         real = self.root / 'assets'; real.symlink_to(self.root.parent, target_is_directory=True)
         self.assertIsNone(asset_path(self.root, 'assets/xhs-' + 'a' * 24 + '/' + 'b' * 32 + '/frame-001.jpg'))
+
+    def test_missing_process_image_is_honest_and_cover_stays_independent(self):
+        self.recipe['illustrated_steps'][0] = {'title':'炖肉','frame_index':None,'image_note':'原片未展示炖肉过程'}
+        result = materialize(self.recipe,self.frames,2,'a'*24,'b'*32,self.root)
+        self.assertIsNone(result['illustrated_steps'][0]['image'])
+        self.assertTrue(result['illustrated_steps'][0]['image_note'])
+        self.assertTrue(current_recipe(result,self.root))
+        self.assertEqual(asset_path(self.root,result['cover']).read_bytes(),b'jpeg-source-2')
+
+    def test_semantic_review_rejects_mismatch_and_incomplete_verdicts(self):
+        from recipe_format import validate_visual_review
+        keys=['cover','cook-0']
+        with self.assertRaises(ValueError): validate_visual_review({'checks':[{'key':'cover','approved':True,'reason':'成品'}]},keys)
+        with self.assertRaises(ValueError): validate_visual_review({'checks':[{'key':'cover','approved':False,'reason':'冰箱'}, {'key':'cook-0','approved':True,'reason':'切菜'}]},keys)
+        with self.assertRaises(ValueError): validate_visual_review({'checks':[{'key':'cover','approved':'true','reason':'成品'}, {'key':'cook-0','approved':True,'reason':'切菜'}]},keys)
+        validate_visual_review({'checks':[{'key':k,'approved':True,'reason':'画面动作匹配'} for k in keys]},keys)

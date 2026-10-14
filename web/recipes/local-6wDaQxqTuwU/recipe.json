@@ -115,40 +115,48 @@
     {
       "title": "炒香蔬菜香肠",
       "text": "油热先炒洋葱，再下甜椒和香肠，炒约1分钟至香肠出现焦边。",
-      "source_time": "约 00:32",
-      "image": "step-01.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "视频约 00:32"
     },
     {
       "title": "加番茄调味",
       "text": "加入去皮番茄罐头，用少许水涮罐倒入；加1大勺红椒粉、孜然粉、盐和黑胡椒拌匀。",
-      "source_time": "约 00:44",
-      "image": "step-02.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "视频约 00:44"
     },
     {
       "title": "焖番茄底",
       "text": "盖锅炖约5分钟。",
-      "source_time": "约 00:46",
-      "image": "step-03.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "视频约 00:48"
     },
     {
       "title": "打蛋加芝士",
       "text": "在番茄底上打入鸡蛋，在周围撒马苏里拉芝士。",
-      "source_time": "约 01:14",
-      "image": "step-04.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "视频约 01:14"
     },
     {
       "title": "焖至凝固",
       "text": "盖锅小火焖，原片先焖约2分钟后继续加热；根据喜欢的熟度延长，熟蛋黄需继续焖至凝固。",
-      "source_time": "约 01:24",
-      "image": "step-05.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "视频约 01:20"
     }
   ],
-  "cover": "step-05.jpg",
-  "format_version": 3,
+  "cover": "review-cover.jpg",
+  "format_version": 4,
   "notes": [
     "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
     "来源：醉酒扶妇《快速早午餐，媳妇说周末就等这一口》。",
     "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
     "原片另做了饮品，本条只整理主菜北非蛋。主要食材份量未标明；鸡蛋数量按口播2个记录。"
+  ],
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "洋葱、红甜椒切丁，香肠切片；准备番茄罐头和芝士。",
+      "image": "review-prep-01.jpg",
+      "source_time": "视频约 00:14"
+    }
   ]
 }

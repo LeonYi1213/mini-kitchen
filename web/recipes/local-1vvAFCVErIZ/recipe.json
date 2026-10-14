@@ -78,28 +78,32 @@
     {
       "title": "拌料腌制",
       "text": "芦笋加少量盐、酱油、黑胡椒、少许糖和香油搓匀，腌至少30分钟。",
-      "source_time": "原笔记图 1",
-      "image": "step-01.jpg"
+      "image": "review-step-01.jpg"
     },
     {
       "title": "沥汁热锅",
       "text": "倒掉腌出的汁水；锅烧热后放黄油或食用油。",
-      "source_time": "原笔记图 2",
-      "image": "step-02.jpg"
+      "image": "review-step-02.jpg"
     },
     {
       "title": "小火煎熟",
       "text": "小火煎芦笋两面，约5分钟至熟透、表面微焦。",
-      "source_time": "原笔记图 3",
-      "image": "step-03.jpg"
+      "image": "review-step-03.jpg"
     }
   ],
-  "cover": "cover.jpg",
-  "format_version": 3,
+  "cover": "review-cover.jpg",
+  "format_version": 4,
   "notes": [
     "依据本机保存的原笔记正文、图片及视频可见字幕整理，未调用云端导入或模型 API，未独立转写音频。",
     "来源：三水饱了《食谱菜谱♥香煎芦笋》。",
     "原文未写明的食材用量保留适量；时间范围及未明确标出的备菜时间是整理估算，实际以食材熟度为准。",
     "原文写350克芦笋用2小勺盐，同时强调盐勺很小、应少放；不把“2勺”当成标准量。配图为原笔记展示图。"
+  ],
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "芦笋洗净去老根，锅小可横切两段，用刀轻拍裂。",
+      "image": "review-prep-01.jpg"
+    }
   ]
 }

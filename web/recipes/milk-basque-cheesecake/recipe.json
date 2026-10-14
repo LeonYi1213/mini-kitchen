@@ -110,38 +110,54 @@
     {
       "title": "奶酪软化，拌入面粉和黄油",
       "text": "奶油奶酪提前软化至能轻松按压；黄油软化至牙膏状。奶酪加入低筋面粉和黄油，搅拌均匀。",
-      "source_time": "00:12–00:17",
-      "image": "soften.jpg"
+      "image": "review-step-01.jpg",
+      "source_time": "00:12–00:17"
     },
     {
       "title": "加入蜂蜜和白糖",
       "text": "加入蜂蜜 15 克、白糖 50 克，拌匀至细腻。",
-      "source_time": "00:18–00:25",
-      "image": "sugar.jpg"
+      "image": "review-step-02.jpg",
+      "source_time": "00:18–00:25"
     },
     {
       "title": "全蛋液分三次加",
       "text": "130 克常温全蛋液分 3 次加入，每次充分拌匀再加下一次；按重量称，不直接替换为固定鸡蛋个数。",
-      "source_time": "00:26–00:31",
-      "image": "egg.jpg"
+      "image": "review-step-03.jpg",
+      "source_time": "00:26–00:31"
     },
     {
       "title": "加柠檬汁、温牛奶，过滤",
       "text": "加入柠檬汁 5 克和温牛奶 200 克拌匀；过筛 3 遍，筛出的颗粒弃去。倒入铺好烘焙纸的模具，原片未注明模具尺寸。",
-      "source_time": "00:32–00:39",
-      "image": "milk.jpg"
+      "image": "review-step-04.jpg",
+      "source_time": "00:32–00:39"
     },
     {
       "title": "参考 230℃烤 21 分钟",
       "text": "作者用美的 P40pro 平炉模式，未预热，230℃烤 21 分钟；正文提示其他烤箱需预热。此温时仅作参考，须结合模具尺寸、糊深及自家烤箱调整。",
-      "source_time": "00:40–00:47",
-      "image": "bake.jpg"
+      "image": "review-step-05.jpg",
+      "source_time": "00:40–00:47"
     },
     {
       "title": "放凉冷藏后脱模",
       "text": "出炉时中心晃动明显。先放凉再冷藏、定型后脱模切块；作者冷藏了 3.5 小时，放凉操作为补充建议。",
-      "source_time": "00:46–00:54",
-      "image": "chill.jpg"
+      "image": "review-step-06.jpg",
+      "source_time": "00:46–00:54"
     }
-  ]
+  ],
+  "cover": "review-cover.jpg",
+  "preparation_steps": [
+    {
+      "title": "备菜",
+      "text": "称量全部原料，奶油奶酪与黄油提前软化，蛋液回温，牛奶温热。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    },
+    {
+      "title": "备菜",
+      "text": "准备烘焙纸、滤网及模具；原片未注明模具尺寸，其他烤箱按说明预热。",
+      "image": null,
+      "image_note": "原素材未提供可清楚对应这一步的过程图，请按文字操作。"
+    }
+  ],
+  "format_version": 4
 }
